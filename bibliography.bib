@@ -1,47 +1,347 @@
 % Библиография оформляется согласно ГОСТ 7.32-2017, ГОСТ Р 7.0.100-2018
 % Порядок записей — по порядку первого упоминания в тексте (sorting=none в biblatex)
 
-% Статья в журнале
-@article{ivanov2019,
-  author  = {Иванов, И. И. and Петров, П. П.},
-  title   = {Ансамблевые методы повышения точности классификации данных},
-  journal = {Журнал машинного обучения},
-  year    = {2019},
-  volume  = {12},
-  number  = {3},
-  pages   = {15--28}
+% ─── Таксономия Блума ───────────────────────────────────────────
+@book{bloom_taxonomy_1956,
+  author    = {Bloom, B. S. and Engelhart, M. D. and Furst, E. J. and Hill, W. H. and Krathwohl, D. R.},
+  title     = {Taxonomy of Educational Objectives: The Classification of Educational Goals. Handbook 1: Cognitive Domain},
+  publisher = {David McKay Company},
+  address   = {New York},
+  year      = {1956}
 }
 
-% Статья на английском языке
-@article{smith2020,
-  author  = {Smith, J. and Johnson, A.},
-  title   = {Deep Learning Approaches for Data Classification},
-  journal = {Journal of Machine Learning Research},
-  year    = {2020},
-  volume  = {34},
-  number  = {4},
-  pages   = {227--246}
+% ─── Конкуренты ─────────────────────────────────────────────────
+@misc{coursebox_ai_2024,
+  title        = {Coursebox AI: Course Creation Platform},
+  howpublished = {URL: https://www.coursebox.ai},
+  note         = {дата обращения: 10.03.2025}
 }
 
-% Книга / монография
-@book{goodfellow2016,
-  author    = {Goodfellow, I. and Bengio, Y. and Courville, A.},
-  title     = {Deep Learning},
-  publisher = {MIT Press},
-  address   = {Cambridge},
+% ─── Фреймворки ─────────────────────────────────────────────────
+@misc{langgraph_docs_2025,
+  title        = {LangGraph Documentation},
+  howpublished = {URL: https://langchain-ai.github.io/langgraph},
+  note         = {дата обращения: 01.04.2025}
+}
+
+@misc{langsmith_docs_2025,
+  title        = {LangSmith Documentation},
+  howpublished = {URL: https://docs.smith.langchain.com},
+  note         = {дата обращения: 01.04.2025}
+}
+
+@inproceedings{autogen_04_2024,
+  author    = {Wu, Q. and Bansal, G. and Zhang, J. and Wu, Y. and others},
+  title     = {AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation},
+  booktitle = {Proceedings of ICLR 2024 Workshop LLM Agents},
+  year      = {2024}
+}
+
+@misc{crewai_docs_2025,
+  title        = {CrewAI Documentation},
+  howpublished = {URL: https://docs.crewai.com},
+  note         = {дата обращения: 01.04.2025}
+}
+
+@misc{crewai_async_issue_2024,
+  title        = {CrewAI GitHub Issues: Async support limitations},
+  howpublished = {URL: https://github.com/crewAIInc/crewAI/issues},
+  note         = {дата обращения: 15.03.2025}
+}
+
+@misc{agno_docs_2025,
+  title        = {Agno Framework Documentation},
+  howpublished = {URL: https://docs.agno.com},
+  note         = {дата обращения: 01.04.2025}
+}
+
+@misc{openai_agents_sdk_2025,
+  title        = {OpenAI Agents SDK Documentation},
+  howpublished = {URL: https://platform.openai.com/docs/agents},
+  note         = {дата обращения: 01.04.2025}
+}
+
+@misc{haystack2_docs_2024,
+  title        = {Haystack 2.x Documentation},
+  howpublished = {URL: https://docs.haystack.deepset.ai/docs/intro},
+  note         = {дата обращения: 15.03.2025}
+}
+
+% ─── LLM / Модели ───────────────────────────────────────────────
+@misc{qwen25_technical_report_2024,
+  title        = {Qwen2.5 Technical Report},
+  author       = {Qwen Team},
+  howpublished = {arXiv:2412.15115},
+  year         = {2024}
+}
+
+% ─── Embedding ──────────────────────────────────────────────────
+@misc{me5_2024,
+  title        = {Multilingual E5 Text Embeddings: A Technical Report},
+  author       = {Wang, L. and Yang, N. and Huang, X. and others},
+  howpublished = {arXiv:2402.05672},
+  year         = {2024}
+}
+
+@misc{user_bge_m3_2024,
+  title        = {USER-bge-m3: Universal Sentence Encoder for Russian},
+  author       = {Deep Pavlov Team},
+  howpublished = {URL: https://huggingface.co/deepvk/USER-bge-m3},
+  note         = {дата обращения: 01.04.2025}
+}
+
+@misc{langchain_docs_2024,
+  title        = {LangChain Documentation},
+  howpublished = {URL: https://python.langchain.com/docs},
+  note         = {дата обращения: 15.03.2025}
+}
+
+@misc{qdrant_docs_2024,
+  title        = {Qdrant Vector Database Documentation},
+  howpublished = {URL: https://qdrant.tech/documentation},
+  note         = {дата обращения: 01.04.2025}
+}
+
+% ─── RAG / Оценка ───────────────────────────────────────────────
+@inproceedings{es_ragas_2023,
+  author    = {Es, S. and James, J. and Anke, L. E. and Schockaert, S.},
+  title     = {RAGAS: Automated Evaluation of Retrieval Augmented Generation},
+  booktitle = {Proceedings of EACL 2024},
+  year      = {2024}
+}
+
+@misc{mt_bench_2023,
+  title        = {Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena},
+  author       = {Zheng, L. and Chiang, W. L. and Sheng, Y. and others},
+  howpublished = {arXiv:2306.05685},
+  year         = {2023}
+}
+
+% ─── Мультимедиа ────────────────────────────────────────────────
+@misc{dalle3_2023,
+  title        = {DALL-E 3 Technical Report},
+  author       = {Betker, J. and Goh, G. and Jing, L. and others},
+  howpublished = {URL: https://openai.com/dall-e-3},
+  year         = {2023}
+}
+
+@misc{flux_2024,
+  title        = {FLUX.1: Unified Image Generation},
+  author       = {Black Forest Labs},
+  howpublished = {arXiv:2407.12697},
+  year         = {2024}
+}
+
+@misc{silero_tts_2024,
+  title        = {Silero Models: Pre-trained Enterprise-Grade Speech Models},
+  howpublished = {URL: https://github.com/snakers4/silero-models},
+  note         = {дата обращения: 01.04.2025}
+}
+
+@misc{elevenlabs_2024,
+  title        = {ElevenLabs Multilingual v2 Documentation},
+  howpublished = {URL: https://elevenlabs.io/docs},
+  note         = {дата обращения: 01.04.2025}
+}
+
+% ─── Бизнес-методологии ─────────────────────────────────────────
+@book{maurya_lean_canvas_2012,
+  author    = {Maurya, A.},
+  title     = {Running Lean: Iterate from Plan A to a Plan That Works},
+  publisher = {O'Reilly Media},
+  address   = {Sebastopol},
+  year      = {2012}
+}
+
+@book{fitzpatrick_mom_test_2013,
+  author    = {Fitzpatrick, R.},
+  title     = {The Mom Test: How to Talk to Customers \& Learn if Your Business Is a Good Idea When Everyone Is Lying to You},
+  publisher = {CreateSpace},
+  year      = {2013}
+}
+
+% ─── Рынок ──────────────────────────────────────────────────────
+@misc{edtech_market_report_2024,
+  title        = {Global EdTech Market Report 2024--2030},
+  howpublished = {EdTech Hub, Statista Research},
+  year         = {2024}
+}
+
+% ─── Инфраструктура ─────────────────────────────────────────────
+@misc{adapstory_gitops_2025,
+  title        = {Adapstory GitOps Repository},
+  howpublished = {URL: https://github.com/Stepan5024/Adapstory-GitOps},
+  note         = {дата обращения: 01.04.2025}
+}
+
+@misc{brown_c4_model_2018,
+  author       = {Brown, S.},
+  title        = {The C4 Model for Visualising Software Architecture},
+  howpublished = {URL: https://c4model.com},
+  year         = {2018},
+  note         = {дата обращения: 01.04.2025}
+}
+
+% ─── Юзабилити ──────────────────────────────────────────────────
+@inproceedings{brooke_sus_1996,
+  author    = {Brooke, J.},
+  title     = {SUS: A <<Quick and Dirty>> Usability Scale},
+  booktitle = {Usability Evaluation in Industry},
+  editor    = {Jordan, P. W. and Thomas, B. and Weerdmeester, B. A. and McClelland, I. L.},
+  publisher = {Taylor \& Francis},
+  address   = {London},
+  year      = {1996},
+  pages     = {189--194}
+}
+
+% ─── Законодательство ───────────────────────────────────────────
+@misc{fz_152_2006,
+  title  = {Федеральный закон от 27 июля 2006 г. № 152-ФЗ «О персональных данных»},
+  year   = {2006},
+  note   = {М.: Собрание законодательства РФ, 2006}
+}
+
+@misc{gk_rf_part4,
+  title  = {Гражданский кодекс Российской Федерации. Часть четвёртая: Права на результаты интеллектуальной деятельности и средства индивидуализации},
+  year   = {2006},
+  note   = {М.: Собрание законодательства РФ, 2006}
+}
+
+% ─── LLM в образовании ──────────────────────────────────────────
+@article{kasneci_llm_education_2023,
+  author  = {Kasneci, E. and Se{\ss}ler, K. and K{\"{u}}chemann, S. and others},
+  title   = {ChatGPT for Good? On Opportunities and Challenges of Large Language Models for Education},
+  journal = {Learning and Individual Differences},
+  year    = {2023},
+  volume  = {103},
+  pages   = {102274}
+}
+
+@inproceedings{pardos_llm_instructional_2023,
+  author    = {Pardos, Z. A. and Bhandari, S.},
+  title     = {Learning gain differences between GPT-4 and human expert tutoring},
+  booktitle = {Proceedings of EDM 2023},
+  year      = {2023}
+}
+
+@inproceedings{tack_aied_2022,
+  author    = {Tack, A. and Piech, C.},
+  title     = {The AI Teacher Test: Measuring the Pedagogical Ability of Blender and GPT-3 in Educational Dialogues},
+  booktitle = {Proceedings of EDM 2022},
+  year      = {2022}
+}
+
+% ─── Мультиагентные системы ─────────────────────────────────────
+@inproceedings{wu_autogen_2023,
+  author    = {Wu, Q. and Bansal, G. and Zhang, J. and Wu, Y. and others},
+  title     = {AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation},
+  booktitle = {arXiv:2308.08155},
+  year      = {2023}
+}
+
+@inproceedings{shinn_reflexion_2023,
+  author    = {Shinn, N. and Cassano, F. and Gopinath, A. and Kambhampati, S. and Yao, S.},
+  title     = {Reflexion: Language Agents with Verbal Reinforcement Learning},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS~2023)},
+  year      = {2023}
+}
+
+@misc{wang_plan_and_execute_2023,
+  author       = {Wang, L. and Xu, W. and Lan, Y. and others},
+  title        = {Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models},
+  howpublished = {arXiv:2305.04091},
+  year         = {2023}
+}
+
+% ─── RAG ────────────────────────────────────────────────────────
+@inproceedings{lewis_rag_2020,
+  author    = {Lewis, P. and Perez, E. and Piktus, A. and others},
+  title     = {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS~2020)},
+  year      = {2020}
+}
+
+% ─── Inter-rater reliability ────────────────────────────────────
+@article{landis_koch_kappa_1977,
+  author  = {Landis, J. R. and Koch, G. G.},
+  title   = {The Measurement of Observer Agreement for Categorical Data},
+  journal = {Biometrics},
+  year    = {1977},
+  volume  = {33},
+  number  = {1},
+  pages   = {159--174}
+}
+
+% ─── Открытые курсы ─────────────────────────────────────────────
+@misc{mit_ocw_2024,
+  title        = {MIT OpenCourseWare},
+  howpublished = {URL: https://ocw.mit.edu},
+  note         = {дата обращения: 01.04.2025}
+}
+
+% ─── Рынок ──────────────────────────────────────────────────────
+@misc{smart_ranking_elearning_2024,
+  title        = {Российский рынок корпоративного обучения: аналитический обзор},
+  howpublished = {Smart Ranking},
+  year         = {2024},
+  note         = {URL: https://smart-ranking.ru/research}
+}
+
+@misc{chapman_elearning_hours_2010,
+  author       = {Chapman, B.},
+  title        = {How Long Does It Take to Create Learning?},
+  howpublished = {Chapman Alliance Research},
+  year         = {2010}
+}
+
+% ─── Бизнес-методологии ─────────────────────────────────────────
+@misc{amazon_cvm_2014,
+  author       = {Bryar, C. and Carr, B.},
+  title        = {Working Backwards: Insights, Stories, and Secrets from Inside Amazon},
+  howpublished = {St. Martin's Press},
+  year         = {2021}
+}
+
+@book{christensen_jtbd_2016,
+  author    = {Christensen, C. M. and Hall, T. and Dillon, K. and Duncan, D. S.},
+  title     = {Competing Against Luck: The Story of Innovation and Customer Choice},
+  publisher = {Harper Business},
   year      = {2016}
 }
 
-% Нормативный документ / ГОСТ
-@misc{gost7322017,
-  title  = {ГОСТ 7.32-2017. Система стандартов по информации, библиотечному и издательскому делу. Отчёт о научно-исследовательской работе. Структура и правила оформления},
-  year   = {2017},
-  note   = {М.: Стандартинформ, 2017. 32 с.}
+% ─── Экспериментирование в SE ────────────────────────────────────
+@book{wohlin_experimentation_2012,
+  author    = {Wohlin, C. and Runeson, P. and H{\"o}st, M. and Ohlsson, M. C. and Regnell, B. and Wessl{\'e}n, A.},
+  title     = {Experimentation in Software Engineering},
+  publisher = {Springer},
+  address   = {Berlin},
+  year      = {2012}
 }
 
-% Электронный ресурс
-@misc{pytorch2023,
-  title        = {PyTorch Documentation},
-  howpublished = {URL: https://pytorch.org/docs/stable/index.html},
-  note         = {дата обращения: 01.03.2025}
+% ─── Методологии обучения ───────────────────────────────────────
+@article{addie_molenda_2003,
+  author  = {Molenda, M.},
+  title   = {In Search of the Elusive ADDIE Model},
+  journal = {Performance Improvement},
+  year    = {2003},
+  volume  = {42},
+  number  = {5},
+  pages   = {34--36}
+}
+
+@book{allen_sam_2012,
+  author    = {Allen, M. W.},
+  title     = {Leaving ADDIE for SAM: An Agile Model for Developing the Best Learning Experiences},
+  publisher = {ASTD Press},
+  address   = {Alexandria},
+  year      = {2012}
+}
+
+@book{wiggins_backward_design_2005,
+  author    = {Wiggins, G. and McTighe, J.},
+  title     = {Understanding by Design},
+  edition   = {2},
+  publisher = {ASCD},
+  address   = {Alexandria},
+  year      = {2005}
 }

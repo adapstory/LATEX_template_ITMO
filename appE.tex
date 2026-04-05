@@ -1,0 +1,37 @@
+% Ссылка в тексте: (приложение~Д)
+\chapter{СПЕЦИФИКАЦИЯ ГРАФА АГЕНТОВ LANGGRAPH}
+
+В~приложении представлена полная спецификация графа агентов ИИ-методиста:
+ноды, рёбра, условные переходы, точки human-in-the-loop
+(раздел~3.2 основного текста).
+
+\section*{Рисунок Д.1 --- Граф агентов LangGraph StateGraph}
+
+[Вставить визуализацию графа LangGraph (экспорт из LangSmith / draw.io)]
+
+\section*{Таблица нод и переходов}
+
+\begin{table}[h!]
+  \caption{Ноды графа агентов ИИ-методиста}
+  \label{tab:langgraph-nodes}
+  \centering
+  \begin{tabular}{|p{4cm}|p{4cm}|p{5cm}|}
+  \hline
+  \textbf{Нода} & \textbf{Тип} & \textbf{Описание} \\
+  \hline
+  target\_analysis & agent & Анализ целевой аудитории \\
+  \hline
+  course\_structure & agent & Генерация структуры (ADDIE/SAM/BD) \\
+  \hline
+  human\_review & interrupt & Ревью структуры владельцем продукта \\
+  \hline
+  content\_creator & agent & Генерация текстов уроков (RAG) \\
+  \hline
+  fact\_check & agent & Верификация утверждений \\
+  \hline
+  media\_gen & agent & Иллюстрации (FLUX) + подкасты (Silero) \\
+  \hline
+  review & agent & Финальный отчёт о качестве \\
+  \hline
+  \end{tabular}
+\end{table}
