@@ -1,0 +1,4782 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.13)  13 APR 2026 13:18
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/extsizes/extbook.cls
+Document Class: extbook 1999/01/07 v1.4a NON-Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/extsizes/size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2025/06/05 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen148
+)
+\c@part=\count271
+\c@chapter=\count272
+\c@section=\count273
+\c@subsection=\count274
+\c@subsubsection=\count275
+\c@paragraph=\count276
+\c@subparagraph=\count277
+\c@figure=\count278
+\c@table=\count279
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen149
+)
+(./preamble.tex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader) 
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count280
+\g__pdfannot_backend_int=\count281
+\g__pdfannot_backend_link_int=\count282
+))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count283
+\l__fontspec_language_int=\count284
+\l__fontspec_strnum_int=\count285
+\l__fontspec_tmp_int=\count286
+\l__fontspec_tmpa_int=\count287
+\l__fontspec_tmpb_int=\count288
+\l__fontspec_tmpc_int=\count289
+\l__fontspec_em_int=\count290
+\l__fontspec_emdef_int=\count291
+\l__fontspec_strong_int=\count292
+\l__fontspec_strongdef_int=\count293
+\l__fontspec_tmpa_dim=\dimen150
+\l__fontspec_tmpb_dim=\dimen151
+\l__fontspec_tmpc_dim=\dimen152
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count294
+\Gm@cntv=\count295
+\c@Gm@tempcnt=\count296
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks18
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip51
+\f@nch@offset@elh=\skip52
+\f@nch@offset@erh=\skip53
+\f@nch@offset@olh=\skip54
+\f@nch@offset@orh=\skip55
+\f@nch@offset@elf=\skip56
+\f@nch@offset@erf=\skip57
+\f@nch@offset@olf=\skip58
+\f@nch@offset@orf=\skip59
+\f@nch@height=\skip60
+\f@nch@footalignment=\skip61
+\f@nch@widthL=\skip62
+\f@nch@widthC=\skip63
+\f@nch@widthR=\skip64
+\@temptokenb=\toks19
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box53
+\beforetitleunit=\skip65
+\aftertitleunit=\skip66
+\ttl@plus=\dimen161
+\ttl@minus=\dimen162
+\ttl@toksa=\toks20
+\titlewidth=\dimen163
+\titlewidthlast=\dimen164
+\titlewidthfirst=\dimen165
+)
+
+./preamble.tex:33: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 {\thechapter
+                 }{1em}{\MakeUppercase}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./preamble.tex:33: Argument of \MakeUppercase  has an extra }.
+<inserted text> 
+                \par 
+l.33 {\thechapter}{1em}{\MakeUppercase}
+                                       
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+./preamble.tex:33: Paragraph ended before \MakeUppercase  was complete.
+<to be read again> 
+                   \par 
+l.33 {\thechapter}{1em}{\MakeUppercase}
+                                       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip67
+\cftbeforetoctitleskip=\skip68
+\cftaftertoctitleskip=\skip69
+\cftbeforepartskip=\skip70
+\cftpartnumwidth=\skip71
+\cftpartindent=\skip72
+\cftbeforechapskip=\skip73
+\cftchapindent=\skip74
+\cftchapnumwidth=\skip75
+\cftbeforesecskip=\skip76
+\cftsecindent=\skip77
+\cftsecnumwidth=\skip78
+\cftbeforesubsecskip=\skip79
+\cftsubsecindent=\skip80
+\cftsubsecnumwidth=\skip81
+\cftbeforesubsubsecskip=\skip82
+\cftsubsubsecindent=\skip83
+\cftsubsubsecnumwidth=\skip84
+\cftbeforeparaskip=\skip85
+\cftparaindent=\skip86
+\cftparanumwidth=\skip87
+\cftbeforesubparaskip=\skip88
+\cftsubparaindent=\skip89
+\cftsubparanumwidth=\skip90
+\cftbeforeloftitleskip=\skip91
+\cftafterloftitleskip=\skip92
+\cftbeforefigskip=\skip93
+\cftfigindent=\skip94
+\cftfignumwidth=\skip95
+\c@lofdepth=\count297
+\c@lotdepth=\count298
+\cftbeforelottitleskip=\skip96
+\cftafterlottitleskip=\skip97
+\cftbeforetabskip=\skip98
+\cfttabindent=\skip99
+\cfttabnumwidth=\skip100
+)
+(./config-lists.tex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip101
+\enit@outerparindent=\dimen166
+\enit@toks=\toks21
+\enit@inbox=\box54
+\enit@count@id=\count299
+\enitdp@description=\count300
+))
+(./config-formulas.tex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip102
+\thm@postskip=\skip103
+\thm@headsep=\skip104
+\dth@everypar=\toks27
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip105
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks28
+\ex@=\dimen167
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen168
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count301
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count302
+\leftroot@=\count303
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count304
+\DOTSCASE@=\count305
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen169
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count306
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count307
+\dotsspace@=\muskip17
+\c@parentequation=\count308
+\dspbrk@lvl=\count309
+\tag@help=\toks29
+\row@=\count310
+\column@=\count311
+\maxfields@=\count312
+\andhelp@=\toks30
+\eqnshift@=\dimen170
+\alignsep@=\dimen171
+\tagshift@=\dimen172
+\tagwidth@=\dimen173
+\totwidth@=\dimen174
+\lineht@=\dimen175
+\@envbody=\toks31
+\multlinegap=\skip106
+\multlinetaggap=\skip107
+\mathdisplay@stack=\toks32
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+\c@theorem=\count313
+)
+(./config-tables.tex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen176
+\lightrulewidth=\dimen177
+\cmidrulewidth=\dimen178
+\belowrulesep=\dimen179
+\belowbottomsep=\dimen180
+\aboverulesep=\dimen181
+\abovetopsep=\dimen182
+\cmidrulesep=\dimen183
+\cmidrulekern=\dimen184
+\defaultaddspace=\dimen185
+\@cmidla=\count314
+\@cmidlb=\count315
+\@aboverulesep=\dimen186
+\@belowrulesep=\dimen187
+\@thisruleclass=\count316
+\@lastruleclass=\count317
+\@thisrulewidth=\dimen188
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip108
+\multirow@cntb=\count318
+\multirow@dima=\skip109
+\bigstrutjot=\dimen189
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen190
+\captionmargin=\dimen191
+\caption@leftmargin=\dimen192
+\caption@rightmargin=\dimen193
+\caption@width=\dimen194
+\caption@indent=\dimen195
+\caption@parindent=\dimen196
+\caption@hangindent=\dimen197
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count319
+\c@continuedfloat=\count320
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip110
+\LTright=\skip111
+\LTpre=\skip112
+\LTpost=\skip113
+\LTchunksize=\count321
+\LTcapwidth=\dimen198
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count322
+\LT@rows=\count323
+\c@LT@tables=\count324
+\c@LT@chunks=\count325
+\LT@p@ftn=\toks33
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count326
+))
+(./config-images.tex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen199
+\Gin@req@width=\dimen256
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count327
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count328
+\c@listtotal=\count329
+\c@listcount=\count330
+\c@liststart=\count331
+\c@liststop=\count332
+\c@citecount=\count333
+\c@citetotal=\count334
+\c@multicitecount=\count335
+\c@multicitetotal=\count336
+\c@instcount=\count337
+\c@maxnames=\count338
+\c@minnames=\count339
+\c@maxitems=\count340
+\c@minitems=\count341
+\c@citecounter=\count342
+\c@maxcitecounter=\count343
+\c@savedcitecounter=\count344
+\c@uniquelist=\count345
+\c@uniquename=\count346
+\c@refsection=\count347
+\c@refsegment=\count348
+\c@maxextratitle=\count349
+\c@maxextratitleyear=\count350
+\c@maxextraname=\count351
+\c@maxextradate=\count352
+\c@maxextraalpha=\count353
+\c@abbrvpenalty=\count354
+\c@highnamepenalty=\count355
+\c@lownamepenalty=\count356
+\c@maxparens=\count357
+\c@parenlevel=\count358
+\blx@tempcnta=\count359
+\blx@tempcntb=\count360
+\blx@tempcntc=\count361
+\c@blx@maxsection=\count362
+\blx@maxsegment@0=\count363
+\blx@notetype=\count364
+\blx@parenlevel@text=\count365
+\blx@parenlevel@foot=\count366
+\blx@sectionciteorder@0=\count367
+\blx@sectionciteorderinternal@0=\count368
+\blx@entrysetcounter=\count369
+\blx@biblioinstance=\count370
+\labelnumberwidth=\skip114
+\labelalphawidth=\skip115
+\biblabelsep=\skip116
+\bibitemsep=\skip117
+\bibnamesep=\skip118
+\bibinitsep=\skip119
+\bibparsep=\skip120
+\bibhang=\skip121
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language91
+\c@mincomprange=\count371
+\c@maxcomprange=\count372
+\c@mincompwidth=\count373
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'gost-numeric.dbx' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-gost/gost-numeric.dbx
+File: gost-numeric.dbx 2023/04/25 v1.24 biblatex-gost data model
+Package biblatex Info: Trying to load biblatex-gost data model...
+Package biblatex Info: ... file 'biblatex-gost.dbx' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-gost/biblatex-gost.dbx
+File: biblatex-gost.dbx 2023/04/25 v1.24 biblatex-gost data model
+))
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count374
+\c@savedafterword=\count375
+\c@annotator=\count376
+\c@savedannotator=\count377
+\c@author=\count378
+\c@savedauthor=\count379
+\c@bookauthor=\count380
+\c@savedbookauthor=\count381
+\c@commentator=\count382
+\c@savedcommentator=\count383
+\c@editor=\count384
+\c@savededitor=\count385
+\c@editora=\count386
+\c@savededitora=\count387
+\c@editorb=\count388
+\c@savededitorb=\count389
+\c@editorc=\count390
+\c@savededitorc=\count391
+\c@foreword=\count392
+\c@savedforeword=\count393
+\c@holder=\count394
+\c@savedholder=\count395
+\c@introduction=\count396
+\c@savedintroduction=\count397
+\c@namea=\count398
+\c@savednamea=\count399
+\c@nameb=\count400
+\c@savednameb=\count401
+\c@namec=\count402
+\c@savednamec=\count403
+\c@translator=\count404
+\c@savedtranslator=\count405
+\c@shortauthor=\count406
+\c@savedshortauthor=\count407
+\c@shorteditor=\count408
+\c@savedshorteditor=\count409
+\c@booktranslator=\count410
+\c@savedbooktranslator=\count411
+\c@bookcommentator=\count412
+\c@savedbookcommentator=\count413
+\c@bookannotator=\count414
+\c@savedbookannotator=\count415
+\c@bookintroduction=\count416
+\c@savedbookintroduction=\count417
+\c@bookforeword=\count418
+\c@savedbookforeword=\count419
+\c@bookafterword=\count420
+\c@savedbookafterword=\count421
+\c@labelname=\count422
+\c@savedlabelname=\count423
+\c@institution=\count424
+\c@savedinstitution=\count425
+\c@lista=\count426
+\c@savedlista=\count427
+\c@listb=\count428
+\c@savedlistb=\count429
+\c@listc=\count430
+\c@savedlistc=\count431
+\c@listd=\count432
+\c@savedlistd=\count433
+\c@liste=\count434
+\c@savedliste=\count435
+\c@listf=\count436
+\c@savedlistf=\count437
+\c@location=\count438
+\c@savedlocation=\count439
+\c@organization=\count440
+\c@savedorganization=\count441
+\c@origlocation=\count442
+\c@savedoriglocation=\count443
+\c@origpublisher=\count444
+\c@savedorigpublisher=\count445
+\c@publisher=\count446
+\c@savedpublisher=\count447
+\c@language=\count448
+\c@savedlanguage=\count449
+\c@origlanguage=\count450
+\c@savedoriglanguage=\count451
+\c@bookoriglanguage=\count452
+\c@savedbookoriglanguage=\count453
+\c@specdata=\count454
+\c@savedspecdata=\count455
+\c@credits=\count456
+\c@savedcredits=\count457
+\c@bookcredits=\count458
+\c@savedbookcredits=\count459
+\c@editioncredits=\count460
+\c@savededitioncredits=\count461
+\c@pageref=\count462
+\c@savedpageref=\count463
+\shorthandwidth=\skip122
+\shortjournalwidth=\skip123
+\shortserieswidth=\skip124
+\shorttitlewidth=\skip125
+\shortauthorwidth=\skip126
+\shorteditorwidth=\skip127
+\locallabelnumberwidth=\skip128
+\locallabelalphawidth=\skip129
+\localshorthandwidth=\skip130
+\localshortjournalwidth=\skip131
+\localshortserieswidth=\skip132
+\localshorttitlewidth=\skip133
+\localshortauthorwidth=\skip134
+\localshorteditorwidth=\skip135
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count464
+\c@textcitetotal=\count465
+\c@textcitemaxnames=\count466
+\c@biburlbigbreakpenalty=\count467
+\c@biburlbreakpenalty=\count468
+\c@biburlnumpenalty=\count469
+\c@biburlucpenalty=\count470
+\c@biburllcpenalty=\count471
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count472
+)
+Package biblatex Info: Trying to load bibliography style 'gost-numeric'...
+Package biblatex Info: ... file 'gost-numeric.bbx' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-gost/gost-numeric.bbx
+File: gost-numeric.bbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load bibliography style 'gost-standard'...
+Package biblatex Info: ... file 'gost-standard.bbx' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-gost/gost-standard.bbx
+File: gost-standard.bbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load biblatex-gost generic definitions...
+Package biblatex Info: ... file 'biblatex-gost.def' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-gost/biblatex-gost.def
+File: biblatex-gost.def 2023/04/25 v1.24 biblatex-gost styles
+)
+\c@blx@gost@pointer=\count473
+\c@bbx:relatedcount=\count474
+\c@bbx:relatedtotal=\count475
+Package biblatex Info: Redefining autocite command 'footnote'.
+Package biblatex Info: Redefining autocite command 'superscript'.
+))
+Package biblatex Info: Trying to load citation style 'gost-numeric'...
+Package biblatex Info: ... file 'gost-numeric.cbx' found.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-gost/gost-numeric.cbx
+File: gost-numeric.cbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count476
+\c@cbx@tempcntb=\count477
+\c@cbx@tempcntc=\count478
+\c@cbx@tempcntd=\count479
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2026-01-19 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+)))
+\@quotelevel=\count480
+\@quotereset=\count481
+
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 6.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 6.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 6.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 6.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 6.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 6.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 6.
+LaTeX Font Info:    Redeclaring math accent \check on input line 6.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 6.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 6.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 6.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 6.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 6.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 6.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 6
+.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 6.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+6.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 6.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 6.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
+6.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 6.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 6.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
+input line 6.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
+e 6.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 6.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 6.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 469.47049pt, 42.67912pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=469.47049pt
+* \textheight=731.23584pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-54.36449pt
+* \headheight=14.0pt
+* \headsep=25.0pt
+* \topskip=14.0pt
+* \footskip=30.0pt
+* \marginparwidth=15.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'english' -> 'english-gost'...
+Package biblatex Info: ... file 'english-gost.lbx' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-gost/english-gost.lbx
+File: english-gost.lbx 2023/04/25 v1.24 biblatex-gost styles
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+))
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' not found.
+
+No file main.bbl.
+Package biblatex Info: Reference section=0 on input line 6.
+Package biblatex Info: Reference segment=0 on input line 6.
+[4
+
+]
+No file main.toc.
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+(./abbreviations.tex [5
+
+])
+Overfull \hbox (55.64449pt too wide) in paragraph at lines 6--26
+[]\TU/TimesNewRoman(0)/m/n/14.4 ADDIE — Analyze, Design, Develop, Implement, Ev
+aluate (методология проектирования
+ []
+
+
+Overfull \hbox (50.85007pt too wide) in paragraph at lines 6--26
+\TU/TimesNewRoman(0)/m/n/14.4 API — Application Programming Interface (интерфей
+с программирования приложений) 
+ []
+
+
+Overfull \hbox (7.12509pt too wide) in paragraph at lines 6--26
+\TU/TimesNewRoman(0)/m/n/14.4 CI/CD — Continuous Integration / Continuous Deliv
+ery (непрерывная интеграция
+ []
+
+
+Overfull \hbox (37.89851pt too wide) in paragraph at lines 6--26
+\TU/TimesNewRoman(0)/m/n/14.4 SAM — Successive Approximation Model (итеративная
+ методология проектирования
+ []
+
+
+Overfull \hbox (30.87196pt too wide) in paragraph at lines 6--26
+\TU/TimesNewRoman(0)/m/n/14.4 SAM — Serviceable Addressable Market (доступный р
+ынок) [в контексте рыночного
+ []
+
+[6
+
+] [7] (./terms.tex)
+Overfull \hbox (51.7555pt too wide) in paragraph at lines 7--30
+\TU/TimesNewRoman(0)/m/n/14.4 Нейронная сеть — математическая модель, имитирующ
+ая работу мозга, используемая
+ []
+
+[8
+
+
+] (./intro.tex
+
+LaTeX Warning: Citation 'edtech_market_report_2024' on page 9 undefined on inpu
+t line 9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+[]\TU/TimesNewRoman(0)/m/n/14.4 Автоматизация разработки образовательных матери
+алов на основе
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 5--15
+\TU/TimesNewRoman(0)/m/n/14.4 По оценкам аналитических агентств, мировой рынок 
+корпоративного
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 5--15
+\TU/TimesNewRoman(0)/m/n/14.4 при этом главным сдерживающим фактором роста оста
+ётся высокая
+ []
+
+
+Underfull \hbox (badness 4120) in paragraph at lines 5--15
+\TU/TimesNewRoman(0)/m/n/14.4 стоимость и длительность создания качественного у
+чебного контента.
+ []
+
+
+Underfull \hbox (badness 2689) in paragraph at lines 5--15
+\TU/TimesNewRoman(0)/m/n/14.4 специализированных педагогических компетенций, ко
+торыми не всегда
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--24
+[]\TU/TimesNewRoman(0)/m/n/14.4 Существующие AI-инструменты для автогенерации к
+урсов (Course-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--24
+\TU/TimesNewRoman(0)/m/n/14.4 box AI, iSpring AI) предоставляют one-shot генера
+цию на основе
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--24
+\TU/TimesNewRoman(0)/m/n/14.4 единственного промпта, не поддерживают научно обо
+снованные
+ []
+
+
+Underfull \hbox (badness 3826) in paragraph at lines 16--24
+\TU/TimesNewRoman(0)/m/n/14.4 методологии проектирования учебного процесса (ADD
+IE, SAM, Back-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--24
+\TU/TimesNewRoman(0)/m/n/14.4 ward Design) и ориентированы преимущественно на а
+нглоязычный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
+\TU/TimesNewRoman(0)/m/n/14.4 методический ассистент, автоматизирующий создание
+, упаковку
+ []
+
+
+Underfull \hbox (badness 6859) in paragraph at lines 34--38
+\TU/TimesNewRoman(0)/m/n/14.4 ассистента, обеспечивающего автоматизированное со
+здание структуры
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 34--38
+\TU/TimesNewRoman(0)/m/n/14.4 и контента учебных курсов на основе входных докум
+ентов заказчика
+ []
+
+[9
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+[]\TU/TimesNewRoman(0)/m/n/14.4 оценить рыночный потенциал решения (TAM/SAM/SOM
+)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+[]\TU/TimesNewRoman(0)/m/n/14.4 спроектировать мультиагентную архитектуру конве
+йера генерации
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+\TU/TimesNewRoman(0)/m/n/14.4 курсов и обосновать выбор технологического стека 
+через
+ []
+
+
+Underfull \hbox (badness 3579) in paragraph at lines 49--51
+[]\TU/TimesNewRoman(0)/m/n/14.4 провести валидацию системы: автоматизированную 
+оценку (Ragas,
+ []
+
+
+Underfull \hbox (badness 5316) in paragraph at lines 49--51
+\TU/TimesNewRoman(0)/m/n/14.4 Bloom’s coverage), экспертный слепой тест (n = 5–
+8 методистов)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+[]\TU/TimesNewRoman(0)/m/n/14.4 оценить бизнес-потенциал: unit-экономику, финан
+совую модель
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+\TU/TimesNewRoman(0)/m/n/14.4 и провести Customer Development для подтверждения
+ Prob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--65
+[]\TU/TimesNewRoman(0)/b/n/14.4 Научная новизна \TU/TimesNewRoman(0)/m/n/14.4 р
+аботы состоит в следующем: предложена
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--65
+\TU/TimesNewRoman(0)/m/n/14.4 и экспериментально верифицирована мультиагентная 
+архитектура
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--65
+\TU/TimesNewRoman(0)/m/n/14.4 методологическая модель проектирования (ADDIE / S
+AM / Back-
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 55--65
+\TU/TimesNewRoman(0)/m/n/14.4 ward Design) как переключаемый системный промпт, 
+(2) stateful DAG-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--65
+\TU/TimesNewRoman(0)/m/n/14.4 на русскоязычном образовательном корпусе (Qdrant 
++ deepvk/USER-
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 55--65
+\TU/TimesNewRoman(0)/m/n/14.4 bge-m3). Показано, что данная архитектура превосх
+одит single-prompt
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 68--71
+[]\TU/TimesNewRoman(0)/m/n/14.4 Мультиагентный конвейер с вариативной методолог
+ической моделью
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 68--71
+\TU/TimesNewRoman(0)/m/n/14.4 (ADDIE/SAM/Backward Design) сокращает время созда
+ния структуры
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+[]\TU/TimesNewRoman(0)/m/n/14.4 Stateful DAG-архитектура (LangGraph) обеспечива
+ет статистически
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+\TU/TimesNewRoman(0)/m/n/14.4 значимо более высокое качество структуры курса (f
+aithfulness
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 71--74
+\TU/TimesNewRoman(0)/m/n/14.4 и Bloom’s coverage) по сравнению с single-prompt 
+подходом на той
+ []
+
+[10]
+Underfull \hbox (badness 2512) in paragraph at lines 78--82
+\TU/TimesNewRoman(0)/m/n/14.4 Document Ingestion Pipeline и агентный конвейер с
+ методологией AD-
+ []
+
+) (./chapter1.tex [11]
+Chapter 1.
+
+LaTeX Warning: Citation 'chapman_elearning_hours_2010' on page 12 undefined on 
+input line 19.
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 9--20
+\TU/TimesNewRoman(0)/m/n/14.4 масштабируемым процессом. Даже при наличии готово
+го экспертного
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 9--20
+\TU/TimesNewRoman(0)/m/n/14.4 материала необходимо определить целевую аудиторию
+, сформулировать
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--20
+\TU/TimesNewRoman(0)/m/n/14.4 подачи, подготовить оценочные материалы и синхрон
+изировать всё
+ []
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 9--20
+\TU/TimesNewRoman(0)/m/n/14.4 это с требованиями LMS. По оценке Chapman Allianc
+e, производство
+ []
+
+
+Underfull \hbox (badness 5832) in paragraph at lines 9--20
+\TU/TimesNewRoman(0)/m/n/14.4 одного часа eLearning-контента требует от 42 до 4
+90 часов работы
+ []
+
+
+Underfull \hbox (badness 3989) in paragraph at lines 9--20
+\TU/TimesNewRoman(0)/m/n/14.4 в зависимости от сложности сценария, мультимедийн
+ости и глубины
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--20
+\TU/TimesNewRoman(0)/m/n/14.4 методической проработки; для большинства практиче
+ских проектов
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 9--20
+\TU/TimesNewRoman(0)/m/n/14.4 реалистичный коридор составляет 40–200 часов на о
+дин час готового
+ []
+
+
+LaTeX Warning: Citation 'smart_ranking_elearning_2024' on page 12 undefined on 
+input line 32.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
+\TU/TimesNewRoman(0)/m/n/14.4 обучения разработка одного курса силами подрядчик
+а обычно
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 33--37
+\TU/TimesNewRoman(0)/m/n/14.4 пересобирать учебные материалы, из-за чего курс б
+ыстро расходится
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--49
+\TU/TimesNewRoman(0)/m/n/14.4 разработки, но и в разрыве между \TU/TimesNewRoma
+n(0)/m/it/14.4 предметной экспертизой
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 41--49
+\TU/TimesNewRoman(0)/m/n/14.4 и \TU/TimesNewRoman(0)/m/it/14.4 образовательной 
+упаковкой\TU/TimesNewRoman(0)/m/n/14.4 . В корпоративной среде инициатором
+ []
+
+[12
+
+]
+Underfull \hbox (badness 1354) in paragraph at lines 50--57
+\TU/TimesNewRoman(0)/m/n/14.4 материал часто остаётся на уровне «экспертного ко
+нспекта» без явных
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 50--57
+\TU/TimesNewRoman(0)/m/n/14.4 учебных результатов и уровней освоения. Во-вторых
+, структура курса
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 50--57
+\TU/TimesNewRoman(0)/m/n/14.4 повторного подключения методиста, даже если измен
+ился только один
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
+[]\TU/TimesNewRoman(0)/m/n/14.4 Именно в этом разрыве возникает ниша для интелл
+ектуального
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 58--62
+\TU/TimesNewRoman(0)/m/n/14.4 методического ассистента: система должна не прост
+о суммаризировать
+ []
+
+
+LaTeX Warning: Citation 'fitzpatrick_mom_test_2013' on page 13 undefined on inp
+ut line 67.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для первичной проверки гипотез о проблеме прове
+дено
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+\TU/TimesNewRoman(0)/m/n/14.4 20 глубинных B2B-интервью с HR-специалистами, L&D
+-
+ []
+
+
+Underfull \hbox (badness 4739) in paragraph at lines 65--70
+\TU/TimesNewRoman(0)/m/n/14.4 менеджерами, методистами и корпоративными тренера
+ми по подходу
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
+[]\TU/TimesNewRoman(0)/b/n/14.4 70% \TU/TimesNewRoman(0)/m/n/14.4 респондентов 
+называют время подготовки курса главным
+ []
+
+
+Underfull \hbox (badness 4819) in paragraph at lines 79--82
+\TU/TimesNewRoman(0)/m/n/14.4 разработки, если он не ухудшает качество структур
+ы и позволяет
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 84--89
+[]\TU/TimesNewRoman(0)/m/n/14.4 Качественные инсайты из интервью также оказалис
+ь устойчивыми.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--89
+\TU/TimesNewRoman(0)/m/n/14.4 Респонденты чаще жаловались не на отсутствие исто
+чников, а на
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 92--97
+\TU/TimesNewRoman(0)/m/n/14.4 интервью на базе функционального прототипа ИИ-мет
+одиста (сценарий
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 104--107
+[]\TU/TimesNewRoman(0)/m/n/14.4 укладывается ли воспринимаемая ценность решения
+ в экономику,
+ []
+
+
+Underfull \hbox (badness 6658) in paragraph at lines 104--107
+\TU/TimesNewRoman(0)/m/n/14.4 сопоставимую со стоимостью аутсорс-разработки или
+ внутреннего
+ []
+
+
+LaTeX Warning: Citation 'grandview_elearning_2025' on page 14 undefined on inpu
+t line 118.
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 115--121
+[]\TU/TimesNewRoman(0)/m/n/14.4 Глобальный рынок e-learning services демонстрир
+ует устойчивый рост:
+ []
+
+
+Underfull \hbox (badness 7064) in paragraph at lines 115--121
+\TU/TimesNewRoman(0)/m/n/14.4 по оценке Grand View Research, его объём составил
+ $299.67 млрд
+ []
+
+
+LaTeX Warning: Citation 'smart_ranking_elearning_2024' on page 14 undefined on 
+input line 126.
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 122--130
+\TU/TimesNewRoman(0)/m/n/14.4 консервативная логика. По данным Smart Ranking, о
+бъём российского
+ []
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 122--130
+\TU/TimesNewRoman(0)/m/n/14.4 EdTech-рынка в 2023 году достиг 119.33 млрд руб.,
+ а доля сегмента
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--130
+\TU/TimesNewRoman(0)/m/n/14.4 «разработчики и платформы» составляла 13% от обще
+й структуры
+ []
+
+
+Underfull \hbox (badness 7685) in paragraph at lines 122--130
+\TU/TimesNewRoman(0)/m/n/14.4 рынка [[]]. Если рассматривать именно
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 122--130
+\TU/TimesNewRoman(0)/m/n/14.4 платформенной и контентной автоматизации можно оц
+енить примерно
+ []
+
+[14]
+
+LaTeX Warning: Citation 'coursebox_ai_2024' on page 15 undefined on input line 
+150.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--156
+[]\TU/TimesNewRoman(0)/b/n/14.4 Coursebox AI \TU/TimesNewRoman(0)/m/n/14.4 пози
+ционируется как AI course creator и позволяет
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--156
+\TU/TimesNewRoman(0)/m/n/14.4 преобразовывать документы, слайды, видео и URL в 
+курс,
+ []
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 146--156
+\TU/TimesNewRoman(0)/m/n/14.4 автоматически генерировать тесты, видео, изображе
+ния и публиковать
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--156
+\TU/TimesNewRoman(0)/m/n/14.4 результат в собственную LMS либо экспортировать в
+ SCORM/LTI
+ []
+
+
+Underfull \hbox (badness 7468) in paragraph at lines 146--156
+\TU/TimesNewRoman(0)/m/n/14.4 форматах [[]]. Это один из наиболее близких по
+ []
+
+
+Underfull \hbox (badness 2126) in paragraph at lines 146--156
+\TU/TimesNewRoman(0)/m/n/14.4 остаётся в первую очередь \TU/TimesNewRoman(0)/m/
+it/14.4 content-first\TU/TimesNewRoman(0)/m/n/14.4 : сильная сторона продукта —
+
+ []
+
+
+LaTeX Warning: Citation 'articulate_ai_2025' on page 15 undefined on input line
+ 163.
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 157--164
+[]\TU/TimesNewRoman(0)/b/n/14.4 Articulate 360 AI \TU/TimesNewRoman(0)/m/n/14.4
+ добавляет AI-функции в зрелый стек корпоративного
+ []
+
+
+Underfull \hbox (badness 3482) in paragraph at lines 157--164
+\TU/TimesNewRoman(0)/m/n/14.4 authoring: создание outline, чернового текста, пе
+ревода, изображений
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 157--164
+\TU/TimesNewRoman(0)/m/n/14.4 и voiceover внутри экосистемы Articulate. Продукт
+ хорошо встроен в
+ []
+
+
+Underfull \hbox (badness 4981) in paragraph at lines 157--164
+\TU/TimesNewRoman(0)/m/n/14.4 привычный workflow instructional designer, но ост
+аётся инструментом
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--164
+\TU/TimesNewRoman(0)/m/n/14.4 повышения производительности автора, а не самосто
+ятельным
+ []
+
+
+Underfull \hbox (badness 5667) in paragraph at lines 157--164
+\TU/TimesNewRoman(0)/m/n/14.4 методическим конвейером с RAG-слоем, факт-чекинго
+м и on-premise
+ []
+
+
+LaTeX Warning: Citation 'ispring_suite_ai_2026' on page 15 undefined on input l
+ine 168.
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 165--175
+\TU/TimesNewRoman(0)/m/n/14.4 добавлены AI Course Creation Helper, AI Translato
+r, AI Image Genera-
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 165--175
+\TU/TimesNewRoman(0)/m/n/14.4 tor, а также text-to-speech и другие инструменты 
+ускорения разработки
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--175
+\TU/TimesNewRoman(0)/m/n/14.4 курса [[]]. Сильной стороной iSpring является
+ []
+
+[15]
+
+LaTeX Warning: Citation 'synthesia_ai_training_2025' on page 16 undefined on in
+put line 179.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--182
+[]\TU/TimesNewRoman(0)/b/n/14.4 Synthesia \TU/TimesNewRoman(0)/m/n/14.4 лидируе
+т в классе AI-видеогенерации для обучения и
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 176--182
+\TU/TimesNewRoman(0)/m/n/14.4 корпоративных коммуникаций: её ценность сосредото
+чена в создании
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--182
+\TU/TimesNewRoman(0)/m/n/14.4 аватарных роликов, voiceover и мультиязычного вид
+ео-контента для
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--182
+\TU/TimesNewRoman(0)/m/n/14.4 обучения и L&D-задач [[]]. Но Synthesia
+ []
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 176--182
+\TU/TimesNewRoman(0)/m/n/14.4 не закрывает задачу проектирования учебной структ
+уры и не служит
+ []
+
+
+LaTeX Warning: Citation 'notebooklm_audio_2025' on page 16 undefined on input l
+ine 190.
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 185--193
+\TU/TimesNewRoman(0)/m/n/14.4 для изучения сложных источников  [[]]. Однако
+ []
+
+
+LaTeX Warning: Citation 'getcourse_platform_2026' on page 16 undefined on input
+ line 197.
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 194--201
+[]\TU/TimesNewRoman(0)/b/n/14.4 GetCourse \TU/TimesNewRoman(0)/m/n/14.4 являетс
+я одним из крупнейших российских игроков рынка
+ []
+
+
+Underfull \hbox (badness 3333) in paragraph at lines 194--201
+\TU/TimesNewRoman(0)/m/n/14.4 LMS/онлайн-школ: платформа сообщает о 50,000+ кли
+ентах, 16 млн
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 194--201
+\TU/TimesNewRoman(0)/m/n/14.4 ИИ-методист потенциально может встраиваться как с
+ервис генерации и
+ []
+
+
+LaTeX Warning: Reference `tab:competitors' on page 16 undefined on input line 2
+04.
+
+
+Underfull \hbox (badness 4595) in paragraph at lines 204--209
+[]\TU/TimesNewRoman(0)/m/n/14.4 В таблице [] приведено сравнение решений по кри
+териям, которые
+ []
+
+
+Underfull \hbox (badness 3623) in paragraph at lines 204--209
+\TU/TimesNewRoman(0)/m/n/14.4 оказались значимыми в Customer Development: спосо
+бность работать
+ []
+
+
+Underfull \hbox (badness 4859) in paragraph at lines 204--209
+\TU/TimesNewRoman(0)/m/n/14.4 от исходного документа, наличие встроенной педаго
+гической логики,
+ []
+
+
+Overfull \hbox (15.18806pt too wide) in paragraph at lines 217--218
+[]\TU/TimesNewRoman(0)/b/n/14.4 Coursebox| 
+ []
+
+
+Overfull \hbox (11.15915pt too wide) in paragraph at lines 218--219
+[]\TU/TimesNewRoman(0)/b/n/14.4 Articulate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+[]\TU/TimesNewRoman(0)/b/n/14.4 iSpring
+ []
+
+
+Overfull \hbox (8.00212pt too wide) in paragraph at lines 220--221
+[]\TU/TimesNewRoman(0)/b/n/14.4 Synthesia| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+[]\TU/TimesNewRoman(0)/b/n/14.4 ИИ-
+ []
+
+
+Overfull \hbox (7.69978pt too wide) in paragraph at lines 221--222
+\TU/TimesNewRoman(0)/b/n/14.4 методист| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
+[]\TU/TimesNewRoman(0)/m/n/14.4 Генерация
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
+\TU/TimesNewRoman(0)/m/n/14.4 курса из
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+[]\TU/TimesNewRoman(0)/m/n/14.4 Явная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+\TU/TimesNewRoman(0)/m/n/14.4 методология
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+[]\TU/TimesNewRoman(0)/m/n/14.4 Русскоязычный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+[]\TU/TimesNewRoman(0)/m/n/14.4 On-premise /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+\TU/TimesNewRoman(0)/m/n/14.4 суверенитет
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+[]\TU/TimesNewRoman(0)/m/n/14.4 AI-аудио /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+[]\TU/TimesNewRoman(0)/m/n/14.4 Авто-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+\TU/TimesNewRoman(0)/m/n/14.4 актуализация
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+[]\TU/TimesNewRoman(0)/m/n/14.4 Human-in-the-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+[]\TU/TimesNewRoman(0)/m/n/14.4 Интеграция с
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+\TU/TimesNewRoman(0)/m/n/14.4 LMS-потоком
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--295
+\TU/TimesNewRoman(0)/m/n/14.4 для отдельных стадий курса: генерации outline, пе
+ревода, видео,
+ []
+
+[16]
+Underfull \hbox (badness 5637) in paragraph at lines 300--302
+[]\TU/TimesNewRoman(0)/m/n/14.4 работу от внутреннего документа организации как
+ от первичного
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 302--304
+[]\TU/TimesNewRoman(0)/m/n/14.4 явную методологическую логику проектирования ку
+рса, а не только
+ []
+
+[17]
+Underfull \hbox (badness 2512) in paragraph at lines 305--307
+[]\TU/TimesNewRoman(0)/m/n/14.4 механизм повторной генерации и обновления курса
+ при изменении
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 309--311
+[]\TU/TimesNewRoman(0)/m/n/14.4 Именно этот разрыв и определяет пространство дл
+я ИИ-методиста как
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--316
+[]\TU/TimesNewRoman(0)/m/n/14.4 Некопируемое преимущество ИИ-методиста формируе
+тся не одной
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--323
+\TU/TimesNewRoman(0)/m/n/14.4 AI/LMS-инфраструктуре Adapstory без вывода данных
+ клиента во
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 323--326
+[]\TU/TimesNewRoman(0)/b/n/14.4 платформенный слой \TU/TimesNewRoman(0)/m/n/14.
+4 — интеграция с экосистемой Adapstory, где
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--326
+\TU/TimesNewRoman(0)/m/n/14.4 генерация курса, хранение артефактов, публикация 
+и дальнейшая
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 337--339
+[]\TU/TimesNewRoman(0)/m/n/14.4 На основании анализа предметной области и проду
+ктового ландшафта
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 343--344
+[]\TU/TimesNewRoman(0)/m/it/14.4 «В какой мере stateful мультиагентная архитект
+ура с вариативной
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+\TU/TimesNewRoman(0)/m/it/14.4 методологической моделью превосходит single-prom
+pt подход при
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+\TU/TimesNewRoman(0)/m/it/14.4 автоматизированном создании русскоязычных образо
+вательных
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 343--344
+\TU/TimesNewRoman(0)/m/it/14.4 материалов по показателям faithfulness, Bloom’s 
+coverage и времени
+ []
+
+
+LaTeX Warning: Citation 'kasneci_llm_education_2023' on page 18 undefined on in
+put line 352.
+
+
+LaTeX Warning: Citation 'pardos_llm_instructional_2023' on page 18 undefined on
+ input line 355.
+
+
+LaTeX Warning: Citation 'tack_aied_2022' on page 18 undefined on input line 356
+.
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 351--359
+\TU/TimesNewRoman(0)/m/n/14.4 Kasneci et al. [[]] показывают, что большие
+ []
+
+
+Underfull \hbox (badness 6842) in paragraph at lines 351--359
+\TU/TimesNewRoman(0)/m/n/14.4 учебных заданий и материалов для самостоятельной 
+работы. Par-
+ []
+
+
+Underfull \hbox (badness 4492) in paragraph at lines 351--359
+\TU/TimesNewRoman(0)/m/n/14.4 dos [[]] и Tack et al.  [[]]
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 351--359
+\TU/TimesNewRoman(0)/m/n/14.4 указывают, что наибольший потенциал LLM возникает
+ в задачах, где
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 360--366
+[]\TU/TimesNewRoman(0)/m/n/14.4 Однако у большинства существующих работ есть по
+вторяющееся
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 360--366
+\TU/TimesNewRoman(0)/m/n/14.4 ограничение: генерация строится как one-shot или 
+short-chain prompt
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 360--366
+\TU/TimesNewRoman(0)/m/n/14.4 слабо связаны с содержанием, а уровни когнитивной
+ сложности не
+ []
+
+
+LaTeX Warning: Citation 'wu_autogen_2023' on page 19 undefined on input line 37
+2.
+
+
+LaTeX Warning: Citation 'shinn_reflexion_2023' on page 19 undefined on input li
+ne 374.
+
+
+LaTeX Warning: Citation 'wang_plan_and_execute_2023' on page 19 undefined on in
+put line 375.
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 369--377
+\TU/TimesNewRoman(0)/m/n/14.4 Wu et al. [[]] демонстрируют, что распределение р
+олей
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 369--377
+\TU/TimesNewRoman(0)/m/n/14.4 между агентами повышает управляемость и качество 
+сложных LLM-
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 378--383
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для настоящей работы важно, что генерация курса
+ является именно
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--383
+\TU/TimesNewRoman(0)/m/it/14.4 многошаговой \TU/TimesNewRoman(0)/m/n/14.4 задач
+ей: нужно разобрать источник, сформулировать
+ []
+
+
+LaTeX Warning: Citation 'lewis_rag_2020' on page 19 undefined on input line 388
+.
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 386--391
+[]\TU/TimesNewRoman(0)/m/n/14.4 RAG-подходы позволяют опираться на внешний корп
+ус знаний и тем
+ []
+
+[19]
+
+LaTeX Warning: Citation 'es_ragas_2023' on page 20 undefined on input line 392.
+
+
+
+LaTeX Warning: Citation 'dalle3_2023' on page 20 undefined on input line 403.
+
+
+LaTeX Warning: Citation 'flux_2024' on page 20 undefined on input line 403.
+
+
+LaTeX Warning: Citation 'silero_tts_2024' on page 20 undefined on input line 40
+6.
+
+
+LaTeX Warning: Citation 'elevenlabs_2024' on page 20 undefined on input line 40
+6.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--407
+[]\TU/TimesNewRoman(0)/m/n/14.4 Отдельным направлением выступает генерация муль
+тимедийных
+ []
+
+
+Underfull \hbox (badness 4569) in paragraph at lines 400--407
+\TU/TimesNewRoman(0)/m/n/14.4 модели, включая DALL-E 3 и FLUX.1, позволяют быст
+ро создавать
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 408--412
+[]\TU/TimesNewRoman(0)/m/n/14.4 Однако в контексте данной работы мультимедиа ра
+ссматривается как
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 408--412
+\TU/TimesNewRoman(0)/m/n/14.4 вспомогательный слой. Научная новизна концентриру
+ется не в самой
+ []
+
+
+LaTeX Warning: Citation 'addie_molenda_2003' on page 20 undefined on input line
+ 415.
+
+
+LaTeX Warning: Citation 'allen_sam_2012' on page 20 undefined on input line 415
+.
+
+
+LaTeX Warning: Citation 'wiggins_backward_design_2005' on page 20 undefined on 
+input line 416.
+
+
+Underfull \hbox (badness 2809) in paragraph at lines 415--421
+[]\TU/TimesNewRoman(0)/m/n/14.4 ADDIE [[]], SAM [[]] и Backward De-
+ []
+
+
+Underfull \hbox (badness 3078) in paragraph at lines 422--428
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для LLM-автоматизации это не просто набор теоре
+тических моделей.
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
+[]\TU/TimesNewRoman(0)/b/n/14.4 педагогические метрики\TU/TimesNewRoman(0)/m/n/
+14.4 : покрытие уровней таксономии Блума,
+ []
+
+
+LaTeX Warning: Citation 'bloom_taxonomy_1956' on page 21 undefined on input lin
+e 444.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--449
+[]\TU/TimesNewRoman(0)/m/n/14.4 Таксономия Блума [[]] служит здесь не как
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--449
+\TU/TimesNewRoman(0)/m/n/14.4 формальное украшение, а как операционализируемая 
+мера глубины
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 452--454
+[]\TU/TimesNewRoman(0)/m/n/14.4 Проведённый обзор позволяет выделить четыре нез
+акрытых пробела в
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--460
+[]\TU/TimesNewRoman(0)/m/n/14.4 Работы по LLM-генерации образовательного контен
+та в основном
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 460--464
+\TU/TimesNewRoman(0)/m/n/14.4 отдельные действия автора, но не исследуют statef
+ul мультиагентный
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 460--464
+\TU/TimesNewRoman(0)/m/n/14.4 pipeline, который ведёт документ через полный цик
+л методической
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
+[]\TU/TimesNewRoman(0)/m/n/14.4 Русскоязычный B2B-контекст представлен слабо: н
+е хватает
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
+\TU/TimesNewRoman(0)/m/n/14.4 воспроизводимых корпусов, включающих регламенты, 
+брендовые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--470
+[]\TU/TimesNewRoman(0)/m/n/14.4 Практически не исследована задача авто-актуализ
+ации курса при
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--470
+\TU/TimesNewRoman(0)/m/n/14.4 изменении исходного документа, хотя именно она оп
+ределяет
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--476
+\TU/TimesNewRoman(0)/m/n/14.4 архитектуры, которая сочетает RAG, мультиагентную
+ оркестрацию,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--490
+[]\TU/TimesNewRoman(0)/m/n/14.4 С учётом выявленного разрыва задача исследовани
+я формулируется
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 483--490
+\TU/TimesNewRoman(0)/m/n/14.4 следующим образом: \TU/TimesNewRoman(0)/m/it/14.4
+ разработать интеллектуального методического
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 483--490
+\TU/TimesNewRoman(0)/m/it/14.4 формирует педагогически состоятельную структуру 
+курса и черновой
+ []
+
+[21]
+
+LaTeX Warning: Citation 'amazon_cvm_2014' on page 22 undefined on input line 49
+6.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--499
+[]\TU/TimesNewRoman(0)/b/n/14.4 Working Backwards / CVM \TU/TimesNewRoman(0)/m/
+n/14.4 [[]]: продуктовые
+ []
+
+
+Underfull \hbox (badness 7685) in paragraph at lines 496--499
+\TU/TimesNewRoman(0)/m/n/14.4 требования формулируются от боли и ценности клиен
+та назад к
+ []
+
+
+LaTeX Warning: Citation 'christensen_jtbd_2016' on page 22 undefined on input l
+ine 499.
+
+
+Underfull \hbox (badness 2418) in paragraph at lines 499--502
+[]\TU/TimesNewRoman(0)/b/n/14.4 Jobs To Be Done \TU/TimesNewRoman(0)/m/n/14.4 [
+[]]: пользователь «нанимает»
+ []
+
+
+LaTeX Warning: Citation 'bloom_taxonomy_1956' on page 22 undefined on input lin
+e 502.
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 502--505
+[]\TU/TimesNewRoman(0)/b/n/14.4 Bloom’s Taxonomy \TU/TimesNewRoman(0)/m/n/14.4 
+[[]]: качество учебных целей
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 513--516
+[]\TU/TimesNewRoman(0)/b/n/14.4 Онбординг-курс\TU/TimesNewRoman(0)/m/n/14.4 : в
+ходом служит продуктовое описание, бриф или
+ []
+
+
+Underfull \hbox (badness 3417) in paragraph at lines 516--519
+[]\TU/TimesNewRoman(0)/b/n/14.4 Асинхронный учебный курс\TU/TimesNewRoman(0)/m/
+n/14.4 : входом являются программа курса,
+ []
+
+[22]
+Underfull \hbox (badness 1466) in paragraph at lines 551--554
+[]\TU/TimesNewRoman(0)/b/n/14.4 для H3\TU/TimesNewRoman(0)/m/n/14.4 : unit-cost
+ на курс, отношение unit-cost к средней рыночной
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 551--554
+\TU/TimesNewRoman(0)/m/n/14.4 стоимости подрядной разработки, а также параметры
+ подписочной
+ []
+
+) (./chapter2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 556--1
+[]\TU/TimesNewRoman(0)/m/n/14.4 Такая система метрик позволяет связать научную 
+часть работы с
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 556--1
+\TU/TimesNewRoman(0)/m/n/14.4 практической ценностью продукта: от корректности 
+по отношению к
+ []
+
+[23]
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+[]\TU/TimesNewRoman(0)/m/n/14.4 В данной главе описывается экспериментальная по
+становка задачи,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+\TU/TimesNewRoman(0)/m/n/14.4 обосновывается выбор технологического стека и фик
+сируются
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+\TU/TimesNewRoman(0)/m/it/14.4 предварительные \TU/TimesNewRoman(0)/m/n/14.4 ре
+зультаты текущего MVP. Цель главы — не
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 3--10
+\TU/TimesNewRoman(0)/m/n/14.4 выдать незавершённый pipeline за финальную валида
+цию, а показать
+ []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 17--20
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для экспериментов сформирован \TU/TimesNewRoman
+(0)/b/n/14.4 ядровой корпус из 16 документов\TU/TimesNewRoman(0)/m/n/14.4 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
+[]\TU/TimesNewRoman(0)/b/n/14.4 5 корпоративных регламентов: \TU/TimesNewRoman(
+0)/m/n/14.4 политика информационной
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 25--29
+\TU/TimesNewRoman(0)/m/n/14.4 безопасности, политика обработки персональных дан
+ных, регламент
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
+\TU/TimesNewRoman(0)/m/n/14.4 управления инцидентами, положение об адаптации со
+трудников,
+ []
+
+[24
+
+]
+Underfull \hbox (badness 7740) in paragraph at lines 48--55
+[]\TU/TimesNewRoman(0)/m/n/14.4 Важно отметить, что на текущем этапе работы экс
+пертный ground
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 48--55
+\TU/TimesNewRoman(0)/m/n/14.4 truth от двух независимых методистов и коэффициен
+т Коэна $\OML/cmm/m/it/14.4 ^^T$ \TU/TimesNewRoman(0)/m/n/14.4 ещё
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 48--55
+\TU/TimesNewRoman(0)/m/n/14.4 не сформированы. Для этого уже подготовлен отдель
+ный инструмент
+ []
+
+
+Underfull \hbox (badness 4403) in paragraph at lines 48--55
+\TU/lmtt/m/n/14.4 calc_cohens_kappa.py\TU/TimesNewRoman(0)/m/n/14.4 , однако са
+ма экспертная разметка вынесена в
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--60
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для исследования определены четыре конфигурации
+, сохраняющие
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+[]\TU/TimesNewRoman(0)/b/n/14.4 B1 \TU/TimesNewRoman(0)/m/n/14.4 — ручная разра
+ботка структуры курса методистом-экспертом;
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 68--70
+[]\TU/TimesNewRoman(0)/b/n/14.4 B3 \TU/TimesNewRoman(0)/m/n/14.4 — коммерческий
+ инструмент класса AI course creator (в работе
+ []
+
+
+Underfull \hbox (badness 4686) in paragraph at lines 75--77
+[]\TU/TimesNewRoman(0)/m/n/14.4 Текущий статус baseline-логики важен для коррек
+тной интерпретации
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+[]\TU/TimesNewRoman(0)/b/n/14.4 B2 \TU/TimesNewRoman(0)/m/n/14.4 уже дал воспро
+изводимые количественные результаты по 16
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 87--90
+[]\TU/TimesNewRoman(0)/m/n/14.4 Соответственно, текущая версия главы 2 представ
+ляет \TU/TimesNewRoman(0)/m/it/14.4 промежуточный
+ []
+
+[25]
+Underfull \hbox (badness 2980) in paragraph at lines 116--121
+[]\TU/TimesNewRoman(0)/m/n/14.4 Задача ИИ-методиста относится к классу stateful
+ workflow: документ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--121
+\TU/TimesNewRoman(0)/m/n/14.4 проходит этапы ingestion, анализа источника, гене
+рации структуры,
+ []
+
+
+LaTeX Warning: Citation 'langgraph_docs_2025' on page 26 undefined on input lin
+e 125.
+
+
+LaTeX Warning: Citation 'autogen_04_2024' on page 26 undefined on input line 12
+5.
+
+
+LaTeX Warning: Citation 'crewai_docs_2025' on page 26 undefined on input line 1
+25.
+
+
+LaTeX Warning: Citation 'agno_docs_2025' on page 26 undefined on input line 125
+.
+
+
+LaTeX Warning: Citation 'openai_agents_sdk_2025' on page 26 undefined on input 
+line 125.
+
+
+Overfull \hbox (21.60759pt too wide) in paragraph at lines 134--135
+[]\TU/TimesNewRoman(0)/b/n/14.4 LangGraph
+ []
+
+
+Overfull \hbox (4.78885pt too wide) in paragraph at lines 135--136
+[]\TU/TimesNewRoman(0)/b/n/14.4 AutoGen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+[]\TU/TimesNewRoman(0)/b/n/14.4 CrewAI
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+[]\TU/TimesNewRoman(0)/b/n/14.4 Agno
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+[]\TU/TimesNewRoman(0)/b/n/14.4 OAI
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+\TU/TimesNewRoman(0)/b/n/14.4 Agents
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+[]\TU/TimesNewRoman(0)/m/n/14.4 Модель
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[]\TU/TimesNewRoman(0)/m/n/14.4 Stateful
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+\TU/TimesNewRoman(0)/m/n/14.4 DAG
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+\TU/TimesNewRoman(0)/m/n/14.4 (State-
+ []
+
+
+Overfull \hbox (30.36852pt too wide) in paragraph at lines 142--143
+[]\TU/TimesNewRoman(0)/m/n/14.4 Conversation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+\TU/TimesNewRoman(0)/m/n/14.4 centric
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+[]\TU/TimesNewRoman(0)/m/n/14.4 Ролевая
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+\TU/TimesNewRoman(0)/m/n/14.4 модель
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+[]\TU/TimesNewRoman(0)/m/n/14.4 Async-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+\TU/TimesNewRoman(0)/m/n/14.4 first
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+[]\TU/TimesNewRoman(0)/m/n/14.4 Tool-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\TU/TimesNewRoman(0)/m/n/14.4 calling
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+[]\TU/TimesNewRoman(0)/m/n/14.4 Явный граф
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+[]\TU/TimesNewRoman(0)/m/n/14.4 Поддержка
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+[]\TU/TimesNewRoman(0)/m/n/14.4 Наблюдаемость и
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+[]\TU/TimesNewRoman(0)/m/n/14.4 Зрелость
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 185--193
+[]\TU/TimesNewRoman(0)/b/n/14.4 Обоснование выбора LangGraph. \TU/TimesNewRoman
+(0)/m/n/14.4 Из всех кандидатов именно Lang-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--203
+[]\TU/TimesNewRoman(0)/b/n/14.4 Причины отказа от альтернатив. \TU/TimesNewRoma
+n(0)/m/n/14.4 AutoGen силён как среда
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--203
+\TU/TimesNewRoman(0)/m/n/14.4 многоагентного взаимодействия, но для детерминиро
+ванного pipeline
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 194--203
+\TU/TimesNewRoman(0)/m/n/14.4 требует дополнительных абстракций над conversatio
+n-моделью. Cre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--203
+\TU/TimesNewRoman(0)/m/n/14.4 wAI удобно описывает роли и задачи, однако хуже с
+оответствует
+ []
+
+[26]
+Underfull \hbox (badness 1436) in paragraph at lines 206--211
+\TU/TimesNewRoman(0)/m/n/14.4 retrieval, а LangGraph — за stateful агентную орк
+естрацию поверх уже
+ []
+
+
+LaTeX Warning: Citation 'haystack2_docs_2024' on page 27 undefined on input lin
+e 216.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--220
+[]\TU/TimesNewRoman(0)/m/n/14.4 Такое разделение ролей соответствует сильным ст
+оронам обоих
+ []
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 212--220
+\TU/TimesNewRoman(0)/m/n/14.4 где каждый шаг — конвертация, очистка, чанкинг, э
+мбеддинг, запись
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 212--220
+\TU/TimesNewRoman(0)/m/n/14.4 в векторное хранилище — оформлен как отдельный мо
+дуль с явным
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--226
+[]\TU/TimesNewRoman(0)/m/n/14.4 Итоговая связка выглядит так: \TU/lmtt/m/n/14.4
+ Document source -> Haystack
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--226
+\TU/lmtt/m/n/14.4 AsyncPipeline -> embeddings -> Qdrant -> LangGraph workflow
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 221--226
+\TU/lmtt/m/n/14.4 -> course artifacts\TU/TimesNewRoman(0)/m/n/14.4 . Это снижае
+т связанность системы и упрощает
+ []
+
+
+Underfull \hbox (badness 5741) in paragraph at lines 221--226
+\TU/TimesNewRoman(0)/m/n/14.4 дальнейшую замену отдельных компонентов без переп
+исывания всей
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+[]\TU/TimesNewRoman(0)/b/n/14.4 локально
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+[]\TU/TimesNewRoman(0)/m/n/14.4 Суверенитет
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+[]\TU/TimesNewRoman(0)/m/n/14.4 Стоимость
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+\TU/TimesNewRoman(0)/m/n/14.4 итераций и
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+[]\TU/TimesNewRoman(0)/m/n/14.4 Русскоязычный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+[]\TU/TimesNewRoman(0)/m/n/14.4 достаточная
+ []
+
+
+Overfull \hbox (2.31706pt too wide) in paragraph at lines 264--265
+[]\TU/TimesNewRoman(0)/m/n/14.4 Инфраструктурная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+[]\TU/TimesNewRoman(0)/b/n/14.4 высокая для
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+\TU/TimesNewRoman(0)/b/n/14.4 локального
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 272--277
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для текущих baseline-экспериментов выбрана моде
+ль \TU/lmtt/m/n/14.4 qwen2.5:7b \TU/TimesNewRoman(0)/m/n/14.4 через
+ []
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 272--277
+\TU/TimesNewRoman(0)/m/n/14.4 многократно прогонять эксперименты на ядровом кор
+пусе без роста
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--283
+\TU/TimesNewRoman(0)/m/n/14.4 ИИ-методист проектируется как provider-agnostic с
+истема: при
+ []
+
+[28]
+
+LaTeX Warning: Citation 'user_bge_m3_2024' on page 29 undefined on input line 2
+95.
+
+
+LaTeX Warning: Citation 'qdrant_docs_2024' on page 29 undefined on input line 2
+95.
+
+
+Underfull \hbox (badness 5008) in paragraph at lines 298--302
+[]\TU/TimesNewRoman(0)/m/n/14.4 Количественный benchmark по MRR@10 и recall@5 п
+одготовлен как
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 305--310
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для document ingestion были рассмотрены две стр
+атегии: рекурсивный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--310
+\TU/TimesNewRoman(0)/m/n/14.4 fixed-size чанкинг и семантический чанкинг. Хотя 
+полноценный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--310
+\TU/TimesNewRoman(0)/m/n/14.4 более перспективным выбран \TU/lmtt/m/n/14.4 Sema
+nticDoubleMergingSplitter \TU/TimesNewRoman(0)/m/n/14.4 из
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 311--317
+\TU/TimesNewRoman(0)/m/n/14.4 содержат смысловые блоки разной длины: определени
+я, процедуры,
+ []
+
+
+LaTeX Warning: Citation 'dalle3_2023' on page 29 undefined on input line 321.
+
+
+LaTeX Warning: Citation 'flux_2024' on page 29 undefined on input line 321.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--325
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для мультимедийного слоя сравнивались DALL-E 3 
+и FLUX.1-dev
+ []
+
+[29]
+
+LaTeX Warning: Citation 'silero_tts_2024' on page 30 undefined on input line 34
+3.
+
+
+LaTeX Warning: Citation 'elevenlabs_2024' on page 30 undefined on input line 34
+3.
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 342--346
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для генерации русскоязычных подкастов сравнивал
+ись Silero TTS v4 и
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 358--362
+\TU/TimesNewRoman(0)/m/n/14.4 отдельный benchmark-скрипт, однако в текущей итер
+ации для выбора
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 370--376
+[]\TU/TimesNewRoman(0)/m/n/14.4 Первым полностью воспроизводимым экспериментом 
+стал прогон one-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+[]\TU/TimesNewRoman(0)/b/n/14.4 Среднее
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
+[]\TU/TimesNewRoman(0)/b/n/14.4 Среднее
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+[]\TU/TimesNewRoman(0)/b/n/14.4 Доля
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+\TU/TimesNewRoman(0)/b/n/14.4 курсов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
+[]\TU/TimesNewRoman(0)/b/n/14.4 Valid
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+[]\TU/TimesNewRoman(0)/m/n/14.4 Продуктовые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+[]\TU/TimesNewRoman(0)/m/n/14.4 Учебные
+ []
+
+
+Overfull \hbox (12.24896pt too wide) in paragraph at lines 381--419
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 421--425
+[]\TU/TimesNewRoman(0)/m/n/14.4 Полученные данные показывают, что one-shot base
+line обладает двумя
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 426--435
+\TU/TimesNewRoman(0)/m/n/14.4 чем с нормативными: для регламентов покрытие пада
+ет до 40%, что
+ []
+
+[30]
+Underfull \hbox (badness 3601) in paragraph at lines 436--439
+[]\TU/TimesNewRoman(0)/m/n/14.4 Именно этот набор ограничений и мотивирует пере
+ход от B2 к B4:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
+[]\TU/TimesNewRoman(0)/m/n/14.4 Ядровой корпус
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
+[]\TU/TimesNewRoman(0)/m/n/14.4 baseline- и pipeline-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+[]\TU/TimesNewRoman(0)/m/n/14.4 QA-пары
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
+[]\TU/TimesNewRoman(0)/m/n/14.4 Фактуальные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
+\TU/TimesNewRoman(0)/m/n/14.4 утверждения
+ []
+
+
+Underfull \hbox (badness 4096) in paragraph at lines 471--475
+[]\TU/TimesNewRoman(0)/m/n/14.4 Эти артефакты важны тем, что превращают работу 
+из описательной
+ []
+
+
+Underfull \hbox (badness 7796) in paragraph at lines 471--475
+\TU/TimesNewRoman(0)/m/n/14.4 следующая итерация не начинается «с нуля», а опир
+ается на уже
+ []
+
+[31]
+Underfull \hbox (badness 1107) in paragraph at lines 485--487
+[]\TU/TimesNewRoman(0)/m/n/14.4 Это ограничение не обесценивает проделанную раб
+оту, но накладывает
+ []
+
+
+Underfull \hbox (badness 6493) in paragraph at lines 489--491
+[]\TU/TimesNewRoman(0)/m/n/14.4 текущие цифры chapter 2 следует трактовать как 
+\TU/TimesNewRoman(0)/b/n/14.4 baseline-слой и
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--493
+[]\TU/TimesNewRoman(0)/m/n/14.4 полная проверка гипотез H1–H3 требует завершени
+я B4-progons,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--507
+[]\TU/TimesNewRoman(0)/m/n/14.4 На основании проведённого отбора и предваритель
+ных результатов
+ []
+
+
+Underfull \hbox (badness 6592) in paragraph at lines 504--507
+\TU/TimesNewRoman(0)/m/n/14.4 следующая итерация ИИ-методиста должна строиться 
+на следующей
+ []
+
+) (./chapter3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 519--1
+\TU/TimesNewRoman(0)/m/n/14.4 работы: on-premise развёртывание, воспроизводимые
+ эксперименты,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--1
+\TU/TimesNewRoman(0)/m/n/14.4 приемлемая себестоимость, возможность усиления re
+trieval и
+ []
+
+[32] [33]
+Chapter 3.
+
+Underfull \hbox (badness 8132) in paragraph at lines 3--7
+[]\TU/TimesNewRoman(0)/m/n/14.4 В данной главе описывается архитектура ИИ-метод
+иста, реализация
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 3--7
+\TU/TimesNewRoman(0)/m/n/14.4 мультиагентного конвейера на основе LangGraph, кл
+ючевые конвейеры
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+[]\TU/TimesNewRoman(0)/m/n/14.4 ИИ-методист является одним из микросервисов пла
+тформы Adap-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+\TU/TimesNewRoman(0)/m/n/14.4 story — образовательной LMS, поддерживающей модел
+ь B2B SaaS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+\TU/TimesNewRoman(0)/m/n/14.4 исходные документы, инициирует генерацию, просмат
+ривает
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 28--30
+[]\TU/TimesNewRoman(0)/b/n/14.4 Хранилище документов MinIO \TU/TimesNewRoman(0)
+/m/n/14.4 — источник исходных файлов (.pdf,
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 30--32
+[]\TU/TimesNewRoman(0)/b/n/14.4 Ollama GPU-сервер \TU/TimesNewRoman(0)/m/n/14.4
+ — провайдер локальных LLM (Qwen 2.5-72B,
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 37--39
+[]\TU/TimesNewRoman(0)/m/n/14.4 На уровне контейнеров (приложение Г, рисунок Г.
+2) микросервис ИИ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
+[]\TU/TimesNewRoman(0)/b/n/14.4 LLM Gateway \TU/TimesNewRoman(0)/m/n/14.4 — про
+вайдер-агностичный интерфейс к языковым
+ []
+
+[34
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+[]\TU/TimesNewRoman(0)/m/n/14.4 Подробная декомпозиция компонентов LangGraph Ru
+ntime приведена
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 66--68
+[]\TU/TimesNewRoman(0)/b/n/14.4 CourseBlueprint \TU/TimesNewRoman(0)/m/n/14.4 —
+ черновая структура курса: метаданные, список
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 70--72
+[]\TU/TimesNewRoman(0)/b/n/14.4 Lesson \TU/TimesNewRoman(0)/m/n/14.4 — атомарна
+я единица обучения: текст, список иллюстраций,
+ []
+
+
+LaTeX Warning: Citation 'langgraph_docs_2025' on page 35 undefined on input lin
+e 82.
+
+
+Underfull \hbox (badness 3229) in paragraph at lines 81--86
+[]\TU/TimesNewRoman(0)/m/n/14.4 Граф агентов ИИ-методиста реализован с использо
+ванием \TU/lmtt/m/n/14.4 StateGraph
+ []
+
+
+Underfull \hbox (badness 1810) in paragraph at lines 81--86
+\TU/TimesNewRoman(0)/m/n/14.4 из LangGraph [[]]. Состояние графа (\TU/lmtt/m/n/
+14.4 CourseState\TU/TimesNewRoman(0)/m/n/14.4 )
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 95--98
+[]\TU/TimesNewRoman(0)/b/n/14.4 TargetAnalysisAgent \TU/TimesNewRoman(0)/m/n/14
+.4 — анализирует исходный документ, определяет
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 98--101
+[]\TU/TimesNewRoman(0)/b/n/14.4 CourseStructureAgent \TU/TimesNewRoman(0)/m/n/1
+4.4 — генерирует структуру курса (Blueprint)
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 98--101
+\TU/TimesNewRoman(0)/m/n/14.4 в соответствии с выбранной методологией (ADDIE / 
+SAM / BD)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
+[]\TU/TimesNewRoman(0)/b/n/14.4 ContentCreatorAgent \TU/TimesNewRoman(0)/m/n/14
+.4 — генерирует текстовый контент уроков
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--107
+[]\TU/TimesNewRoman(0)/b/n/14.4 FactCheckAgent \TU/TimesNewRoman(0)/m/n/14.4 — 
+верифицирует фактические утверждения
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--107
+\TU/TimesNewRoman(0)/m/n/14.4 в сгенерированном контенте относительно исходного
+ документа,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
+[]\TU/TimesNewRoman(0)/b/n/14.4 MediaGenerationAgent \TU/TimesNewRoman(0)/m/n/1
+4.4 — параллельно генерирует иллюстрации
+ []
+
+
+LaTeX Warning: Citation 'langgraph_docs_2025' on page 36 undefined on input lin
+e 115.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
+[]\TU/TimesNewRoman(0)/m/n/14.4 После завершения CourseStructureAgent граф прио
+станавливается
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
+\TU/TimesNewRoman(0)/m/n/14.4 на ноде \TU/lmtt/m/n/14.4 human_review_structure 
+\TU/TimesNewRoman(0)/m/n/14.4 через механизм
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
+\TU/lmtt/m/n/14.4 interrupt_before \TU/TimesNewRoman(0)/m/n/14.4 [[]]. Автор ку
+рса получает
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
+\TU/TimesNewRoman(0)/m/n/14.4 уведомление (веб-сокет / email) и может: одобрить
+ структуру,
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 129--131
+[]\TU/TimesNewRoman(0)/m/n/14.4 параллельное исполнение ветки MediaGenerationAg
+ent без блокировки
+ []
+
+
+LaTeX Warning: Citation 'langsmith_docs_2025' on page 36 undefined on input lin
+e 133.
+
+
+Underfull \hbox (badness 4726) in paragraph at lines 133--137
+\TU/TimesNewRoman(0)/m/n/14.4 вызова LLM: входной промпт, ответ модели, latency
+, токены. Это
+ []
+
+
+LaTeX Warning: Citation 'haystack2_docs_2024' on page 36 undefined on input lin
+e 145.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--147
+[]\TU/TimesNewRoman(0)/m/n/14.4 Конвейер индексации документов реализован на Ha
+ystack 2.x
+ []
+
+[36]
+Underfull \hbox (badness 1137) in paragraph at lines 153--155
+[]\TU/TimesNewRoman(0)/b/n/14.4 SemanticDoubleMergingSplitter \TU/TimesNewRoman
+(0)/m/n/14.4 — разбивает текст на семантические
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
+[]\TU/TimesNewRoman(0)/b/n/14.4 OllamaTextEmbedder \TU/TimesNewRoman(0)/m/n/14.
+4 — векторизует фрагменты через модель
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+[]\TU/TimesNewRoman(0)/b/n/14.4 QdrantDocumentStore.write_documents() \TU/Times
+NewRoman(0)/m/n/14.4 — записывает фрагменты
+ []
+
+
+Underfull \hbox (badness 7888) in paragraph at lines 161--164
+\TU/TimesNewRoman(0)/m/n/14.4 документа пользователем; генерация курса начинает
+ся только после
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 175--177
+[]\TU/TimesNewRoman(0)/m/n/14.4 ContentCreatorAgent для каждого урока выполняет
+ гибридный поиск
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--179
+[]\TU/TimesNewRoman(0)/m/n/14.4 FactCheckAgent проверяет каждое утверждение в т
+ексте урока
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
+[]\TU/TimesNewRoman(0)/m/n/14.4 После одобрения текстовой структуры курса Media
+GenerationAgent
+ []
+
+
+LaTeX Warning: Citation 'flux_2024' on page 37 undefined on input line 190.
+
+[37]
+
+LaTeX Warning: Citation 'silero_tts_2024' on page 38 undefined on input line 19
+2.
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 191--194
+[]\TU/TimesNewRoman(0)/m/n/14.4 генерируется аудиоподкаст: LLM генерирует диало
+г двух ведущих
+ []
+
+
+Underfull \hbox (badness 3826) in paragraph at lines 202--204
+[]\TU/TimesNewRoman(0)/m/n/14.4 FactCheckAgent прогоняет все существующие уроки
+ против нового
+ []
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 204--207
+[]\TU/TimesNewRoman(0)/m/n/14.4 Уроки с faithfulness ниже порога (по умолчанию 
+0.8) помечаются
+ []
+
+
+LaTeX Warning: Citation 'adapstory_gitops_2025' on page 38 undefined on input l
+ine 218.
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 216--219
+[]\TU/TimesNewRoman(0)/m/n/14.4 ИИ-методист развёрнут в составе K3s-кластера Ad
+apstory (single-node,
+ []
+
+
+LaTeX Warning: Citation 'fz_152_2006' on page 38 undefined on input line 223.
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 233--235
+[]\TU/TimesNewRoman(0)/b/n/14.4 Circuit Breaker\TU/TimesNewRoman(0)/m/n/14.4 : 
+при недоступности Ollama > 30 с переключается
+ []
+
+[38]) (./chapter4.tex
+Underfull \hbox (badness 2073) in paragraph at lines 245--1
+[]\TU/TimesNewRoman(0)/m/n/14.4 Трассировка и метрики собираются через OpenTele
+metry Collector: la-
+ []
+
+[39]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+[]\TU/TimesNewRoman(0)/m/n/14.4 В данной главе описывается протокол валидации И
+И-методиста,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+\TU/TimesNewRoman(0)/m/n/14.4 представляются результаты проверки гипотез H1–H3,
+ анализируется
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+\TU/TimesNewRoman(0)/m/n/14.4 методологии), согласованность учебных целей с сод
+ержанием,
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 28--31
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для независимой верификации результатов привлеч
+ены 5–8 экспертов-
+ []
+
+[40
+
+]
+
+LaTeX Warning: Citation 'brooke_sus_1996' on page 41 undefined on input line 57
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
+[]\TU/TimesNewRoman(0)/b/n/14.4 SUS \TU/TimesNewRoman(0)/m/n/14.4 (System Usabi
+lity Scale, 10 вопросов) [[]]:
+ []
+
+
+Underfull \hbox (badness 4739) in paragraph at lines 69--71
+[]\TU/TimesNewRoman(0)/b/n/14.4 Входной документ: \TU/TimesNewRoman(0)/m/n/14.4
+ продуктовое описание нового SaaS-инструмента,
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 78--80
+[]\TU/TimesNewRoman(0)/m/n/14.4 После индексации (≈[PLACEHOLDER] с) инициируетс
+я CourseStruc-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+[]\TU/TimesNewRoman(0)/m/n/14.4 ContentCreatorAgent генерирует тексты уроков; F
+actCheckAgent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
+[]\TU/TimesNewRoman(0)/b/n/14.4 Входной документ: \TU/TimesNewRoman(0)/m/n/14.4
+ корпоративный регламент информационной
+ []
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 96--98
+[]\TU/TimesNewRoman(0)/b/n/14.4 Специфика: \TU/TimesNewRoman(0)/m/n/14.4 докуме
+нт содержит точные числовые требования (сроки,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
+[]\TU/TimesNewRoman(0)/m/n/14.4 Проверяется, что FactCheckAgent выявляет галлюц
+инации
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
+[]\TU/TimesNewRoman(0)/m/n/14.4 Проверяется корректность выявления устаревших у
+роков и качество
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+[]\TU/TimesNewRoman(0)/b/n/14.4 B1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+[]\TU/TimesNewRoman(0)/b/n/14.4 B2 (one-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+[]\TU/TimesNewRoman(0)/b/n/14.4 B3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+\TU/TimesNewRoman(0)/b/n/14.4 (Course-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+[]\TU/TimesNewRoman(0)/b/n/14.4 B4 (ИИ-
+ []
+
+
+Overfull \hbox (1.11417pt too wide) in paragraph at lines 128--129
+\TU/TimesNewRoman(0)/b/n/14.4 методист)| 
+ []
+
+
+Underfull \hbox (badness 3407) in paragraph at lines 136--137
+[]\TU/TimesNewRoman(0)/m/n/14.4 Bloom’s coverage,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+[]\TU/TimesNewRoman(0)/m/n/14.4 Экспертная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+[]\TU/TimesNewRoman(0)/m/n/14.4 Unit-стоимость,
+ []
+
+
+Underfull \hbox (badness 6944) in paragraph at lines 165--168
+\TU/TimesNewRoman(0)/m/n/14.4 структуры курса с X часов до Y минут при сохранен
+ии Bloom’s-
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 169--175
+[]\TU/TimesNewRoman(0)/m/n/14.4 По результатам пилота время создания черновика 
+составило [PLACE-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--175
+\TU/TimesNewRoman(0)/m/n/14.4 HOLDER] минут против [PLACEHOLDER] часов у экспер
+та (B1)
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 169--175
+\TU/TimesNewRoman(0)/m/n/14.4 и [PLACEHOLDER] минут у Coursebox AI (B3). Bloom’
+s coverage B4
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 176--179
+[]\TU/TimesNewRoman(0)/b/n/14.4 H2 (техническая). \TU/TimesNewRoman(0)/m/n/14.4
+ «Мультиагентная архитектура обеспечивает более
+ []
+
+[42]
+Underfull \hbox (badness 1874) in paragraph at lines 180--184
+\TU/TimesNewRoman(0)/m/n/14.4 fulness на [PLACEHOLDER] пунктов (p < 0.05, крите
+рий Вилкоксона)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+[]\TU/TimesNewRoman(0)/m/n/14.4 Throughput (курсов/час при нагрузочном тестиров
+ании): [PLACE-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--209
+[]\TU/TimesNewRoman(0)/m/n/14.4 На синтетическом датасете из 100 утверждений (5
+0 корректных,
+ []
+
+
+LaTeX Warning: Citation 'wohlin_experimentation_2012' on page 43 undefined on i
+nput line 216.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
+\TU/TimesNewRoman(0)/m/n/14.4 внутренней и внешней валидности [[]].
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 222--230
+[]\TU/TimesNewRoman(0)/b/n/14.4 Малый размер выборки ($\OML/cmm/m/it/14.4 n \OT
+1/cmr/m/n/14.4 = 15$\TU/TimesNewRoman(0)/b/n/14.4 ). \TU/TimesNewRoman(0)/m/n/1
+4.4 Тестовый корпус содержит
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 222--230
+\TU/TimesNewRoman(0)/m/n/14.4 15 документов, что ограничивает статистическую мо
+щность сравнений.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--230
+\TU/TimesNewRoman(0)/m/n/14.4 порога 80%. Следовательно, результаты следует рас
+сматривать
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 231--236
+[]\TU/TimesNewRoman(0)/b/n/14.4 Доменная специфика. \TU/TimesNewRoman(0)/m/n/14
+.4 Все 15 документов корпуса принадлежат
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--236
+\TU/TimesNewRoman(0)/m/n/14.4 учебные программы ФГОС). Обобщаемость результатов
+ на другие
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--250
+[]\TU/TimesNewRoman(0)/m/n/14.4 Оценка Bloom’s coverage проводится относительно
+ двух источников
+ []
+
+
+Underfull \hbox (badness 6032) in paragraph at lines 239--250
+\TU/TimesNewRoman(0)/m/n/14.4 экспертов-методистов с расчётом inter-rater relia
+bility (Cohen’s $\OML/cmm/m/it/14.4 ^^T$\TU/TimesNewRoman(0)/m/n/14.4 , см.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--250
+\TU/TimesNewRoman(0)/m/n/14.4 раздел 2.1.1), и (2) открытые курсы из публичных 
+репозиториев
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 239--250
+\TU/TimesNewRoman(0)/m/n/14.4 независимую валидацию педагогического качества. Н
+есмотря на это,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--250
+\TU/TimesNewRoman(0)/m/n/14.4 оба эксперта могут разделять общие когнитивные пр
+едубеждения
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--250
+\TU/TimesNewRoman(0)/m/n/14.4 профессиональных методистов, что является угрозой
+ внутренней
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 253--261
+[]\TU/TimesNewRoman(0)/b/n/14.4 Малая выборка пилота ($\OML/cmm/m/it/14.4 n \OT
+1/cmr/m/n/14.4 = 5$\TU/TimesNewRoman(0)/b/n/14.4 ). \TU/TimesNewRoman(0)/m/n/14
+.4 Пользовательское исследование
+ []
+
+
+Underfull \hbox (badness 8189) in paragraph at lines 262--266
+[]\TU/TimesNewRoman(0)/b/n/14.4 Эффект новизны. \TU/TimesNewRoman(0)/m/n/14.4 П
+овышенный интерес пользователей к новому
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
+\TU/TimesNewRoman(0)/m/n/14.4 72B. Результаты могут не воспроизводиться на друг
+их моделях
+ []
+
+
+Underfull \hbox (badness 3713) in paragraph at lines 269--274
+\TU/TimesNewRoman(0)/m/n/14.4 (LLaMA 3.3, Mistral Large, GPT-4o), что ограничив
+ает обобщаемость
+ []
+
+[44]
+
+LaTeX Warning: Citation 'mt_bench_2023' on page 45 undefined on input line 282.
+
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 280--286
+[]\TU/TimesNewRoman(0)/b/n/14.4 Авто-классификация Bloom’s уровней. \TU/TimesNe
+wRoman(0)/m/n/14.4 Уровни таксономии Блума
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--286
+\TU/TimesNewRoman(0)/m/n/14.4 определялись автоматически с помощью GPT-4o в рол
+и judge-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--286
+\TU/TimesNewRoman(0)/m/n/14.4 модели [[]]. Надёжность такой классификации
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 280--286
+\TU/TimesNewRoman(0)/m/n/14.4 на русскоязычных учебных целях не валидирована не
+зависимо; это
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 289--294
+\TU/TimesNewRoman(0)/m/n/14.4 контенте B2B-сегмента. Перенос результатов на дру
+гие языки, другие
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--305
+[]\TU/TimesNewRoman(0)/m/n/14.4 кросс-модельная оценка: воспроизведение экспери
+ментов
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 305--307
+[]\TU/TimesNewRoman(0)/m/n/14.4 расширенный пилот ($\OML/cmm/m/it/14.4 n \OMS/c
+msy/m/n/14.4 ^^U \OT1/cmr/m/n/14.4 20$\TU/TimesNewRoman(0)/m/n/14.4 ) с longitu
+dinal метриками удержания
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 315--318
+[]\TU/TimesNewRoman(0)/m/n/14.4 Себестоимость одного сгенерированного курса скл
+адывается из: GPU-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+[]\TU/TimesNewRoman(0)/m/n/14.4 Ключевые метрики подписочной модели (B2B SaaS, 
+тариф
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+\TU/TimesNewRoman(0)/m/n/14.4 «Профессиональный», [PLACEHOLDER] руб./мес. за не
+ограниченные
+ []
+
+[45]
+
+LaTeX Warning: Citation 'maurya_lean_canvas_2012' on page 46 undefined on input
+ line 338.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
+[]\TU/TimesNewRoman(0)/m/n/14.4 Lean Canvas [[]] ИИ-методиста приведён
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
+\TU/TimesNewRoman(0)/m/n/14.4 [PLACEHOLDER] часов; высокая стоимость внешних по
+дрядчиков;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
+[]\TU/TimesNewRoman(0)/b/n/14.4 Решение\TU/TimesNewRoman(0)/m/n/14.4 : автомати
+ческая генерация структуры и текстов курса
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 350--353
+[]\TU/TimesNewRoman(0)/b/n/14.4 Unfair Advantage\TU/TimesNewRoman(0)/m/n/14.4 :
+ методологическая вариативность (ADDIE/SAM/BD)
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 356--358
+[]\TU/TimesNewRoman(0)/m/n/14.4 Детальные расчёты приведены в приложении И. Клю
+чевые итоговые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+[]\TU/TimesNewRoman(0)/b/n/14.4 NPV \TU/TimesNewRoman(0)/m/n/14.4 (ставка диско
+нтирования [PLACEHOLDER]%): [PLACE-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
+[]\TU/TimesNewRoman(0)/b/n/14.4 Точка безубыточности\TU/TimesNewRoman(0)/m/n/14
+.4 : [PLACEHOLDER] клиентов / [PLACE-
+ []
+
+
+LaTeX Warning: Citation 'edtech_market_report_2024' on page 46 undefined on inp
+ut line 374.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
+[]\TU/TimesNewRoman(0)/b/n/14.4 Международный EdTech\TU/TimesNewRoman(0)/m/n/14
+.4 : потенциальный TAM $\OMS/cmsy/m/n/14.4 ^^Y$ \TU/TimesNewRoman(0)/m/n/14.4 $
+51 млрд
+ []
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 375--377
+[]\TU/TimesNewRoman(0)/b/n/14.4 Корпоративное обучение (CLO-сегмент)\TU/TimesNe
+wRoman(0)/m/n/14.4 : интеграция в Mi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--379
+[]\TU/TimesNewRoman(0)/b/n/14.4 Государственное образование\TU/TimesNewRoman(0)
+/m/n/14.4 : адаптация под ФГОС-регламент
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
+[]\TU/TimesNewRoman(0)/b/n/14.4 P (Political)\TU/TimesNewRoman(0)/m/n/14.4 : ре
+гуляторные требования к использованию AI
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--390
+[]\TU/TimesNewRoman(0)/b/n/14.4 S (Social)\TU/TimesNewRoman(0)/m/n/14.4 : опасе
+ния преподавателей о замещении; требования
+ []
+
+
+Underfull \hbox (badness 5133) in paragraph at lines 390--392
+[]\TU/TimesNewRoman(0)/b/n/14.4 T (Technological)\TU/TimesNewRoman(0)/m/n/14.4 
+: быстрое устаревание LLM; риск лицензионных
+ []
+
+
+LaTeX Warning: Citation 'fz_152_2006' on page 47 undefined on input line 392.
+
+
+Overfull \hbox (25.46556pt too wide) in paragraph at lines 407--408
+[]\TU/TimesNewRoman(0)/b/n/14.4 Вероятность| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
+[]\TU/TimesNewRoman(0)/m/n/14.4 Деградация
+ []
+
+
+Underfull \hbox (badness 6396) in paragraph at lines 411--412
+\TU/TimesNewRoman(0)/m/n/14.4 качества новой
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+[]\TU/TimesNewRoman(0)/m/n/14.4 Регрессионный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+\TU/TimesNewRoman(0)/m/n/14.4 Ragas-тест
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+\TU/TimesNewRoman(0)/m/n/14.4 при каждом
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
+[]\TU/TimesNewRoman(0)/m/n/14.4 Недоступность
+ []
+
+
+Underfull \hbox (badness 5985) in paragraph at lines 421--422
+[]\TU/TimesNewRoman(0)/m/n/14.4 Утечка данных
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
+\TU/TimesNewRoman(0)/m/n/14.4 через LLM-
+ []
+
+
+Overfull \hbox (7.79387pt too wide) in paragraph at lines 423--424
+[]\TU/TimesNewRoman(0)/m/n/14.4 Критическое| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+[]\TU/TimesNewRoman(0)/m/n/14.4 On-premise
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+\TU/TimesNewRoman(0)/m/n/14.4 развёртывание;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+\TU/TimesNewRoman(0)/m/n/14.4 запрет облачных
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
+[]\TU/TimesNewRoman(0)/m/n/14.4 Неприятие
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
+\TU/TimesNewRoman(0)/m/n/14.4 авторами
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+[]\TU/TimesNewRoman(0)/m/n/14.4 Human-in-the-loop;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+\TU/TimesNewRoman(0)/m/n/14.4 прозрачность AI-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+[]\TU/TimesNewRoman(0)/m/n/14.4 Изменение
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+[]\TU/TimesNewRoman(0)/m/n/14.4 LLM Gateway
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+\TU/TimesNewRoman(0)/m/n/14.4 с провайдер-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+\TU/TimesNewRoman(0)/m/n/14.4 агностичным API;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+\TU/TimesNewRoman(0)/m/n/14.4 альтернативы:
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Citation 'gk_rf_part4' on page 47 undefined on input line 453.
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 452--457
+\TU/TimesNewRoman(0)/m/n/14.4 программы для ЭВМ в соответствии со ст. 1261 ГК Р
+Ф [[]].
+ []
+
+[47] [48]) (./conclusion.tex [49]
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+[]\TU/TimesNewRoman(0)/m/n/14.4 В настоящей работе разработан и валидирован инт
+еллектуальный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+\TU/TimesNewRoman(0)/m/n/14.4 платформы Adapstory, автоматизирующий создание, у
+паковку
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+\TU/TimesNewRoman(0)/m/n/14.4 и актуализацию учебных курсов на основе документо
+в заказчика
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 10--21
+[]\TU/TimesNewRoman(0)/b/n/14.4 Итоги выполнения задач исследования. \TU/TimesN
+ewRoman(0)/m/n/14.4 В ходе работы проведены
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--21
+\TU/TimesNewRoman(0)/m/n/14.4 Customer Development интервью с B2B-аудиторией ([
+PLACE-
+ []
+
+
+Underfull \hbox (badness 1424) in paragraph at lines 10--21
+\TU/TimesNewRoman(0)/m/n/14.4 курсов. Разработан технологический стек на основе
+ воспроизводимых
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--21
+\TU/TimesNewRoman(0)/m/n/14.4 экспериментов: LangGraph 1.x в качестве агентного
+ оркестратора,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--21
+\TU/TimesNewRoman(0)/m/n/14.4 bge-m3 для RAG. Реализованы Document Ingestion Pi
+peline, граф
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 10--21
+\TU/TimesNewRoman(0)/m/n/14.4 из пяти специализированных агентов с human-in-the
+-loop и механизм
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--21
+\TU/TimesNewRoman(0)/m/n/14.4 авто-актуализации контента. Проведена многоуровне
+вая валидация:
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 22--26
+\TU/TimesNewRoman(0)/m/n/14.4 / частично подтверждена]. Мультиагентный конвейер
+ сокращает time-
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 27--31
+[]\TU/TimesNewRoman(0)/m/n/14.4 Гипотеза H2 (техническая): [подтверждена / част
+ично подтверждена].
+ []
+
+
+Underfull \hbox (badness 4927) in paragraph at lines 32--35
+[]\TU/TimesNewRoman(0)/m/n/14.4 Гипотеза H3 (бизнесовая): [подтверждена / части
+чно подтверждена].
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 32--35
+\TU/TimesNewRoman(0)/m/n/14.4 Unit-стоимость генерации курса составила [PLACEHO
+LDER] руб., что
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 36--47
+[]\TU/TimesNewRoman(0)/b/n/14.4 Научный вклад. \TU/TimesNewRoman(0)/m/n/14.4 Пр
+едложена и экспериментально верифицирована
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 36--47
+\TU/TimesNewRoman(0)/m/n/14.4 sign) как переключаемый системный промпт, statefu
+l DAG-оркестрация
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--47
+\TU/TimesNewRoman(0)/m/n/14.4 образовательном корпусе. Результаты верификации н
+а тестовом
+ []
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 36--47
+\TU/TimesNewRoman(0)/m/n/14.4 HOLDER] открытых курсов вносят вклад в исследоват
+ельскую лакуну,
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 36--47
+\TU/TimesNewRoman(0)/m/n/14.4 мультиагентной генерации образовательного контент
+а на русскоязычных
+ []
+
+[50
+
+]) (./ai-usage.tex
+Underfull \hbox (badness 10000) in paragraph at lines 48--1
+[]\TU/TimesNewRoman(0)/b/n/14.4 Практический импакт. \TU/TimesNewRoman(0)/m/n/1
+4.4 Система прошла Problem/Solution Fit:
+ []
+
+
+Underfull \hbox (badness 6741) in paragraph at lines 48--1
+\TU/TimesNewRoman(0)/m/n/14.4 [PLACEHOLDER] B2B-пилотов подтверждены LOI-письма
+ми от ЛПР
+ []
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 48--1
+\TU/TimesNewRoman(0)/m/n/14.4 мультиязычности (EN, KZ), выход на международный 
+рынок и API-
+ []
+
+[51]
+Underfull \hbox (badness 1540) in paragraph at lines 12--14
+[]\TU/TimesNewRoman(0)/m/n/14.4 В ходе написания работы автором использовались 
+следующие системы
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
+[]\TU/TimesNewRoman(0)/b/n/14.4 Claude Sonnet 4.6 \TU/TimesNewRoman(0)/m/n/14.4
+ (Anthropic) — помощь в структурировании
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 16--19
+\TU/TimesNewRoman(0)/m/n/14.4 литературного обзора, корректура академического с
+тиля, генерация
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 верификацией через Google Scholar), перефразирова
+ние отдельных
+ []
+
+
+Underfull \hbox (badness 3623) in paragraph at lines 30--33
+[]\TU/TimesNewRoman(0)/b/n/14.4 AI-инструменты не использовались \TU/TimesNewRo
+man(0)/m/n/14.4 для: проведения экспериментов
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 30--33
+\TU/TimesNewRoman(0)/m/n/14.4 и сбора метрик, разработки кода ИИ-методиста, про
+ведения интервью
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 40--43
+[]\TU/TimesNewRoman(0)/b/n/14.4 Провёл исследование предметной области\TU/Times
+NewRoman(0)/m/n/14.4 : систематический обзор
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 44--49
+[]\TU/TimesNewRoman(0)/b/n/14.4 Разработал архитектурное решение\TU/TimesNewRom
+an(0)/m/n/14.4 : принял ключевые проектные
+ []
+
+[52
+
+]
+Underfull \hbox (badness 1622) in paragraph at lines 54--58
+\TU/TimesNewRoman(0)/m/n/14.4 way, Document Ingestion Pipeline (Haystack 2.x), 
+FastAPI-приложения
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 59--62
+[]\TU/TimesNewRoman(0)/b/n/14.4 Провёл эксперименты\TU/TimesNewRoman(0)/m/n/14.
+4 : сформировал тестовый датасет, разработал
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 63--66
+[]\TU/TimesNewRoman(0)/b/n/14.4 Провёл Customer Development\TU/TimesNewRoman(0)
+/m/n/14.4 : [PLACEHOLDER] глубинных B2B-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+\TU/TimesNewRoman(0)/m/n/14.4 интервью по методу Mom Test, [PLACEHOLDER] решенч
+еских
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
+[]\TU/TimesNewRoman(0)/b/n/14.4 Организовал пилоты\TU/TimesNewRoman(0)/m/n/14.4
+ : подписал [PLACEHOLDER] LOI
+ []
+
+)
+
+LaTeX Warning: Empty bibliography on input line 49.
+
+./main.tex:54: Undefined control sequence.
+<argument> ... \value {tocdepth}=\chaptertocdepth 
+                                                  }
+l.54 \appendix
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./main.tex:54: LaTeX Error: Command \addchaptertocentry undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \appendix
+              
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./appA.tex [53]
+ПРИЛОЖЕНИЕ А.
+
+LaTeX Warning: Citation 'fitzpatrick_mom_test_2013' on page 54 undefined on inp
+ut line 5.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+\TU/TimesNewRoman(0)/m/n/14.4 по методу Mom Test [[]], использовавшийся
+ []
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 11--14
+[]\TU/TimesNewRoman(0)/b/n/14.4 Цель\TU/TimesNewRoman(0)/m/n/14.4 : валидироват
+ь гипотезу о проблеме «Разработка образовательных
+ []
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 11--14
+\TU/TimesNewRoman(0)/m/n/14.4 курсов занимает слишком много времени и/или требу
+ет компетенций,
+ []
+
+
+Underfull \hbox (badness 7907) in paragraph at lines 15--17
+[]\TU/TimesNewRoman(0)/b/n/14.4 Целевая аудитория\TU/TimesNewRoman(0)/m/n/14.4 
+: HR-специалисты, L&D-менеджеры, методисты,
+ []
+
+[54
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]\TU/TimesNewRoman(0)/b/n/14.4 Роль /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]\TU/TimesNewRoman(0)/b/n/14.4 Ключевые болевые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+[]\TU/TimesNewRoman(0)/b/n/14.4 Текущие
+ []
+
+) (./appB.tex [55]
+ПРИЛОЖЕНИЕ Б.
+) (./appC.tex [56
+
+]
+ПРИЛОЖЕНИЕ В.
+
+Underfull \hbox (badness 7081) in paragraph at lines 4--7
+\TU/TimesNewRoman(0)/m/n/14.4 к пилотному использованию ИИ-методиста, подписанн
+ые ЛПР B2B-
+ []
+
+) (./appD.tex [57
+
+]
+ПРИЛОЖЕНИЕ Г.
+
+LaTeX Warning: Citation 'brown_c4_model_2018' on page 58 undefined on input lin
+e 5.
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 4--7
+[]\TU/TimesNewRoman(0)/m/n/14.4 В приложении представлены архитектурные диаграм
+мы ИИ-методиста
+ []
+
+) (./appE.tex [58
+
+]
+ПРИЛОЖЕНИЕ Д.
+
+Underfull \hbox (badness 2932) in paragraph at lines 4--7
+[]\TU/TimesNewRoman(0)/m/n/14.4 В приложении представлена полная спецификация г
+рафа агентов ИИ-
+ []
+
+
+Underfull \hbox (badness 3098) in paragraph at lines 4--7
+\TU/TimesNewRoman(0)/m/n/14.4 методиста: ноды, рёбра, условные переходы, точки 
+human-in-the-loop
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+[]\TU/TimesNewRoman(0)/m/n/14.4 Анализ целевой
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+[]\TU/TimesNewRoman(0)/m/n/14.4 Генерация структуры
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+[]\TU/TimesNewRoman(0)/m/n/14.4 Ревью структуры
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+[]\TU/TimesNewRoman(0)/m/n/14.4 Генерация текстов
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+[]\TU/TimesNewRoman(0)/m/n/14.4 Верификация
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 32--33
+[]\TU/TimesNewRoman(0)/m/n/14.4 Иллюстрации (FLUX)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+[]\TU/TimesNewRoman(0)/m/n/14.4 Финальный отчёт о
+ []
+
+) (./appF.tex [59
+
+]
+ПРИЛОЖЕНИЕ Е.
+
+Underfull \hbox (badness 5607) in paragraph at lines 4--7
+[]\TU/TimesNewRoman(0)/m/n/14.4 В приложении представлены системные промпты аге
+нта CourseStruc-
+ []
+
+Missing character: There is no Т (U+0422) in font [lmmono12-regular]:!
+Missing character: There is no ы (U+044B) in font [lmmono12-regular]:!
+Missing character: There is no э (U+044D) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no п (U+043F) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no п (U+043F) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no л (U+043B) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no г (U+0433) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no з (U+0437) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no б (U+0431) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no ч (U+0447) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no б (U+0431) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no ы (U+044B) in font [lmmono12-regular]:!
+Missing character: There is no х (U+0445) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no Т (U+0422) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no я (U+044F) in font [lmmono12-regular]:!
+Missing character: There is no з (U+0437) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no ч (U+0447) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no п (U+043F) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no л (U+043B) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no г (U+0433) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no з (U+0437) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no ь (U+044C) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no л (U+043B) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no я (U+044F) in font [lmmono12-regular]:!
+Missing character: There is no ф (U+0444) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no з (U+0437) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no Т (U+0422) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no б (U+0431) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no я (U+044F) in font [lmmono12-regular]:!
+Missing character: There is no К (U+041A) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no ж (U+0436) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no ы (U+044B) in font [lmmono12-regular]:!
+Missing character: There is no й (U+0439) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no л (U+043B) in font [lmmono12-regular]:!
+Missing character: There is no ь (U+044C) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no л (U+043B) in font [lmmono12-regular]:!
+Missing character: There is no ж (U+0436) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no ж (U+0436) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no ь (U+044C) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no ч (U+0447) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no б (U+0431) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no ы (U+044B) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no ц (U+0446) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no л (U+043B) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no п (U+043F) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no Б (U+0411) in font [lmmono12-regular]:!
+Missing character: There is no л (U+043B) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no з (U+0437) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no й (U+0439) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no Ф (U+0424) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no с (U+0441) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no г (U+0433) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no Д (U+0414) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no к (U+043A) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no м (U+043C) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no н (U+043D) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no Ц (U+0426) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no л (U+043B) in font [lmmono12-regular]:!
+Missing character: There is no е (U+0435) in font [lmmono12-regular]:!
+Missing character: There is no в (U+0432) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no я (U+044F) in font [lmmono12-regular]:!
+Missing character: There is no а (U+0430) in font [lmmono12-regular]:!
+Missing character: There is no у (U+0443) in font [lmmono12-regular]:!
+Missing character: There is no д (U+0434) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no т (U+0442) in font [lmmono12-regular]:!
+Missing character: There is no о (U+043E) in font [lmmono12-regular]:!
+Missing character: There is no р (U+0440) in font [lmmono12-regular]:!
+Missing character: There is no и (U+0438) in font [lmmono12-regular]:!
+Missing character: There is no я (U+044F) in font [lmmono12-regular]:!
+) (./appG.tex [60
+
+]
+ПРИЛОЖЕНИЕ Ж.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]\TU/TimesNewRoman(0)/b/n/14.4 Объём
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]\TU/TimesNewRoman(0)/m/n/14.4 Продуктовое
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+[]\TU/TimesNewRoman(0)/m/n/14.4 Brand Guide-
+ []
+
+
+Underfull \hbox (badness 5189) in paragraph at lines 17--18
+\TU/TimesNewRoman(0)/m/n/14.4 lines v2.1 (Adap-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]\TU/TimesNewRoman(0)/m/n/14.4 Продуктовое
+ []
+
+
+Underfull \hbox (badness 5787) in paragraph at lines 19--20
+[]\TU/TimesNewRoman(0)/m/n/14.4 Гайд по маскоту
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+\TU/TimesNewRoman(0)/m/n/14.4 Адаптик (Adap-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]\TU/TimesNewRoman(0)/m/n/14.4 Продуктовое
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[]\TU/TimesNewRoman(0)/m/n/14.4 Гайд по мерчу
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]\TU/TimesNewRoman(0)/m/n/14.4 Продуктовое
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[]\TU/TimesNewRoman(0)/m/n/14.4 Редакционная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+\TU/TimesNewRoman(0)/m/n/14.4 политика (Adap-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]\TU/TimesNewRoman(0)/m/n/14.4 Продуктовое
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+[]\TU/TimesNewRoman(0)/m/n/14.4 Стилевая рамка
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+\TU/TimesNewRoman(0)/m/n/14.4 бизнес-сегмента
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]\TU/TimesNewRoman(0)/m/n/14.4 Технический
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+[]\TU/TimesNewRoman(0)/m/n/14.4 Политика
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+\TU/TimesNewRoman(0)/m/n/14.4 информационной
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]\TU/TimesNewRoman(0)/m/n/14.4 Технический
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+[]\TU/TimesNewRoman(0)/m/n/14.4 Политика
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+\TU/TimesNewRoman(0)/m/n/14.4 обработки
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+\TU/TimesNewRoman(0)/m/n/14.4 персональных
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]\TU/TimesNewRoman(0)/m/n/14.4 Технический
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+[]\TU/TimesNewRoman(0)/m/n/14.4 Регламент
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+\TU/TimesNewRoman(0)/m/n/14.4 управления
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+\TU/TimesNewRoman(0)/m/n/14.4 ИТ-инцидентами
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]\TU/TimesNewRoman(0)/m/n/14.4 Технический
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+[]\TU/TimesNewRoman(0)/m/n/14.4 Положение
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+\TU/TimesNewRoman(0)/m/n/14.4 об адаптации
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+\TU/TimesNewRoman(0)/m/n/14.4 (онбординге)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]\TU/TimesNewRoman(0)/m/n/14.4 Технический
+ []
+
+
+Overfull \hbox (11.91472pt too wide) in paragraph at lines 35--36
+[]\TU/TimesNewRoman(0)/m/n/14.4 Антикоррупционная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+\TU/TimesNewRoman(0)/m/n/14.4 политика
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]\TU/TimesNewRoman(0)/m/n/14.4 Учебная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/m/n/14.4 and Program-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/m/n/14.4 ming in Python
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\TU/TimesNewRoman(0)/m/n/14.4 Учебная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+[]\TU/TimesNewRoman(0)/m/n/14.4 Single Vari-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+\TU/TimesNewRoman(0)/m/n/14.4 able Calculus
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]\TU/TimesNewRoman(0)/m/n/14.4 Учебная
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+[]\TU/TimesNewRoman(0)/m/n/14.4 Mathematics
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 41--42
+\TU/TimesNewRoman(0)/m/n/14.4 for Computer Sci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]\TU/TimesNewRoman(0)/m/n/14.4 Учебная
+ []
+
+
+Underfull \hbox (badness 7851) in paragraph at lines 43--44
+[]\TU/TimesNewRoman(0)/m/n/14.4 Principles of Mi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\TU/TimesNewRoman(0)/m/n/14.4 croeconomics
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]\TU/TimesNewRoman(0)/m/n/14.4 Учебная
+ []
+
+
+Underfull \hbox (badness 6001) in paragraph at lines 45--46
+[]\TU/TimesNewRoman(0)/m/n/14.4 Classical Mechan-
+ []
+
+
+LaTeX Warning: Float too large for page by 135.56406pt on input line 48.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 50--54
+[]\TU/TimesNewRoman(0)/m/n/14.4 Корпус сбалансирован по трём сценариям применен
+ия ИИ-методиста:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--54
+\TU/TimesNewRoman(0)/m/n/14.4 документы 1–5 (продуктовые описания) соответствую
+т сценарию
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 50--54
+\TU/TimesNewRoman(0)/m/n/14.4 compliance-курса, документы 11–15 (учебные програ
+ммы) — сценарию
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 64--66
+[]\TU/TimesNewRoman(0)/b/n/14.4 OpenEdu.ru\TU/TimesNewRoman(0)/m/n/14.4 : 5 кур
+сов российских вузов (ВШЭ, ИТМО, МГУ) —
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 68--70
+[]\TU/TimesNewRoman(0)/b/n/14.4 Telegram-курсы\TU/TimesNewRoman(0)/m/n/14.4 : 2
+ бота-симулятора — примеры ролевого обучения
+ []
+
+) (./appH.tex
+Underfull \hbox (badness 3884) in paragraph at lines 74--2
+\TU/TimesNewRoman(0)/m/n/14.4 Блума. Согласованность экспертов оценена коэффици
+ентом Коэна $\OML/cmm/m/it/14.4 ^^T$
+ []
+
+[61
+
+] [62]
+ПРИЛОЖЕНИЕ И.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+[]\TU/TimesNewRoman(0)/m/n/14.4 В приложении представлены полные результаты авт
+оматизированной
+ []
+
+) (./appI.tex [63
+
+]
+ПРИЛОЖЕНИЕ К.
+
+Underfull \hbox (badness 3354) in paragraph at lines 4--7
+[]\TU/TimesNewRoman(0)/m/n/14.4 В приложении представлены бизнес-модель Lean Ca
+nvas и детальные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[]\TU/TimesNewRoman(0)/b/n/14.4 Уникальное
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+[]\TU/TimesNewRoman(0)/m/n/14.4 Создание 1ч
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 обучения = 73–
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 490ч работы
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 методиста
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 (Chapman,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 2010); высокая
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 стоимость
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 подрядчиков
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 (100–300 тыс.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 руб./курс);
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 устаревание
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\TU/TimesNewRoman(0)/m/n/14.4 чем методисты
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+[]\TU/TimesNewRoman(0)/m/n/14.4 Автоматическая
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 генерация
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 структуры
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 и текстов курса
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 по загруженному
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 документу
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 за 30 мин;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 3 методологии
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 (AD-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 DIE/SAM/BD);
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\TU/TimesNewRoman(0)/m/n/14.4 механизм авто-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+[]\TU/TimesNewRoman(0)/m/n/14.4 Единственный
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 инструмент,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 сочетающий
+ []
+
+
+Overfull \hbox (2.04987pt too wide) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 методологическую
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 вариативность,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 суверенитет
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 данных (on-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 premise LLM)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 и глубокую
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+\TU/TimesNewRoman(0)/m/n/14.4 интеграцию
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]\TU/TimesNewRoman(0)/b/n/14.4 Несправедливое
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]\TU/TimesNewRoman(0)/b/n/14.4 Ключевые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+[]\TU/TimesNewRoman(0)/m/n/14.4 ADDIE/SAM/BD
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+\TU/TimesNewRoman(0)/m/n/14.4 как
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+\TU/TimesNewRoman(0)/m/n/14.4 переключаемые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+\TU/TimesNewRoman(0)/m/n/14.4 промпты;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+\TU/TimesNewRoman(0)/m/n/14.4 экосистема LMS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
+[]\TU/TimesNewRoman(0)/m/n/14.4 Time-to-draft
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
+\TU/TimesNewRoman(0)/m/n/14.4 ($\OML/cmm/m/it/14.4 <$\TU/TimesNewRoman(0)/m/n/1
+4.4 30 мин);
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
+\TU/TimesNewRoman(0)/m/n/14.4 Bloom’s coverage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
+\TU/TimesNewRoman(0)/m/n/14.4 ($\OMS/cmsy/m/n/14.4 ^^U$\TU/TimesNewRoman(0)/m/n
+/14.4 70%); faith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
+\TU/TimesNewRoman(0)/m/n/14.4 fulness (Ragas);
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
+\TU/TimesNewRoman(0)/m/n/14.4 unit-cost/курс;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+[]\TU/TimesNewRoman(0)/m/n/14.4 Прямые
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+\TU/TimesNewRoman(0)/m/n/14.4 продажи B2B;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+\TU/TimesNewRoman(0)/m/n/14.4 платформами;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+\TU/TimesNewRoman(0)/m/n/14.4 контент-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+\TU/TimesNewRoman(0)/m/n/14.4 маркетинг;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+\TU/TimesNewRoman(0)/m/n/14.4 EdTech-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+[]\TU/TimesNewRoman(0)/b/n/14.4 Структура
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
+[]\TU/TimesNewRoman(0)/m/n/14.4 Затраты: GPU-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
+\TU/TimesNewRoman(0)/m/n/14.4 инфраструктура,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
+\TU/TimesNewRoman(0)/m/n/14.4 разработка,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
+\TU/TimesNewRoman(0)/m/n/14.4 поддержка.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
+\TU/TimesNewRoman(0)/m/n/14.4 B2B SaaS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
+\TU/TimesNewRoman(0)/m/n/14.4 unit-cost
+ []
+
+
+Overfull \hbox (388.99907pt too wide) in paragraph at lines 16--60
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./appJ.tex [64
+
+] [65]
+ПРИЛОЖЕНИЕ Л.
+)
+
+Package caption Warning: Unused \captionsetup[figure] on input line 6.
+See the caption package documentation for explanation.
+
+[66
+
+] (./main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 16991 strings out of 468168
+ 363911 string characters out of 5432815
+ 1417779 words of memory out of 5000000
+ 45482 multiletter control sequences out of 15000+600000
+ 629261 words of font info for 67 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 78i,12n,96p,693b,1589s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.xdv (63 pages, 850216 bytes).
