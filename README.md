@@ -49,9 +49,42 @@ LaTeX-шаблон для магистерской диссертации AI Tal
 - XeLaTeX как компилятор (рекомендуется)
 - Пакет `biblatex-gost` (входит в TeX Live)
 
-**Компиляция через latexmk:**
+**Рекомендуемая локальная сборка:**
 ```bash
-latexmk -xelatex -f -interaction=nonstopmode main.tex
+./build.sh
+```
+
+Скрипт выполняет корректную последовательность
+`XeLaTeX -> biber -> XeLaTeX -> XeLaTeX`, добавляет
+`/Library/TeX/texbin` в~`PATH` на~macOS и~не~падает из-за нефатальных
+типографских warning'ов XeLaTeX.
+
+**Очистка временных файлов:**
+```bash
+./build.sh clean
+```
+
+**Альтернативно через latexmk:**
+```bash
+latexmk main.tex
+```
+
+В~репозитории есть файл `.latexmkrc`, поэтому `latexmk` автоматически
+использует `XeLaTeX + biber` и делает нужное число прогонов сам.
+
+**Полезные команды:**
+```bash
+latexmk -C        # очистка временных файлов
+latexmk main.tex  # чистая сборка PDF
+```
+
+**Примечание для macOS (MacTeX/BasicTeX):**
+если `latexmk`, `xelatex` или `biber` не находятся, добавьте
+`/Library/TeX/texbin` в~`PATH`.
+
+Для `fish`:
+```fish
+fish_add_path /Library/TeX/texbin
 ```
 
 **Или вручную (4 прогона):**

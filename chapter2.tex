@@ -107,6 +107,123 @@ evaluation-набора:
 его педагогическую глубину, связь с источником и эксплуатационную
 стоимость решения.
 
+Вместе с тем одной Bloom's taxonomy недостаточно для полноценной
+педагогической и пользовательской оценки курса. Bloom хорошо описывает
+когнитивный уровень целей, но слабее отражает структурную сложность
+результата, согласованность курса, качество онлайн-дизайна и эффект
+для обучающегося. Поэтому в~методологическом контуре исследования
+рассматривается более широкий набор рамок
+~\cite{monash_solo_2026, webb_dok_guide_2013,
+advancehe_constructive_alignment_2026, quality_matters_he_rubric_2026,
+fink_significant_learning_2026, chi_wylie_2014, cast_udl_2024}.
+
+\subsection{Расширенная педагогическая и learner-centered рамка}
+
+\begingroup
+\small
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{3.2cm}|p{4.0cm}|p{5.3cm}|}
+  \caption{Дополнительные рамки оценки качества курса сверх Bloom's taxonomy}
+  \label{tab:extended-learning-metrics} \\
+  \hline
+  \textbf{Рамка} & \textbf{Что измеряет} & \textbf{Потенциальная операционализация для ИИ-методиста} \\
+  \hline
+  \endfirsthead
+  \hline
+  \textbf{Рамка} & \textbf{Что измеряет} & \textbf{Потенциальная операционализация для ИИ-методиста} \\
+  \hline
+  \endhead
+  SOLO Taxonomy
+    & структурную сложность и~степень интеграции результата обучения
+    & экспертная оценка blueprint на~уровнях
+      unistructural--extended abstract \\
+  \hline
+  Webb's Depth of Knowledge (DOK)
+    & когнитивную строгость заданий и~оценочных материалов
+    & распределение generated tasks по~уровням DOK~1--4 \\
+  \hline
+  Constructive Alignment (Biggs)
+    & согласованность целей, активностей и~assessment
+    & доля целей, для~которых в~курсе есть связанная активность
+      и~способ проверки \\
+  \hline
+  Quality Matters Rubric
+    & качество онлайн-курса как цифрового образовательного продукта
+    & checklist-score по~целям, assessment, materials, activities,
+      technologies и~accessibility \\
+  \hline
+  Fink's Taxonomy of Significant Learning
+    & значимое обучение beyond content recall
+    & покрытие application, integration, human dimension,
+      caring и~learning how to learn \\
+  \hline
+  ICAP Framework
+    & тип учебной активности и~глубину вовлечения обучающегося
+    & доля passive / active / constructive / interactive
+      learning activities \\
+  \hline
+  UDL: Universal Design for Learning
+    & доступность, вариативность подачи и~варианты действия
+    & coverage по~осьям engagement, representation,
+      action \& expression \\
+  \hline
+\end{longtable}
+\endgroup
+
+\begingroup
+\small
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{3.2cm}|p{4.0cm}|p{5.3cm}|}
+  \caption{Learner-centered метрики эффекта обучения}
+  \label{tab:learner-centered-metrics} \\
+  \hline
+  \textbf{Показатель} & \textbf{Что измеряет} & \textbf{Потенциальная операционализация} \\
+  \hline
+  \endfirsthead
+  \hline
+  \textbf{Показатель} & \textbf{Что измеряет} & \textbf{Потенциальная операционализация} \\
+  \hline
+  \endhead
+  Self-efficacy / самоэффективность
+    & уверенность обучающегося, что он может выполнить конкретную задачу
+    & task-specific Likert-вопросы вида
+      «теперь я могу самостоятельно сделать X» \\
+  \hline
+  Perceived Competence / ощущаемая компетентность
+    & субъективное ощущение владения темой или навыком
+    & короткая post-course шкала PCS по~конкретному домену \\
+  \hline
+  Transfer of learning / перенос в~практику
+    & факт применения изученного в~рабочей или учебной ситуации
+    & follow-up через 2--4~недели: применял~ли, сколько раз,
+      какие барьеры возникли \\
+  \hline
+  Retrospective pre-post
+    & изменение восприятия своих возможностей с~учётом response-shift
+    & один пост-опросник с~оценкой состояния
+      «до курса» и~«после курса» \\
+  \hline
+  Goal attainment / достижение цели
+    & степень достижения индивидуальной учебной или рабочей цели
+    & mini goal-attainment scale по~цели, сформулированной
+      перед~обучением \\
+  \hline
+\end{longtable}
+\endgroup
+
+Для настоящего исследования эти рамки рассматриваются как~\textbf{следующий
+слой валидации}, а~не~как замена уже выполненных технических измерений.
+Иными словами, текущий MVP по-прежнему опирается на~Bloom coverage,
+валидность структуры, retrieval/factual метрики и~операционную
+себестоимость, но следующая волна pilot-stage может быть усилена
+показателями самоэффективности, perceived competence, transfer
+и~goal attainment
+~\cite{bandura_self_efficacy_2006, pcs_sdt_2026,
+kirkpatrick_model_2026, shilts_retrospective_2008,
+shogren_gas_2021}.
+
 % ─────────────────────────────────────────────────────────────────
 \section{Выбор и обоснование технологий}
 % ─────────────────────────────────────────────────────────────────
@@ -496,7 +613,7 @@ retrieval, факт-чекинг и глубину методической ст
     & инфраструктурный cost per course в текущем pipeline \\
   \hline
   Отношение к стоимости подрядной разработки
-    & 5\%
+    & 0.05\%
     & текущий MVP в модели существенно дешевле внешнего производства \\
   \hline
   LTV / CAC

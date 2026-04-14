@@ -1,37 +1,67 @@
 % Ссылка в тексте: (приложение~Д)
 \chapter{СПЕЦИФИКАЦИЯ ГРАФА АГЕНТОВ LANGGRAPH}
 
-В~приложении представлена полная спецификация графа агентов ИИ-методиста:
-ноды, рёбра, условные переходы, точки human-in-the-loop
-(раздел~3.2 основного текста).
+В~приложении представлена текстовая спецификация графа агентов
+ИИ-методиста: ноды, основные переходы и~точки human-in-the-loop.
 
-\section*{Рисунок Д.1 --- Граф агентов LangGraph StateGraph}
-
-[Вставить визуализацию графа LangGraph (экспорт из LangSmith / draw.io)]
-
-\section*{Таблица нод и переходов}
+\section*{Д.1 --- Ноды графа}
 
 \begin{table}[h!]
   \caption{Ноды графа агентов ИИ-методиста}
   \label{tab:langgraph-nodes}
   \centering
-  \begin{tabular}{|p{4cm}|p{4cm}|p{5cm}|}
+  \begin{tabular}{|p{3.5cm}|p{2.5cm}|p{5.5cm}|}
   \hline
   \textbf{Нода} & \textbf{Тип} & \textbf{Описание} \\
   \hline
-  target\_analysis & agent & Анализ целевой аудитории \\
+  target\_analysis & agent & Анализ целевой аудитории и~контекста использования курса \\
   \hline
-  course\_structure & agent & Генерация структуры (ADDIE/SAM/BD) \\
+  course\_structure & agent & Генерация структуры курса по~выбранной методологии \\
   \hline
-  human\_review & interrupt & Ревью структуры владельцем продукта \\
+  human\_review & interrupt & Ручное подтверждение или~коррекция структуры \\
   \hline
-  content\_creator & agent & Генерация текстов уроков (RAG) \\
+  content\_creator & agent & Генерация уроков с~использованием retrieval \\
   \hline
-  fact\_check & agent & Верификация утверждений \\
+  fact\_check & agent & Проверка утверждений относительно исходного документа \\
   \hline
-  media\_gen & agent & Иллюстрации (FLUX) + подкасты (Silero) \\
+  media\_gen & agent & Иллюстрации и~TTS-материалы \\
   \hline
-  review & agent & Финальный отчёт о качестве \\
+  final\_review & agent & Итоговая проверка качества и~сборка отчёта \\
   \hline
   \end{tabular}
 \end{table}
+
+\section*{Д.2 --- Основные переходы}
+
+\begin{table}[h!]
+  \caption{Ключевые переходы в графе LangGraph}
+  \label{tab:langgraph-edges}
+  \centering
+  \begin{tabular}{|p{3.2cm}|p{3.2cm}|p{5cm}|}
+  \hline
+  \textbf{Откуда} & \textbf{Куда} & \textbf{Условие перехода} \\
+  \hline
+  target\_analysis & course\_structure & исходный документ разобран и~аудитория определена \\
+  \hline
+  course\_structure & human\_review & blueprint построен и~доступен для~проверки \\
+  \hline
+  human\_review & content\_creator & структура утверждена пользователем \\
+  \hline
+  content\_creator & fact\_check & уроки сгенерированы и~требуют верификации \\
+  \hline
+  fact\_check & media\_gen & фактологический порог пройден \\
+  \hline
+  media\_gen & final\_review & медиаартефакты готовы \\
+  \hline
+  final\_review & export & итоговый пакет курса признан валидным \\
+  \hline
+  \end{tabular}
+\end{table}
+
+\section*{Д.3 --- Human-in-the-loop точки}
+
+\begin{itemize}
+  \item подтверждение структуры курса перед генерацией полного контента;
+  \item ручной review спорных fact-check кейсов;
+  \item финальное решение о~публикации курса в~LMS.
+\end{itemize}

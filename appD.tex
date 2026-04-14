@@ -1,24 +1,58 @@
 % Ссылка в тексте: (приложение~Г)
-\chapter{C4-ДИАГРАММЫ АРХИТЕКТУРЫ}
+\chapter{C4-ДЕКОМПОЗИЦИЯ АРХИТЕКТУРЫ}
 
-В~приложении представлены архитектурные диаграммы ИИ-методиста
-по~нотации C4~Model~\cite{brown_c4_model_2018}
-(раздел~3.1 основного текста).
+В~приложении представлена текстовая C4-декомпозиция архитектуры
+ИИ-методиста. На~этапе черновика она заменяет финальные визуальные
+диаграммы и~фиксирует состав системы в~форме, достаточной
+для~архитектурного обсуждения.
 
-\section*{Рисунок Г.1 --- Системный контекст (C4 Level~1)}
+\section*{Г.1 --- Системный контекст (C4 Level~1)}
 
-% \begin{figure}[h!]
-% \centering
-% \includegraphics[width=0.9\textwidth]{c4-l1-context.png}
-% \caption{Контекстная диаграмма ИИ-методиста (C4 Level~1)}
-% \label{fig:c4-l1}
-% \end{figure}
-[Вставить диаграмму]
+\begin{itemize}
+  \item \textbf{Автор курса / HR-специалист}: загружает документ,
+    запускает генерацию, ревьюит структуру курса;
+  \item \textbf{BFF School}: маршрутизирует запросы веб-клиента;
+  \item \textbf{ИИ-методист}: выполняет ingestion, анализ документа,
+    генерацию структуры и~контента;
+  \item \textbf{LMS Adapstory}: принимает итоговый курс и~публикует его;
+  \item \textbf{MinIO}: хранит исходные документы и~медиа;
+  \item \textbf{Ollama / GPU-узел}: обслуживает локальные LLM и~media-модели;
+  \item \textbf{Qdrant}: хранит векторный индекс для~retrieval.
+\end{itemize}
 
-\section*{Рисунок Г.2 --- Диаграмма контейнеров (C4 Level~2)}
+\section*{Г.2 --- Контейнеры (C4 Level~2)}
 
-[Вставить диаграмму]
+\begin{table}[h!]
+  \caption{Контейнерная декомпозиция ИИ-методиста}
+  \label{tab:c4-containers}
+  \centering
+  \begin{tabular}{|p{4cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Контейнер} & \textbf{Технология} & \textbf{Роль} \\
+  \hline
+  API Gateway & FastAPI & входная точка для~BFF и~оркестрация запросов \\
+  \hline
+  Async workers & Celery & асинхронное выполнение ingestion и~generation задач \\
+  \hline
+  Agent runtime & LangGraph & исполнение stateful agent workflow \\
+  \hline
+  Ingestion pipeline & Haystack 2.x & извлечение, очистка, чанкинг и~индексация документов \\
+  \hline
+  LLM Gateway & Python service & единый доступ к~Qwen / внешним провайдерам \\
+  \hline
+  Vector storage & Qdrant & поиск релевантных фрагментов для~RAG \\
+  \hline
+  \end{tabular}
+\end{table}
 
-\section*{Рисунок Г.3 --- Диаграмма компонентов (C4 Level~3)}
+\section*{Г.3 --- Компоненты (C4 Level~3)}
 
-[Вставить диаграмму]
+\begin{itemize}
+  \item \textbf{Document parser}: преобразует PDF/DOCX/PPTX/XLSX в~текст;
+  \item \textbf{Chunker + embedder}: формирует индексируемые фрагменты;
+  \item \textbf{CourseStructureAgent}: генерирует blueprint курса;
+  \item \textbf{ContentCreatorAgent}: формирует тексты уроков;
+  \item \textbf{FactCheckAgent}: проверяет фактические утверждения;
+  \item \textbf{Review / HITL layer}: обеспечивает human-in-the-loop контроль;
+  \item \textbf{Exporter}: публикует результат в~LMS Adapstory.
+\end{itemize}
