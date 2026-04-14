@@ -12,12 +12,12 @@
   \item \textbf{Автор курса / HR-специалист}: загружает документ,
     запускает генерацию, ревьюит структуру курса;
   \item \textbf{BFF School}: маршрутизирует запросы веб-клиента;
-  \item \textbf{ИИ-методист}: выполняет ingestion, анализ документа,
+  \item \textbf{ИИ-методист}: выполняет обработку документа, анализ,
     генерацию структуры и~контента;
   \item \textbf{LMS Adapstory}: принимает итоговый курс и~публикует его;
   \item \textbf{MinIO}: хранит исходные документы и~медиа;
-  \item \textbf{Ollama / GPU-узел}: обслуживает локальные LLM и~media-модели;
-  \item \textbf{Qdrant}: хранит векторный индекс для~retrieval.
+  \item \textbf{Ollama / GPU-узел}: обслуживает локальные LLM и~модели мультимедиа;
+  \item \textbf{Qdrant}: хранит векторный индекс для~поиска релевантных фрагментов.
 \end{itemize}
 
 \section*{Г.2 --- Контейнеры (C4 Level~2)}
@@ -32,9 +32,9 @@
   \hline
   API Gateway & FastAPI & входная точка для~BFF и~оркестрация запросов \\
   \hline
-  Async workers & Celery & асинхронное выполнение ingestion и~generation задач \\
+  Async workers & Celery & асинхронное выполнение задач обработки документов и~генерации \\
   \hline
-  Agent runtime & LangGraph & исполнение stateful agent workflow \\
+  Agent runtime & LangGraph & исполнение агентного графа с~сохраняемым состоянием \\
   \hline
   Ingestion pipeline & Haystack 2.x & извлечение, очистка, чанкинг и~индексация документов \\
   \hline
@@ -50,9 +50,9 @@
 \begin{itemize}
   \item \textbf{Document parser}: преобразует PDF/DOCX/PPTX/XLSX в~текст;
   \item \textbf{Chunker + embedder}: формирует индексируемые фрагменты;
-  \item \textbf{CourseStructureAgent}: генерирует blueprint курса;
+  \item \textbf{CourseStructureAgent}: генерирует структуру курса;
   \item \textbf{ContentCreatorAgent}: формирует тексты уроков;
   \item \textbf{FactCheckAgent}: проверяет фактические утверждения;
-  \item \textbf{Review / HITL layer}: обеспечивает human-in-the-loop контроль;
+  \item \textbf{Review / HITL layer}: обеспечивает контроль с~участием человека;
   \item \textbf{Exporter}: публикует результат в~LMS Adapstory.
 \end{itemize}
