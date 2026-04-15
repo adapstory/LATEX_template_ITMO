@@ -3,6 +3,12 @@
 
 \input{preamble.tex}
 
+\newif\ifomitvalidationchapter
+\omitvalidationchapterfalse
+\ifdefined\omitvalidationchapterdraft
+  \omitvalidationchaptertrue
+\fi
+
 \begin{document}
 
 % Нумерация страниц начинается с листа «СОДЕРЖАНИЕ» (п. 4.3.1)
@@ -35,7 +41,10 @@
 \input{chapter1.tex}
 \input{chapter2.tex}
 \input{chapter3.tex}
-\input{chapter4.tex}
+\ifomitvalidationchapter
+\else
+  \input{chapter4.tex}
+\fi
 \input{conclusion.tex}
 \input{ai-usage.tex}
 

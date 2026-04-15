@@ -27,8 +27,9 @@ ARTIFACTS=(
 usage() {
   cat <<'EOF'
 Usage:
-  ./build.sh         Build main.pdf
-  ./build.sh clean   Remove LaTeX temporary files
+  ./build.sh              Build full main.pdf
+  ./build.sh advisor      Build main.pdf without chapter 4
+  ./build.sh clean        Remove LaTeX temporary files
 EOF
 }
 
@@ -46,11 +47,17 @@ require_bin() {
 
 run_xelatex() {
   local step="$1"
+  local variant="${2:-full}"
   local tmp_log
   tmp_log="$(mktemp -t "diploma-xelatex-${step}")"
+  local tex_entry="main.tex"
+
+  if [[ "$variant" == "advisor" ]]; then
+    tex_entry='\def\omitvalidationchapterdraft{1}\input{main.tex}'
+  fi
 
   set +e
-  xelatex -interaction=nonstopmode -file-line-error -synctex=1 main.tex \
+  xelatex -interaction=nonstopmode -file-line-error -synctex=1 "$tex_entry" \
     >"$tmp_log" 2>&1
   local status=$?
   set -e
@@ -68,15 +75,16 @@ run_xelatex() {
 }
 
 build() {
+  local variant="${1:-full}"
   require_bin xelatex
   require_bin biber
 
   clean
 
-  run_xelatex 1
+  run_xelatex 1 "$variant"
   biber main
-  run_xelatex 2
-  run_xelatex 3
+  run_xelatex 2 "$variant"
+  run_xelatex 3 "$variant"
 
   if [[ ! -f main.pdf ]]; then
     echo "Build failed: main.pdf was not produced." >&2
@@ -89,7 +97,10 @@ build() {
 
 case "${1:-build}" in
   build)
-    build
+    build full
+    ;;
+  advisor)
+    build advisor
     ;;
   clean)
     clean
