@@ -1,27 +1,23 @@
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[
-    trapezium/.style={draw=teal!80!black, thick, fill=#1, minimum height=1.2cm,
-        trapezium, trapezium angle=75, trapezium stretches body,
-        text=white, font=\bfseries\small, align=center},
-]
+\begin{tikzpicture}
 % TAM — widest
-\node[trapezium=teal!70!black, minimum width=12cm] (tam) at (0,0) {};
-\node[font=\bfseries\small, text=white] at (tam.center) {TAM (глобальный): \$842{,}64 млрд (2030)};
+\fill[teal!70!black, rounded corners=2pt] (-6,0) rectangle (6,1.2);
+\node[font=\bfseries\small, text=white] at (0,0.6) {TAM (глобальный): \$842{,}64 млрд к~2030 г.};
 
 % SAM — medium
-\node[trapezium=teal!50!black, minimum width=8cm] (sam) at (0,-1.8) {};
-\node[font=\bfseries\small, text=white] at (sam.center) {SAM (EdTech-инструменты, РФ): 15{,}5 млрд руб.};
+\fill[teal!50!black, rounded corners=2pt] (-4,-1.8) rectangle (4,-0.6);
+\node[font=\bfseries\small, text=white] at (0,-1.2) {SAM (EdTech-инструменты, РФ): 15{,}5 млрд руб.};
 
 % SOM — narrowest
-\node[trapezium=teal!30!black, minimum width=4.5cm] (som) at (0,-3.6) {};
-\node[font=\bfseries\small, text=white] at (som.center) {SOM (3 года): 15{,}5 млн руб.};
+\fill[teal!30!black, rounded corners=2pt] (-2.2,-3.6) rectangle (2.2,-2.4);
+\node[font=\bfseries\small, text=white] at (0,-3.0) {SOM (3 года): 15{,}5 млн руб.};
 
-% Connecting lines
-\draw[gray, dashed, thick] ([xshift=-0.3cm]tam.south west) -- ([xshift=-0.3cm]sam.north west);
-\draw[gray, dashed, thick] ([xshift=0.3cm]tam.south east) -- ([xshift=0.3cm]sam.north east);
-\draw[gray, dashed, thick] ([xshift=-0.3cm]sam.south west) -- ([xshift=-0.3cm]som.north west);
-\draw[gray, dashed, thick] ([xshift=0.3cm]sam.south east) -- ([xshift=0.3cm]som.north east);
+% Connecting dashed lines (funnel edges)
+\draw[gray, dashed, thick] (-6,0) -- (-4,-0.6);
+\draw[gray, dashed, thick] (6,0) -- (4,-0.6);
+\draw[gray, dashed, thick] (-4,-1.8) -- (-2.2,-2.4);
+\draw[gray, dashed, thick] (4,-1.8) -- (2.2,-2.4);
 \end{tikzpicture}
 \caption{Оценка рынка: TAM / SAM / SOM}
 \label{fig:tam-sam-som}
