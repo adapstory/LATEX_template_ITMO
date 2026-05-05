@@ -2,22 +2,25 @@
 \centering
 \begin{tikzpicture}
 % TAM — widest
-\fill[teal!70!black, rounded corners=2pt] (-6,0) rectangle (6,1.2);
-\node[font=\bfseries\small, text=white] at (0,0.6) {TAM (глобальный): \$842{,}64 млрд к~2030 г.};
+\fill[teal!70!black, rounded corners=2pt] (-5.5,0) rectangle (5.5,1.0);
+\node[font=\bfseries\small, text=white] at (0,0.5)
+  {TAM (глобальный): \$842{,}64 млрд к~2030 г.};
 
 % SAM — medium
-\fill[teal!50!black, rounded corners=2pt] (-4,-1.8) rectangle (4,-0.6);
-\node[font=\bfseries\small, text=white] at (0,-1.2) {SAM (EdTech-инструменты, РФ): 15{,}5 млрд руб.};
+\fill[teal!55!black, rounded corners=2pt] (-5.0,-1.6) rectangle (5.0,-0.6);
+\node[font=\bfseries\footnotesize, text=white] at (0,-1.1)
+  {SAM (EdTech-инструменты, РФ): 15{,}5 млрд руб.};
 
 % SOM — narrowest
-\fill[teal!30!black, rounded corners=2pt] (-2.2,-3.6) rectangle (2.2,-2.4);
-\node[font=\bfseries\small, text=white] at (0,-3.0) {SOM (3 года): 15{,}5 млн руб.};
+\fill[teal!40!black, rounded corners=2pt] (-3.5,-3.2) rectangle (3.5,-2.2);
+\node[font=\bfseries\small, text=white] at (0,-2.7)
+  {SOM (3 года): 15{,}5 млн руб.};
 
-% Connecting dashed lines (funnel edges)
-\draw[gray, dashed, thick] (-6,0) -- (-4,-0.6);
-\draw[gray, dashed, thick] (6,0) -- (4,-0.6);
-\draw[gray, dashed, thick] (-4,-1.8) -- (-2.2,-2.4);
-\draw[gray, dashed, thick] (4,-1.8) -- (2.2,-2.4);
+% Connecting dashed lines (funnel)
+\draw[gray, dashed, thick] (-5.5,0) -- (-5.0,-0.6);
+\draw[gray, dashed, thick] (5.5,0) -- (5.0,-0.6);
+\draw[gray, dashed, thick] (-5.0,-1.6) -- (-3.5,-2.2);
+\draw[gray, dashed, thick] (5.0,-1.6) -- (3.5,-2.2);
 \end{tikzpicture}
 \caption{Оценка рынка: TAM / SAM / SOM}
 \label{fig:tam-sam-som}
