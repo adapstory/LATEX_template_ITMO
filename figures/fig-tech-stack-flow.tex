@@ -1,18 +1,20 @@
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}[
-    node distance=1.8cm,
+    node distance=1.2cm,
     every node/.style={font=\small},
-    block/.style={rectangle, rounded corners=4pt, draw, minimum height=1cm, minimum width=2.2cm, align=center, fill=white},
+    block/.style={rectangle, rounded corners=4pt, draw, minimum height=1cm, minimum width=2.4cm, align=center, fill=white},
     bigblock/.style={rectangle, rounded corners=4pt, draw, minimum height=1.2cm, minimum width=2.8cm, align=center, fill=blue!8, line width=0.8pt},
     arr/.style={-stealth, thick},
   ]
-    % Nodes
+    % Row 1: Document -> Haystack AsyncPipeline -> SemanticSplitter -> OllamaEmbedder
     \node[block] (minio) {Document\\(MinIO)};
     \node[block, right=of minio] (pipeline) {Haystack\\AsyncPipeline};
-    \node[block, right=1.5cm of pipeline] (splitter) {Semantic\\Splitter};
+    \node[block, right=of pipeline] (splitter) {Semantic\\Splitter};
     \node[block, right=of splitter] (embedder) {Ollama\\Embedder};
-    \node[block, right=of embedder] (qdrant) {Qdrant};
+
+    % Row 2: Qdrant <- ... LangGraph StateGraph -> Course Artifacts
+    \node[block, below=1.8cm of minio] (qdrant) {Qdrant};
     \node[bigblock, right=of qdrant] (langgraph) {LangGraph\\StateGraph};
     \node[block, right=of langgraph] (artifacts) {Course\\Artifacts};
 
@@ -22,11 +24,15 @@
             fit=(splitter)(embedder), label={[font=\footnotesize]above:Haystack 2.x}] {};
     \end{scope}
 
-    % Arrows
+    % Row 1 arrows
     \draw[arr] (minio) -- (pipeline);
     \draw[arr] (pipeline) -- (splitter);
     \draw[arr] (splitter) -- (embedder);
-    \draw[arr] (embedder) -- (qdrant);
+
+    % Corner arrow from embedder down to qdrant
+    \draw[arr] (embedder.south) -- ++(0,-0.6) -| (qdrant.north);
+
+    % Row 2 arrows
     \draw[arr] (qdrant) -- (langgraph);
     \draw[arr] (langgraph) -- (artifacts);
   \end{tikzpicture}

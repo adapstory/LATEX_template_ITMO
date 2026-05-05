@@ -36,7 +36,7 @@
     % Риски как точки с подписями
     % Деградация LLM: (2, 2)
     \addplot[only marks, mark=*, mark size=6pt, blue!70] coordinates {(2, 2)};
-    \node[font=\footnotesize, anchor=south, yshift=4pt] at (axis cs:2,2) {Деградация LLM};
+    \node[font=\footnotesize, anchor=west, xshift=8pt] at (axis cs:2,2) {Деградация LLM};
 
     % Недоступность GPU: (1, 2)
     \addplot[only marks, mark=*, mark size=6pt, orange!80!black] coordinates {(1, 2)};
@@ -50,9 +50,9 @@
     \addplot[only marks, mark=*, mark size=6pt, green!50!black] coordinates {(2, 1)};
     \node[font=\footnotesize, anchor=south, yshift=4pt] at (axis cs:2,1) {Неприятие пользователями};
 
-    % Смена лицензии: (1.15, 2.15) — слегка сдвинуто для читаемости
-    \addplot[only marks, mark=*, mark size=6pt, purple!70] coordinates {(1.15, 2.3)};
-    \node[font=\footnotesize, anchor=north west, xshift=2pt, yshift=-2pt] at (axis cs:1.15,2.3) {Смена лицензии};
+    % Смена лицензии: сдвинуто для читаемости
+    \addplot[only marks, mark=*, mark size=6pt, purple!70] coordinates {(1.3, 2.5)};
+    \node[font=\footnotesize, anchor=south west, xshift=2pt, yshift=4pt] at (axis cs:1.3,2.5) {Смена лицензии};
 
     \end{axis}
   \end{tikzpicture}

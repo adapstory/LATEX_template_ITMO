@@ -1,30 +1,31 @@
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}[
-    every node/.style={font=\small},
+    every node/.style={font=\scriptsize},
+    x=1cm,
   ]
-    % Actor positions
+    % Actor positions — wider spacing
     \def\actorA{0}       % Пользователь
-    \def\actorB{2.8}     % BFF
-    \def\actorC{5.6}     % ИИ-методист
-    \def\actorD{8.4}     % LLM
-    \def\actorE{11.2}    % Qdrant
+    \def\actorB{3.2}     % BFF
+    \def\actorC{6.8}     % ИИ-методист
+    \def\actorD{10.0}    % LLM
+    \def\actorE{13.2}    % Qdrant
 
     % Actor labels
-    \node[font=\small\bfseries] at (\actorA, 0) {Пользователь};
-    \node[font=\small\bfseries] at (\actorB, 0) {BFF};
-    \node[font=\small\bfseries] at (\actorC, 0) {ИИ-методист};
-    \node[font=\small\bfseries] at (\actorD, 0) {LLM};
-    \node[font=\small\bfseries] at (\actorE, 0) {Qdrant};
+    \node[font=\scriptsize\bfseries] at (\actorA, 0) {Пользователь};
+    \node[font=\scriptsize\bfseries] at (\actorB, 0) {BFF};
+    \node[font=\scriptsize\bfseries] at (\actorC, 0) {ИИ-методист};
+    \node[font=\scriptsize\bfseries] at (\actorD, 0) {LLM};
+    \node[font=\scriptsize\bfseries] at (\actorE, 0) {Qdrant};
 
-    % Lifelines
+    % Lifelines — taller
     \foreach \x in {\actorA, \actorB, \actorC, \actorD, \actorE} {
-      \draw[dashed, gray] (\x, -0.3) -- (\x, -11.5);
+      \draw[dashed, gray] (\x, -0.4) -- (\x, -13.5);
     }
 
-    % Messages
-    \def\ystart{-1.0}
-    \def\ystep{1.0}
+    % Messages with more vertical space
+    \def\ystart{-1.2}
+    \def\ystep{1.2}
 
     % 1. Пользователь -> BFF
     \draw[-stealth] (\actorA, \ystart) -- (\actorB, \ystart)

@@ -3,7 +3,7 @@
   \centering
   \begin{tikzpicture}
     \begin{axis}[
-      width=0.9\textwidth,
+      width=0.95\textwidth,
       height=0.55\textwidth,
       xlabel={Месяц},
       ylabel={тыс. руб./мес.},
@@ -44,7 +44,7 @@
     \addlegendentry{Расходы}
     % Точка безубыточности — вертикальная линия
     \draw[gray, densely dashed, thick] (axis cs:32,0) -- (axis cs:32,420);
-    \node[font=\footnotesize, align=center, anchor=south west] at (axis cs:32.5,350)
+    \node[font=\small, align=center, anchor=south west] at (axis cs:32.5,350)
       {Точка\\безубыточности\\(32 мес.)};
     % Точка пересечения
     \addplot[only marks, mark=o, mark size=5pt, thick, black] coordinates {(32, 200)};

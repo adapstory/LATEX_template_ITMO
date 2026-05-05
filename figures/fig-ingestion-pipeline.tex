@@ -1,31 +1,43 @@
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}[
-    node distance=2.4cm,
-    every node/.style={font=\small},
-    block/.style={rectangle, rounded corners=4pt, draw, minimum height=1cm, minimum width=2cm, align=center, fill=white},
+    scale=0.9, every node/.append style={transform shape},
+    node distance=0.8cm,
+    every node/.style={font=\scriptsize},
+    block/.style={rectangle, rounded corners=4pt, draw, minimum height=0.8cm, minimum width=1.8cm, align=center, fill=white},
     arr/.style={-stealth, thick},
-    desc/.style={font=\scriptsize\itshape, text width=2.2cm, align=center},
+    desc/.style={font=\tiny\itshape, text width=1.8cm, align=center},
   ]
-    % Nodes
+    % Top row
     \node[block] (fetcher) {MinIO\\Fetcher};
     \node[block, right=of fetcher] (converter) {Document\\Converter};
     \node[block, right=of converter] (splitter) {Semantic\\Splitter};
-    \node[block, right=of splitter] (embedder) {Ollama\\Embedder};
-    \node[block, right=of embedder] (store) {Qdrant\\Store};
 
-    % Descriptions below
-    \node[desc, below=0.3cm of fetcher] {загрузка\\PDF/DOCX};
-    \node[desc, below=0.3cm of converter] {конвертация\\в текст};
-    \node[desc, below=0.3cm of splitter] {семантический\\чанкинг};
-    \node[desc, below=0.3cm of embedder] {векторизация\\(bge-m3)};
-    \node[desc, below=0.3cm of store] {запись\\в Qdrant};
+    % Bottom row
+    \node[block, below=1.2cm of splitter] (embedder) {Ollama\\Embedder};
+    \node[block, left=of embedder] (store) {Qdrant\\Store};
 
-    % Arrows
+    % Descriptions below top row
+    \node[desc, below=0.2cm of fetcher] {загрузка\\PDF/DOCX};
+    \node[desc, below=0.2cm of converter] {конвертация\\в текст};
+    \node[desc, below=0.2cm of splitter, xshift=0.9cm] {};
+
+    % Descriptions below bottom row
+    \node[desc, below=0.2cm of embedder] {векторизация\\(bge-m3)};
+    \node[desc, below=0.2cm of store] {запись\\в Qdrant};
+
+    % Arrows top row
     \draw[arr] (fetcher) -- (converter);
     \draw[arr] (converter) -- (splitter);
-    \draw[arr] (splitter) -- (embedder);
+
+    % Corner arrow from splitter to embedder
+    \draw[arr] (splitter.south) -- (embedder.north);
+
+    % Bottom row arrow
     \draw[arr] (embedder) -- (store);
+
+    % Description for splitter (placed to the right to avoid overlap)
+    \node[desc, right=0.1cm of splitter.south east, anchor=north west] {семантический\\чанкинг};
   \end{tikzpicture}
   \caption{Конвейер обработки документов (Document Ingestion Pipeline)}
   \label{fig:ingestion-pipeline}

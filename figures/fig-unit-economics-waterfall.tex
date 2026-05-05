@@ -6,10 +6,12 @@
       width=0.85\textwidth,
       height=4.5cm,
       bar width=18pt,
-      xlabel={Стоимость, руб.},
-      xmin=0, xmax=180000,
+      xlabel={Стоимость, руб. (логарифмическая шкала)},
+      xmode=log,
+      xmin=10, xmax=500000,
+      log ticks with fixed point,
       ytick=data,
-      symbolic y coords={{Подрядная разработка},{ИИ-генерация курса}},
+      symbolic y coords={{ИИ-генерация курса},{Подрядная разработка}},
       y tick label style={font=\small},
       nodes near coords,
       nodes near coords align={horizontal},
@@ -18,15 +20,15 @@
       grid style={dashed, gray!40},
       enlarge y limits=0.5,
     ]
-    \addplot[fill=red!40, draw=red!60] coordinates {
-      (150000,{Подрядная разработка})
-    };
     \addplot[fill=teal!60, draw=teal!80] coordinates {
       (75,{ИИ-генерация курса})
     };
+    \addplot[fill=red!40, draw=red!60] coordinates {
+      (150000,{Подрядная разработка})
+    };
     \end{axis}
-    \node[font=\small, text=teal!60!black, anchor=west] at (7.5, 0.5)
-      {Экономия: \textbf{99{,}95\,\%}};
+    \node[font=\small, text=teal!60!black, anchor=west] at (9.5, 1.0)
+      {$\times$2000 разница};
   \end{tikzpicture}
   \caption{Unit-экономика ИИ-методиста: себестоимость vs рыночная стоимость}
   \label{fig:unit-economics}

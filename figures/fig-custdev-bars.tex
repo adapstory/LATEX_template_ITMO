@@ -1,28 +1,38 @@
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
-\begin{axis}[
-    xbar,
-    width=0.85\textwidth,
-    height=5cm,
-    xlabel={Доля респондентов, \%},
-    xmin=0, xmax=100,
-    ytick=data,
-    yticklabels={
-        {Готовы рассмотреть ИИ-инструмент},
-        {Привлекают внешних подрядчиков},
-        {Время разработки --- главное ограничение}
-    },
-    y tick label style={font=\small, anchor=east},
-    nodes near coords,
-    nodes near coords align={horizontal},
-    nodes near coords style={font=\small, append after command={node[anchor=west]{\,\%}}},
-    bar width=14pt,
-    enlarge y limits=0.35,
-    every axis plot/.append style={fill=teal!80!black, draw=teal!60!black},
-]
-\addplot coordinates {(60,0) (50,1) (70,2)};
-\end{axis}
+  % Scale: 1cm = 10%
+  \def\barh{0.45}
+  \def\gap{1.4}
+
+  % Bar 1: 70%
+  \fill[teal!70!black] (0, 2*\gap) rectangle (7, 2*\gap+\barh);
+  \node[anchor=east, font=\small] at (-0.2, 2*\gap+\barh/2)
+    {Время --- главное ограничение};
+  \node[anchor=west, font=\small] at (7.1, 2*\gap+\barh/2) {70\,\%};
+
+  % Bar 2: 50%
+  \fill[teal!70!black] (0, 1*\gap) rectangle (5, 1*\gap+\barh);
+  \node[anchor=east, font=\small] at (-0.2, 1*\gap+\barh/2)
+    {Привлекают внешних подрядчиков};
+  \node[anchor=west, font=\small] at (5.1, 1*\gap+\barh/2) {50\,\%};
+
+  % Bar 3: 60%
+  \fill[teal!70!black] (0, 0) rectangle (6, \barh);
+  \node[anchor=east, font=\small] at (-0.2, \barh/2)
+    {Готовы рассмотреть ИИ-инструмент};
+  \node[anchor=west, font=\small] at (6.1, \barh/2) {60\,\%};
+
+  % Axis line
+  \draw[thick] (0,-0.3) -- (0, 2*\gap+\barh+0.3);
+  \draw[thick] (0,-0.3) -- (8.2,-0.3);
+
+  % X axis ticks
+  \foreach \x/\lab in {0/0, 1/10, 2/20, 3/30, 4/40, 5/50, 6/60, 7/70, 8/80} {
+    \draw (\x, -0.3) -- (\x, -0.45);
+    \node[below, font=\scriptsize] at (\x, -0.45) {\lab};
+  }
+  \node[below, font=\small] at (4, -1.0) {Доля респондентов, \%};
 \end{tikzpicture}
 \caption{Результаты Customer Development (n=20 B2B-интервью)}
 \label{fig:custdev-bars}

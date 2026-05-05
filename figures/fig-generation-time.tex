@@ -3,12 +3,12 @@
   \begin{tikzpicture}
     \begin{axis}[
       ybar,
-      width=0.9\textwidth,
+      width=0.85\textwidth,
       height=7cm,
       ylabel={Время, с},
-      symbolic x coords={Продуктовые, Нормативные, Учебные программы, Все документы (среднее)},
+      symbolic x coords={Продуктовые, Нормативные, {Учебные программы}, {Все документы (среднее)}},
       xtick=data,
-      x tick label style={rotate=15, anchor=east, font=\small},
+      x tick label style={font=\small, rotate=30, anchor=east},
       ymin=0, ymax=7,
       bar width=1.2cm,
       nodes near coords,
@@ -22,8 +22,8 @@
       \addplot coordinates {
         (Продуктовые, 5.28)
         (Нормативные, 3.76)
-        (Учебные программы, 3.70)
-        (Все документы (среднее), 4.31)
+        ({Учебные программы}, 3.70)
+        ({Все документы (среднее)}, 4.31)
       };
     \end{axis}
   \end{tikzpicture}

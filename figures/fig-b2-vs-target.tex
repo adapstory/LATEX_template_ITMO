@@ -6,7 +6,7 @@
       ybar,
       width=0.9\textwidth,
       height=0.55\textwidth,
-      bar width=18pt,
+      bar width=14pt,
       ylabel={Значение, \%},
       ymin=0, ymax=120,
       xtick=data,
@@ -34,10 +34,11 @@
       (Структурная валидность, 100)
     };
     \legend{Результат B2, Целевой показатель}
+    % Аннотация разрывов — над столбцами
+    \node[font=\footnotesize, text=red!70!black, anchor=south] at (axis cs:Покрытие Блума, 75) {$\Delta$\,=\,--8{,}5\,п.п.};
+    \node[font=\footnotesize, text=red!70!black, anchor=south] at (axis cs:Доля курсов $\geq$70\%, 85) {$\Delta$\,=\,--61{,}2\,п.п.};
+    \node[font=\footnotesize, text=green!50!black, anchor=south] at (axis cs:Структурная валидность, 105) {$\Delta$\,=\,0};
     \end{axis}
-    % Аннотация разрывов
-    \node[font=\footnotesize, text=red!70!black, align=center] at (2.1, 5.2) {$\Delta$\,=\,--8.5\,п.п.};
-    \node[font=\footnotesize, text=red!70!black, align=center] at (4.9, 3.5) {$\Delta$\,=\,--61.2\,п.п.};
   \end{tikzpicture}
   \caption{Сравнение результатов конфигурации B2 с целевыми показателями}
   \label{fig:b2-vs-target}

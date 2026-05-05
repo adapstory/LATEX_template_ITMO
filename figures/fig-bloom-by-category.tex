@@ -8,30 +8,23 @@
     ylabel={Покрытие уровней Блума, \%},
     ymin=0, ymax=100,
     xtick=data,
-    symbolic x coords={Нормативные, {Все документы}, {Учебные программы}, Продуктовые},
-    x tick label style={font=\small, text width=3cm, align=center},
-    bar width=20pt,
+    symbolic x coords={Нормативные,{Все документы},{Учебные программы},Продуктовые},
+    x tick label style={font=\small, rotate=25, anchor=east},
+    bar width=22pt,
     enlarge x limits=0.2,
     nodes near coords,
-    nodes near coords style={font=\small},
-    every node near coord/.append style={anchor=south},
-    legend style={at={(0.5,-0.2)}, anchor=north},
+    nodes near coords style={font=\small, anchor=south},
 ]
+\addplot[fill=red!50, draw=red!70!black] coordinates
+    {(Нормативные,40) ({Все документы},61.5) ({Учебные программы},66.7) (Продуктовые,75)};
 
-% Bars colored by threshold
-\addplot[fill=red!60!orange, draw=red!40!black] coordinates
-    {(Нормативные, 40)};
-\addplot[fill=red!60!orange, draw=red!40!black] coordinates
-    {({Все документы}, 61.5)};
-\addplot[fill=red!60!orange, draw=red!40!black] coordinates
-    {({Учебные программы}, 66.7)};
-\addplot[fill=teal!70!black, draw=teal!50!black] coordinates
-    {(Продуктовые, 75)};
-
-% Threshold line
+% Целевой порог
 \draw[dashed, thick, black!70] (axis cs:Нормативные,70) -- (axis cs:Продуктовые,70)
-    node[pos=0.85, above, font=\scriptsize] {Целевой порог (70\%)};
+    node[pos=0.75, above, font=\scriptsize] {Целевой порог (70\,\%)};
 
+% Перекрасить Продуктовые (>=70) — наложим поверх
+\addplot[fill=teal!70!black, draw=teal!50!black, forget plot] coordinates
+    {(Нормативные,0) ({Все документы},0) ({Учебные программы},0) (Продуктовые,75)};
 \end{axis}
 \end{tikzpicture}
 \caption{Покрытие уровней таксономии Блума по категориям документов (конфигурация B2)}
