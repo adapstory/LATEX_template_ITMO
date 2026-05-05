@@ -1,0 +1,62 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{polaraxis}[
+    compat=1.18,
+    width=0.75\textwidth,
+    height=0.75\textwidth,
+    xtick={0,60,120,180,240,300},
+    xticklabels={
+        Генерация из документа,
+        Методология,
+        Русский язык,
+        On-premise,
+        Факт-чекинг,
+        Авто-актуализация
+    },
+    xticklabel style={font=\scriptsize, anchor=center, align=center},
+    ymin=0, ymax=1,
+    ytick={0,0.25,0.5,0.75,1},
+    yticklabels={},
+    y grid style={gray!40},
+    x grid style={gray!40},
+    grid=both,
+    legend style={
+        at={(1.25,1.0)},
+        anchor=north west,
+        font=\scriptsize,
+        cells={anchor=west},
+    },
+    cycle list={
+        {blue!60!black, mark=square*, mark size=1.5pt},
+        {red!70!black, mark=triangle*, mark size=1.5pt},
+        {orange!80!black, mark=diamond*, mark size=1.5pt},
+        {purple!70!black, mark=pentagon*, mark size=1.5pt},
+        {teal!80!black, thick, mark=*, mark size=2pt},
+    },
+]
+% Coursebox: 1, 0, 0.5, 0, 0, 0.5
+\addplot coordinates {(0,1)(60,0)(120,0.5)(180,0)(240,0)(300,0.5)(360,1)};
+\addlegendentry{Coursebox}
+
+% Articulate AI: 0.5, 0, 0.5, 0, 0, 0
+\addplot coordinates {(0,0.5)(60,0)(120,0.5)(180,0)(240,0)(300,0)(360,0.5)};
+\addlegendentry{Articulate AI}
+
+% iSpring AI: 0.5, 0, 1, 0, 0, 0
+\addplot coordinates {(0,0.5)(60,0)(120,1)(180,0)(240,0)(300,0)(360,0.5)};
+\addlegendentry{iSpring AI}
+
+% Synthesia: 0, 0, 0.5, 0, 0, 0
+\addplot coordinates {(0,0)(60,0)(120,0.5)(180,0)(240,0)(300,0)(360,0)};
+\addlegendentry{Synthesia}
+
+% ИИ-методист: 1, 1, 1, 1, 1, 1
+\addplot coordinates {(0,1)(60,1)(120,1)(180,1)(240,1)(300,1)(360,1)};
+\addlegendentry{ИИ-методист}
+
+\end{polaraxis}
+\end{tikzpicture}
+\caption{Радарная диаграмма сравнения решений}
+\label{fig:competitor-radar}
+\end{figure}

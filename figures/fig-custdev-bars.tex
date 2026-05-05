@@ -1,0 +1,30 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xbar,
+    width=0.85\textwidth,
+    height=5cm,
+    pgfplotsset={compat=1.18},
+    xlabel={Доля респондентов, \%},
+    xmin=0, xmax=100,
+    ytick=data,
+    yticklabels={
+        {Готовы рассмотреть ИИ-инструмент},
+        {Привлекают внешних подрядчиков},
+        {Время разработки --- главное ограничение}
+    },
+    y tick label style={font=\small, anchor=east},
+    nodes near coords,
+    nodes near coords align={horizontal},
+    nodes near coords style={font=\small, append after command={node[anchor=west]{\,\%}}},
+    bar width=14pt,
+    enlarge y limits=0.35,
+    every axis plot/.append style={fill=teal!80!black, draw=teal!60!black},
+]
+\addplot coordinates {(60,0) (50,1) (70,2)};
+\end{axis}
+\end{tikzpicture}
+\caption{Результаты Customer Development (n=20 B2B-интервью)}
+\label{fig:custdev-bars}
+\end{figure}

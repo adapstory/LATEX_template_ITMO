@@ -54,6 +54,13 @@
 \renewcommand{\cftsubsecfont}{\normalfont}
 \renewcommand{\cftsubsecpagefont}{\normalfont}
 
+% TikZ + pgfplots для графиков и диаграмм
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, calc, patterns, fit}
+\usepgfplotslibrary{groupplots, statistics}
+
 % Конфигурационные файлы
 \input{config-lists.tex}
 \input{config-formulas.tex}

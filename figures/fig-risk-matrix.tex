@@ -1,0 +1,62 @@
+% Матрица рисков ИИ-методиста
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      compat=1.18,
+      width=0.85\textwidth,
+      height=0.7\textwidth,
+      xmin=0.5, xmax=3.5,
+      ymin=0.5, ymax=3.5,
+      xtick={1,2,3},
+      ytick={1,2,3},
+      xticklabels={Низкая, Средняя, Высокая},
+      yticklabels={Среднее, Высокое, Критическое},
+      xlabel={Вероятность},
+      ylabel={Влияние},
+      grid=major,
+      grid style={thin, gray!50},
+      axis on top,
+      clip=false,
+    ]
+    % Цветовые зоны фона
+    % Зелёная зона (низкая вер. + среднее влияние)
+    \fill[green!15] (axis cs:0.5,0.5) rectangle (axis cs:1.5,1.5);
+    % Жёлтая зона
+    \fill[yellow!15] (axis cs:1.5,0.5) rectangle (axis cs:2.5,1.5);
+    \fill[yellow!15] (axis cs:0.5,1.5) rectangle (axis cs:1.5,2.5);
+    \fill[yellow!15] (axis cs:1.5,1.5) rectangle (axis cs:2.5,2.5);
+    % Оранжевая зона
+    \fill[orange!15] (axis cs:2.5,0.5) rectangle (axis cs:3.5,1.5);
+    \fill[orange!15] (axis cs:2.5,1.5) rectangle (axis cs:3.5,2.5);
+    \fill[orange!15] (axis cs:0.5,2.5) rectangle (axis cs:1.5,3.5);
+    % Красная зона
+    \fill[red!15] (axis cs:1.5,2.5) rectangle (axis cs:2.5,3.5);
+    \fill[red!15] (axis cs:2.5,2.5) rectangle (axis cs:3.5,3.5);
+
+    % Риски как точки с подписями
+    % Деградация LLM: (2, 2)
+    \addplot[only marks, mark=*, mark size=6pt, blue!70] coordinates {(2, 2)};
+    \node[font=\footnotesize, anchor=south, yshift=4pt] at (axis cs:2,2) {Деградация LLM};
+
+    % Недоступность GPU: (1, 2)
+    \addplot[only marks, mark=*, mark size=6pt, orange!80!black] coordinates {(1, 2)};
+    \node[font=\footnotesize, anchor=south east, xshift=-2pt, yshift=4pt] at (axis cs:1,2) {Недоступность GPU};
+
+    % Утечка данных: (1, 3)
+    \addplot[only marks, mark=*, mark size=6pt, red!70] coordinates {(1, 3)};
+    \node[font=\footnotesize, anchor=south, yshift=4pt] at (axis cs:1,3) {Утечка данных};
+
+    % Неприятие пользователями: (2, 1)
+    \addplot[only marks, mark=*, mark size=6pt, green!50!black] coordinates {(2, 1)};
+    \node[font=\footnotesize, anchor=south, yshift=4pt] at (axis cs:2,1) {Неприятие пользователями};
+
+    % Смена лицензии: (1.15, 2.15) — слегка сдвинуто для читаемости
+    \addplot[only marks, mark=*, mark size=6pt, purple!70] coordinates {(1.15, 2.3)};
+    \node[font=\footnotesize, anchor=north west, xshift=2pt, yshift=-2pt] at (axis cs:1.15,2.3) {Смена лицензии};
+
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Матрица рисков ИИ-методиста}
+  \label{fig:risk-matrix}
+\end{figure}

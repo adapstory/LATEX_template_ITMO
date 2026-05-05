@@ -1,0 +1,50 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    compat=1.18,
+    width=0.85\textwidth,
+    height=0.7\textwidth,
+    xlabel={Методическая глубина},
+    ylabel={Суверенитет данных},
+    xmin=0, xmax=10,
+    ymin=0, ymax=10,
+    grid=major,
+    grid style={gray!30},
+    xlabel style={font=\small},
+    ylabel style={font=\small},
+    tick label style={font=\small},
+    clip=false,
+]
+
+% Regular competitors
+\addplot[only marks, mark=*, mark size=3pt, teal!60!black]
+    coordinates {(3,1)};
+\node[anchor=south west, font=\scriptsize] at (axis cs:3.2,1.1) {Coursebox AI};
+
+\addplot[only marks, mark=*, mark size=3pt, teal!60!black]
+    coordinates {(4,1)};
+\node[anchor=south west, font=\scriptsize] at (axis cs:4.2,1.1) {Articulate AI};
+
+\addplot[only marks, mark=*, mark size=3pt, teal!60!black]
+    coordinates {(4,2)};
+\node[anchor=south west, font=\scriptsize] at (axis cs:4.2,2.1) {iSpring AI};
+
+\addplot[only marks, mark=*, mark size=3pt, teal!60!black]
+    coordinates {(1,1)};
+\node[anchor=south west, font=\scriptsize] at (axis cs:1.2,1.1) {Synthesia};
+
+\addplot[only marks, mark=*, mark size=3pt, teal!60!black]
+    coordinates {(2,3)};
+\node[anchor=south west, font=\scriptsize] at (axis cs:2.2,3.1) {NotebookLM};
+
+% ИИ-методист — highlighted
+\addplot[only marks, mark=*, mark size=5pt, fill=teal!80!black, draw=black, thick]
+    coordinates {(8,9)};
+\node[anchor=south west, font=\scriptsize\bfseries] at (axis cs:8.2,9.1) {ИИ-методист};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Карта позиционирования конкурентных решений}
+\label{fig:positioning-map}
+\end{figure}

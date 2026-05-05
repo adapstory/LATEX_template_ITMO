@@ -1,0 +1,32 @@
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    node distance=2.4cm,
+    every node/.style={font=\small},
+    block/.style={rectangle, rounded corners=4pt, draw, minimum height=1cm, minimum width=2cm, align=center, fill=white},
+    arr/.style={-stealth, thick},
+    desc/.style={font=\scriptsize\itshape, text width=2.2cm, align=center},
+  ]
+    % Nodes
+    \node[block] (fetcher) {MinIO\\Fetcher};
+    \node[block, right=of fetcher] (converter) {Document\\Converter};
+    \node[block, right=of converter] (splitter) {Semantic\\Splitter};
+    \node[block, right=of splitter] (embedder) {Ollama\\Embedder};
+    \node[block, right=of embedder] (store) {Qdrant\\Store};
+
+    % Descriptions below
+    \node[desc, below=0.3cm of fetcher] {загрузка\\PDF/DOCX};
+    \node[desc, below=0.3cm of converter] {конвертация\\в текст};
+    \node[desc, below=0.3cm of splitter] {семантический\\чанкинг};
+    \node[desc, below=0.3cm of embedder] {векторизация\\(bge-m3)};
+    \node[desc, below=0.3cm of store] {запись\\в Qdrant};
+
+    % Arrows
+    \draw[arr] (fetcher) -- (converter);
+    \draw[arr] (converter) -- (splitter);
+    \draw[arr] (splitter) -- (embedder);
+    \draw[arr] (embedder) -- (store);
+  \end{tikzpicture}
+  \caption{Конвейер обработки документов (Document Ingestion Pipeline)}
+  \label{fig:ingestion-pipeline}
+\end{figure}

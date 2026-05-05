@@ -1,0 +1,33 @@
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      compat=1.18,
+      ybar,
+      width=0.9\textwidth,
+      height=7cm,
+      ylabel={Время, с},
+      symbolic x coords={Продуктовые, Нормативные, Учебные программы, Все документы (среднее)},
+      xtick=data,
+      x tick label style={rotate=15, anchor=east, font=\small},
+      ymin=0, ymax=7,
+      bar width=1.2cm,
+      nodes near coords,
+      nodes near coords align={vertical},
+      every node near coord/.append style={font=\small},
+      enlarge x limits=0.2,
+      grid=major,
+      ymajorgrids=true,
+      xmajorgrids=false,
+    ]
+      \addplot coordinates {
+        (Продуктовые, 5.28)
+        (Нормативные, 3.76)
+        (Учебные программы, 3.70)
+        (Все документы (среднее), 4.31)
+      };
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Среднее время генерации структуры курса по категориям (конфигурация B2)}
+  \label{fig:generation-time}
+\end{figure}

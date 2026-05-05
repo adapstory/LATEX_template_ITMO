@@ -1,0 +1,56 @@
+% Финансовый прогноз на 3 года
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      compat=1.18,
+      width=0.9\textwidth,
+      height=0.55\textwidth,
+      xlabel={Месяц},
+      ylabel={тыс. руб./мес.},
+      xmin=0, xmax=36,
+      ymin=0, ymax=450,
+      grid=major,
+      grid style={dashed, gray!30},
+      legend style={at={(0.3,0.95)}, anchor=north, legend columns=1},
+      xtick={0,6,12,18,24,30,36},
+    ]
+    % Выручка
+    \addplot[blue, thick, mark=*, mark size=2pt] coordinates {
+      (0, 0)
+      (3, 15)
+      (6, 45)
+      (9, 75)
+      (12, 120)
+      (15, 150)
+      (18, 180)
+      (21, 210)
+      (24, 240)
+      (27, 270)
+      (30, 300)
+      (33, 330)
+      (36, 360)
+    };
+    \addlegendentry{Выручка}
+    % Расходы
+    \addplot[red!70!black, thick, dashed, mark=square*, mark size=2pt] coordinates {
+      (0, 200)
+      (6, 200)
+      (12, 200)
+      (18, 200)
+      (24, 200)
+      (30, 200)
+      (36, 200)
+    };
+    \addlegendentry{Расходы}
+    % Точка безубыточности — вертикальная линия
+    \draw[gray, densely dashed, thick] (axis cs:32,0) -- (axis cs:32,420);
+    \node[font=\footnotesize, align=center, anchor=south west] at (axis cs:32.5,350)
+      {Точка\\безубыточности\\(32 мес.)};
+    % Точка пересечения
+    \addplot[only marks, mark=o, mark size=5pt, thick, black] coordinates {(32, 200)};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Финансовый прогноз на 3 года (сценарная модель)}
+  \label{fig:financial-forecast}
+\end{figure}

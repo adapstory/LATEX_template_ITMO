@@ -1,0 +1,35 @@
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    node distance=1.8cm,
+    every node/.style={font=\small},
+    block/.style={rectangle, rounded corners=4pt, draw, minimum height=1cm, minimum width=2.2cm, align=center, fill=white},
+    bigblock/.style={rectangle, rounded corners=4pt, draw, minimum height=1.2cm, minimum width=2.8cm, align=center, fill=blue!8, line width=0.8pt},
+    arr/.style={-stealth, thick},
+  ]
+    % Nodes
+    \node[block] (minio) {Document\\(MinIO)};
+    \node[block, right=of minio] (pipeline) {Haystack\\AsyncPipeline};
+    \node[block, right=1.5cm of pipeline] (splitter) {Semantic\\Splitter};
+    \node[block, right=of splitter] (embedder) {Ollama\\Embedder};
+    \node[block, right=of embedder] (qdrant) {Qdrant};
+    \node[bigblock, right=of qdrant] (langgraph) {LangGraph\\StateGraph};
+    \node[block, right=of langgraph] (artifacts) {Course\\Artifacts};
+
+    % Dashed box around Haystack components
+    \begin{scope}[on background layer]
+      \node[draw, dashed, rounded corners=6pt, inner sep=10pt,
+            fit=(splitter)(embedder), label={[font=\footnotesize]above:Haystack 2.x}] {};
+    \end{scope}
+
+    % Arrows
+    \draw[arr] (minio) -- (pipeline);
+    \draw[arr] (pipeline) -- (splitter);
+    \draw[arr] (splitter) -- (embedder);
+    \draw[arr] (embedder) -- (qdrant);
+    \draw[arr] (qdrant) -- (langgraph);
+    \draw[arr] (langgraph) -- (artifacts);
+  \end{tikzpicture}
+  \caption{Технологический стек ИИ-методиста: контур обработки и генерации}
+  \label{fig:tech-stack-flow}
+\end{figure}

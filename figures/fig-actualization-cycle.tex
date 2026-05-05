@@ -1,0 +1,25 @@
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    every node/.style={font=\small},
+    block/.style={rectangle, rounded corners=4pt, draw, minimum height=1cm, minimum width=3cm, align=center, fill=white},
+    arr/.style={-stealth, thick},
+  ]
+    % Nodes in a circle (radius 3cm)
+    \node[block] (update) at (90:3cm) {Обновление\\документа};
+    \node[block] (reindex) at (0:3cm) {Переиндексация};
+    \node[block] (factcheck) at (270:3cm) {Факт-чекинг\\уроков};
+    \node[block] (regen) at (180:3cm) {Перегенерация\\устаревших};
+
+    % Center label
+    \node[align=center, font=\footnotesize\itshape] at (0,0) {faithfulness $< 0{,}8$\\\boldmath$\to$ OUTDATED};
+
+    % Clockwise arrows (curved)
+    \draw[arr] (update.east) to[bend left=20] (reindex.north);
+    \draw[arr] (reindex.south) to[bend left=20] (factcheck.east);
+    \draw[arr] (factcheck.west) to[bend left=20] (regen.south);
+    \draw[arr] (regen.north) to[bend left=20] (update.west);
+  \end{tikzpicture}
+  \caption{Механизм авто-актуализации курса при изменении источника}
+  \label{fig:actualization-cycle}
+\end{figure}

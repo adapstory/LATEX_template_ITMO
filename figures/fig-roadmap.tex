@@ -1,0 +1,50 @@
+% Дорожная карта развития ИИ-методиста
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    phase/.style={draw, rounded corners=3pt, minimum height=1.2cm, text width=3.8cm, align=center, font=\small\bfseries},
+    items/.style={font=\footnotesize, align=left, text width=4cm},
+  ]
+    % Временная ось
+    \draw[->, thick] (0, 0) -- (14.5, 0);
+    \node[font=\footnotesize, anchor=north] at (0, -0.1) {0};
+    \node[font=\footnotesize, anchor=north] at (4.2, -0.1) {6 мес.};
+    \node[font=\footnotesize, anchor=north] at (8.4, -0.1) {12 мес.};
+    \node[font=\footnotesize, anchor=north] at (14, -0.1) {24 мес.};
+
+    % Фаза 1
+    \node[phase, fill=blue!20, minimum width=4cm] (p1) at (2.1, 1.5) {MVP + валидация};
+    \draw[thick, blue!50] (0.1, 0.1) -- (0.1, 0.8) -- (p1.south west);
+    \draw[thick, blue!50] (4.1, 0.1) -- (4.1, 0.8) -- (p1.south east);
+    \node[items, anchor=north west] at (0.1, -0.6) {%
+      \textbullet~Стабилизация B4\\
+      \textbullet~Факт-чекинг\\
+      \textbullet~Решенческие интервью%
+    };
+
+    % Фаза 2
+    \node[phase, fill=green!20, minimum width=4cm] (p2) at (6.3, 1.5) {Production v1};
+    \draw[thick, green!50] (4.3, 0.1) -- (4.3, 0.8) -- (p2.south west);
+    \draw[thick, green!50] (8.3, 0.1) -- (8.3, 0.8) -- (p2.south east);
+    \node[items, anchor=north west] at (4.3, -0.6) {%
+      \textbullet~3 методологии\\
+      \textbullet~Платные внедрения\\
+      \textbullet~Аналитика%
+    };
+
+    % Фаза 3
+    \node[phase, fill=orange!20, minimum width=5.4cm] (p3) at (11.2, 1.5) {Масштабирование};
+    \draw[thick, orange!50] (8.5, 0.1) -- (8.5, 0.8) -- (p3.south west);
+    \draw[thick, orange!50] (13.9, 0.1) -- (13.9, 0.8) -- (p3.south east);
+    \node[items, anchor=north west] at (8.5, -0.6) {%
+      \textbullet~Открытый API\\
+      \textbullet~Мультиязычность\\
+      \textbullet~Смежные рынки%
+    };
+
+    % Подпись оси
+    \node[font=\small, anchor=north] at (7.25, -2.0) {Время};
+  \end{tikzpicture}
+  \caption{Дорожная карта развития ИИ-методиста}
+  \label{fig:roadmap}
+\end{figure}
