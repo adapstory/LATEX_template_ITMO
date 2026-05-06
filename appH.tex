@@ -118,7 +118,9 @@ Markdown-документ, а raw evidence сохранялся в катало�
 faithfulness~=~0.335, answer relevancy~=~0.239,
 context precision~=~0.567 и context recall~=~0.335. Эти значения
 трактуются как диагностические, а не как основание для завышенного
-вывода о~полном качестве retrieval.
+вывода о~полном качестве retrieval. В текущей ВКР RAG/eval-контур
+работает как conservative guardrail перед human-review: качество retrieval
+требует расширения корпуса и экспертной разметки релевантных фрагментов.
 
 На~100 фактуальных утверждениях fact-check контур дал:
 precision~=~0.600, recall~=~0.900, F1~=~0.720.
