@@ -8,37 +8,23 @@
     arr/.style={-stealth, thick},
     desc/.style={font=\tiny\itshape, text width=1.8cm, align=center},
   ]
-    % Top row
-    \node[block] (fetcher) {MinIO\\Fetcher};
-    \node[block, right=of fetcher] (converter) {Document\\Converter};
-    \node[block, right=of converter] (splitter) {Semantic\\Splitter};
+    \node[block] (upload) {School UI\\upload};
+    \node[block, right=of upload] (dify) {Dify\\index};
+    \node[block, right=of dify] (search) {RAG\\search};
+    \node[block, below=1.2cm of search] (evidence) {Evidence\\Table};
+    \node[block, left=of evidence] (kg) {Knowledge\\Graph};
 
-    % Bottom row
-    \node[block, below=1.2cm of splitter] (embedder) {Ollama\\Embedder};
-    \node[block, left=of embedder] (store) {Qdrant\\Store};
+    \node[desc, below=0.2cm of upload] {загрузка\\источника};
+    \node[desc, below=0.2cm of dify] {индексация\\и чанкинг};
+    \node[desc, below=0.2cm of search] {поиск\\фрагментов};
+    \node[desc, below=0.2cm of evidence] {нумерация\\источников};
+    \node[desc, below=0.2cm of kg] {компетенции\\и понятия};
 
-    % Descriptions below top row
-    \node[desc, below=0.2cm of fetcher] {загрузка\\PDF/DOCX};
-    \node[desc, below=0.2cm of converter] {конвертация\\в текст};
-    \node[desc, below=0.2cm of splitter, xshift=0.9cm] {};
-
-    % Descriptions below bottom row
-    \node[desc, below=0.2cm of embedder] {векторизация\\(bge-m3)};
-    \node[desc, below=0.2cm of store] {запись\\в Qdrant};
-
-    % Arrows top row
-    \draw[arr] (fetcher) -- (converter);
-    \draw[arr] (converter) -- (splitter);
-
-    % Corner arrow from splitter to embedder
-    \draw[arr] (splitter.south) -- (embedder.north);
-
-    % Bottom row arrow
-    \draw[arr] (embedder) -- (store);
-
-    % Description for splitter (placed to the right to avoid overlap)
-    \node[desc, right=0.1cm of splitter.south east, anchor=north west] {семантический\\чанкинг};
+    \draw[arr] (upload) -- (dify);
+    \draw[arr] (dify) -- (search);
+    \draw[arr] (search.south) -- (evidence.north);
+    \draw[arr] (kg) -- (evidence);
   \end{tikzpicture}
-  \caption{Конвейер обработки документов (Document Ingestion Pipeline)}
+  \caption{Контур обработки источника и сборки EvidenceTable}
   \label{fig:ingestion-pipeline}
 \end{figure}

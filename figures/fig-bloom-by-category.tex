@@ -8,7 +8,7 @@
     ylabel={Покрытие уровней Блума, \%},
     ymin=0, ymax=100,
     xtick=data,
-    symbolic x coords={Нормативные,{Все документы},{Учебные программы},Продуктовые},
+    symbolic x coords={Регламенты,{Все документы},{MIT OCW},Продуктовые},
     x tick label style={font=\small, rotate=25, anchor=east},
     bar width=22pt,
     enlarge x limits=0.2,
@@ -16,15 +16,15 @@
     nodes near coords style={font=\small, anchor=south},
 ]
 \addplot[fill=red!50, draw=red!70!black] coordinates
-    {(Нормативные,40) ({Все документы},61.5) ({Учебные программы},66.7) (Продуктовые,75)};
+    {(Регламенты,38.9) ({Все документы},61.4) ({MIT OCW},69.5) (Продуктовые,73.8)};
 
 % Целевой порог
-\draw[dashed, thick, black!70] (axis cs:Нормативные,70) -- (axis cs:Продуктовые,70)
+\draw[dashed, thick, black!70] (axis cs:Регламенты,70) -- (axis cs:Продуктовые,70)
     node[pos=0.75, above, font=\scriptsize] {Целевой порог (70\,\%)};
 
 % Перекрасить Продуктовые (>=70) — наложим поверх
 \addplot[fill=teal!70!black, draw=teal!50!black, forget plot] coordinates
-    {(Нормативные,0) ({Все документы},0) ({Учебные программы},0) (Продуктовые,75)};
+    {(Регламенты,0) ({Все документы},0) ({MIT OCW},0) (Продуктовые,73.8)};
 \end{axis}
 \end{tikzpicture}
 \caption{Покрытие уровней таксономии Блума по категориям документов (конфигурация B2)}

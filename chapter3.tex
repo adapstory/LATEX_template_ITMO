@@ -6,250 +6,263 @@
 
 \subsection{Контекстная диаграмма (C4 Level~1)}
 
-ИИ-методист~--- один из~микросервисов платформы Adapstory,
-образовательной LMS с~моделью B2B~SaaS для~корпоративных
-заказчиков. На уровне системного контекста (C4~Level~1,
-приложение~Г, раздел~Г.1) он взаимодействует со~следующими
-акторами и~системами:
+ИИ-методист реализован как продуктовый контур платформы Adapstory,
+который объединяет сервис генерации курсов, RAG-поиск, граф знаний,
+ручное ревью и публикацию результата в LMS. На уровне системного
+контекста (C4~Level~1, приложение~Г, раздел~Г.1) участвуют следующие
+акторы и системы:
 
 \begin{itemize}
-  \item \textbf{Разработчик курса / методист / HR-специалист} --- основной пользователь:
-    загружает исходные документы, инициирует подготовку черновика,
-    просматривает, корректирует и~утверждает результат;
-  \item \textbf{BFF~School} (Backend-for-Frontend школы) --- единственная
-    точка входа для~веб-клиента; маршрутизирует запросы к~микросервису;
-  \item \textbf{Адаптивная LMS Adapstory} --- принимает утверждённую структуру
-    курса через REST~API и~публикует её в~каталоге;
-  \item \textbf{Хранилище документов MinIO} --- источник исходных файлов
-    (.pdf, .docx, .pptx, .xlsx) и~хранилище медиафайлов курса;
-  \item \textbf{Ollama GPU-сервер} --- провайдер локальных LLM
-    (семейство Qwen~2.5, FLUX.1-dev);
-  \item \textbf{Qdrant} --- векторная база знаний для~RAG.
+  \item \textbf{Разработчик курса / методист / HR-специалист} ---
+    загружает исходные материалы, задаёт аудиторию и методологию,
+    просматривает, корректирует и утверждает результат;
+  \item \textbf{School UI и BFF~School} --- веб-интерфейс и
+    Backend-for-Frontend, через которые пользователь запускает
+    генерацию, видит статус, provenance, quality seal и результат;
+  \item \textbf{AI~Course~Generator} --- FastAPI-микросервис,
+    исполняющий LangGraph-конвейер подготовки курса;
+  \item \textbf{Dify/RAG-контур} --- индексирует и ищет фрагменты
+    исходных документов для source-grounded генерации;
+  \item \textbf{Knowledge~Graph} --- предоставляет понятия, связи
+    компетенций и дополнительные контекстные факты;
+  \item \textbf{Ollama / OpenAI-compatible LLM endpoint} ---
+    обслуживает локальные модели семейства Qwen в dev/env-dev контуре;
+  \item \textbf{PostgreSQL} --- хранит запуски, результаты,
+    LangGraph-checkpoints и audit/provenance-данные;
+  \item \textbf{LMS Adapstory} --- принимает утверждённый курс
+    после человеческого контроля качества.
 \end{itemize}
 
 \subsection{Диаграмма контейнеров (C4 Level~2)}
 
-На уровне контейнеров (приложение~Г, раздел~Г.2) микросервис
-разделён на~процессы:
+На уровне контейнеров (приложение~Г, раздел~Г.2) MVP состоит из
+следующих процессов:
 
 \begin{itemize}
-  \item \textbf{FastAPI~API~Gateway} --- принимает HTTP-запросы от~BFF,
-    валидирует входные данные (Pydantic~v2), публикует задания в~Celery;
-  \item \textbf{Celery~Workers} (×N) --- пул асинхронных воркеров,
-    исполняющих задачи Document~Ingestion и~Course~Generation;
-  \item \textbf{LLM~Gateway} --- провайдер-агностичный интерфейс
-    к~языковым моделям с~retry, circuit~breaker (Resilience4j-аналог
-    на~Python / Tenacity) и~кэшированием промптов;
-  \item \textbf{LangGraph~Runtime} --- исполняет граф агентов,
-    сохраняет checkpoint в~Redis;
-  \item \textbf{Haystack~AsyncPipeline} --- конвейер индексации документов.
+  \item \textbf{AI~Course~Generator API} --- FastAPI-сервис с REST
+    и MCP-инструментами; принимает запросы от BFF, создаёт run,
+    отдаёт status/result/provenance и команды human-review;
+  \item \textbf{LangGraph Runtime} --- исполняет граф генерации,
+    поддерживает interrupt-точки и сохраняет состояние через
+    PostgreSQL checkpointer;
+  \item \textbf{Dify course tool / RAG plugin} --- выполняет загрузку,
+    индексирование и поиск фрагментов источника; генерация fail-closed
+    при отсутствии пригодного индекса;
+  \item \textbf{Knowledge~Graph MCP} --- возвращает связанные
+    компетенции и понятия, усиливая контекст CourseStructureAgent;
+  \item \textbf{LLM Gateway} --- провайдер-агностичный слой вызова
+    модели с retry, token/cost telemetry и возможностью переключения
+    между локальным и внешним endpoint;
+  \item \textbf{School BFF / Frontend} --- пользовательский контур
+    ревью, публикации и отображения thesis-validation метрик.
 \end{itemize}
-
-\subsection{Диаграмма компонентов (C4 Level~3)}
-
-Декомпозиция компонентов LangGraph~Runtime приведена
-в~приложении~Г (раздел~Г.3) и~раскрыта в~разделе~3.2.
 
 \subsection{Доменная модель}
 
-Доменная модель ИИ-методиста включает сущности:
+Доменная модель текущего MVP включает следующие ключевые сущности:
 
 \begin{itemize}
-  \item \textbf{EducationalProduct} --- запрос на~проектирование курса:
-    содержит ссылку на~исходный документ, выбранную методологию
-    (ADDIE / SAM / Backward~Design) и~параметры целевой аудитории;
-  \item \textbf{CourseBlueprint} --- рабочий методический черновик структуры курса:
-    метаданные, список модулей, учебные цели с~разметкой по~Блуму;
-  \item \textbf{Module} --- логический раздел курса: название, описание,
-    список уроков, competency~tags;
-  \item \textbf{Lesson} --- атомарная единица обучения: текст, список
-    иллюстраций, ссылка на~TTS-подкаст, тестовые вопросы;
-  \item \textbf{CompetencyTag} --- тег компетенции из~графа знаний Neo4j.
+  \item \textbf{CourseRun} --- запуск генерации с tenant/user,
+    выбранной методологией, статусом, стоимостью и временем выполнения;
+  \item \textbf{SourceDocument} и \textbf{EvidenceTable} ---
+    нормализованное представление найденных фрагментов источника
+    со стабильными \texttt{source\_id} для ссылок;
+  \item \textbf{CourseBlueprint} --- методический черновик структуры
+    курса: модули, уроки, цели обучения и Bloom-разметка;
+  \item \textbf{LessonContent} --- черновой учебный блок с inline
+    citations/source references;
+  \item \textbf{VerificationReport} --- отчёт факт-чекинга и
+    финальной проверки, содержащий \texttt{total\_claims},
+    \texttt{cited\_claims} и \texttt{quality\_seal};
+  \item \textbf{ProvenanceRecord} --- audit-запись с моделью,
+    версией pipeline, guardrail bundle, числом источников, token/cost
+    telemetry и временем генерации;
+  \item \textbf{ThesisValidationSnapshot} --- машинно читаемый
+    срез метрик H1--H3 для дипломной валидации.
 \end{itemize}
 
 % ─────────────────────────────────────────────────────────────────
 \section{Мультиагентная система (LangGraph)}
 % ─────────────────────────────────────────────────────────────────
 
-\subsection{Граф агентов (StateGraph)}
+\subsection{Граф агентов}
 
 Граф агентов реализован через \texttt{StateGraph}
-из~LangGraph~\cite{langgraph_docs_2025}.
-Состояние графа (\texttt{CourseState}) хранит входной документ,
-промежуточные артефакты (структуру курса, список модулей, контент уроков)
-и~флаги человеческого ревью. Полная спецификация графа~--- в~приложении~Д.
+из LangGraph~\cite{langgraph_docs_2025}. В текущей реализации
+используется 6-node Feynman-inspired pipeline:
+
+\begin{center}
+\texttt{source\_analyzer -> course\_structure -> content\_creator -> fact\_check -> review -> verifier}
+\end{center}
+
+В граф встроены две точки участия человека:
+
+\begin{itemize}
+  \item после \texttt{course\_structure}: методист утверждает или
+    возвращает на доработку структуру курса до генерации полного
+    контента;
+  \item после \texttt{verifier}: методист видит quality seal,
+    provenance и блокирующие замечания перед публикацией.
+\end{itemize}
 
 Граф агентов представлен на рисунке~\ref{fig:agent-graph}.
 
 \input{figures/fig-agent-graph.tex}
 
-\subsection{Агенты конвейера}
+\subsection{Ноды конвейера}
 
-Конвейер включает пять агентов:
+Конвейер включает шесть специализированных нод:
 
 \begin{enumerate}
-  \item \textbf{TargetAnalysisAgent} --- анализирует исходный документ,
-    определяет целевую аудиторию, предварительные знания и~разрыв
-    между текущим и~желаемым уровнем компетентности;
-  \item \textbf{CourseStructureAgent} --- формирует структуру курса
-    (CourseBlueprint) в~соответствии с~выбранной методологией (ADDIE / SAM / BD)
-    и~формирует учебные цели с~разметкой по~таксономии Блума;
-  \item \textbf{ContentCreatorAgent} --- подготавливает черновые тексты
-    уроков с~использованием RAG: извлекает релевантные фрагменты
-    из~Qdrant и~передаёт их в~контекст LLM;
-  \item \textbf{FactCheckAgent} --- верифицирует фактические утверждения
-    в~сгенерированном контенте относительно исходного документа,
-    выявляет галлюцинации и~инициирует пересмотр при~низкой достоверности
-    относительно источника (faithfulness);
-  \item \textbf{MediaGenerationAgent} --- параллельно подготавливает
-    иллюстрации (FLUX.1-dev) и~TTS-подкасты (Silero) для~уроков.
+  \item \textbf{SourceAnalyzer} --- извлекает из Dify/RAG и
+    Knowledge~Graph релевантные фрагменты, строит \texttt{EvidenceTable}
+    и помечает неполное покрытие источников;
+  \item \textbf{CourseStructureAgent} --- формирует
+    \texttt{CourseBlueprint} по методологии ADDIE, целевой аудитории
+    и таблице свидетельств;
+  \item \textbf{ContentCreatorAgent} --- пишет черновые уроки
+    с inline-ссылками на \texttt{source\_id};
+  \item \textbf{FactCheckAgent} --- проверяет фактические утверждения
+    относительно EvidenceTable и выделяет неподтверждённые claims;
+  \item \textbf{ReviewAgent} --- оценивает педагогическую связность,
+    Bloom coverage и соответствие методологическому чек-листу;
+  \item \textbf{Verifier} --- алгоритмически считает долю
+    подтверждённых claims, формирует \texttt{PASS},
+    \texttt{PASS\_WITH\_NOTES} или \texttt{FAIL}, собирает
+    provenance и snapshot H1--H3.
 \end{enumerate}
 
-\subsection{Контур участия человека}
+\subsection{Управление состоянием и human-in-the-loop}
 
-После~завершения CourseStructureAgent граф приостанавливается
-на~ноде \texttt{human\_review\_structure} через механизм
-\texttt{interrupt\_before}~\cite{langgraph_docs_2025}.
-Разработчик курса получает уведомление (веб-сокет / email) и~может:
-одобрить структуру, отредактировать отдельные модули или~запросить
-полную перегенерацию с~альтернативной методологией.
-После~одобрения граф возобновляется с~сохранённого checkpoint.
+Состояние графа хранится в \texttt{CourseGenerationState}. Оно
+содержит входные параметры, \texttt{source\_documents},
+\texttt{evidence\_table}, \texttt{blueprint},
+\texttt{lesson\_contents}, \texttt{fact\_check\_reports},
+\texttt{review\_report}, \texttt{verification\_report},
+\texttt{provenance}, token/cost telemetry и обратную связь человека.
 
-\subsection{Управление состоянием и трассировка}
-
-Checkpoint~API LangGraph сохраняет \texttt{CourseState}
-после каждой ноды в~Redis, что даёт:
+В production-like контуре граф компилируется с PostgreSQL checkpointer.
+Это даёт три свойства, критичные для B2B-сценария:
 
 \begin{itemize}
-  \item идемпотентное возобновление при~сбое воркера;
-  \item возможность просмотра истории выполнения через LangSmith;
-  \item параллельное исполнение ветки MediaGenerationAgent без~блокировки
-    основного конвейера.
+  \item запуск можно возобновить после сбоя сервиса без потери
+    промежуточных артефактов;
+  \item human-review не требует держать процесс в памяти;
+  \item статус запуска, quality seal и provenance доступны через API
+    как воспроизводимый артефакт, а не только как текст в UI.
 \end{itemize}
-
-LangSmith~\cite{langsmith_docs_2025} трассирует
-каждый вызов LLM: входной промпт, ответ модели, latency, токены~---
-достаточно для~анализа деградации качества на~конкретных документах
-без~воспроизведения всего конвейера.
 
 % ─────────────────────────────────────────────────────────────────
 \section{Ключевые конвейеры}
 % ─────────────────────────────────────────────────────────────────
 
-\subsection{Конвейер обработки документов (Document Ingestion Pipeline, Haystack~2.x)}
+\subsection{Обработка источника и поиск}
 
-Индексация документов построена на~Haystack~2.x
-\texttt{AsyncPipeline}~\cite{haystack2_docs_2024}:
+В ранней архитектурной гипотезе рассматривалась связка
+Haystack~2.x + Qdrant. В текущем MVP фактический контур другой:
+индексация и retrieval вынесены в Dify course tool / RAG plugin,
+а семантическое усиление структуры выполняется через Knowledge~Graph.
+Qdrant остаётся допустимым векторным backend в инфраструктурном
+профиле, но не заявляется как обязательный реализованный слой
+дипломного MVP.
+
+Текущий поток обработки источника:
 
 \begin{enumerate}
-  \item \textbf{MinIODocumentFetcher} --- загружает файл из~MinIO
-    по~presigned~URL (форматы: PDF, DOCX, PPTX, XLSX);
-  \item \textbf{DocumentConverter} --- конвертирует файл в~текст
-    (pdfminer / python-docx / python-pptx); сохраняет метаданные источника;
-  \item \textbf{SemanticDoubleMergingSplitter} --- разбивает текст
-    на~семантические фрагменты;
-  \item \textbf{OllamaTextEmbedder} --- векторизует фрагменты
-    через модель \texttt{deepvk/USER-bge-m3} (Ollama API);
-  \item \textbf{QdrantDocumentStore.write\_documents()} --- записывает
-    фрагменты с~векторами в~Qdrant (коллекция курса).
+  \item пользователь загружает документ через School UI / BFF;
+  \item Dify/RAG-контур создаёт или обновляет индекс источника;
+  \item \texttt{source\_analyzer} выполняет поиск фрагментов
+    и строит \texttt{EvidenceTable};
+  \item Knowledge~Graph добавляет связанные компетенции и понятия;
+  \item LangGraph-ноды используют общий evidence-контекст, а не
+    независимые несвязанные RAG-вызовы.
 \end{enumerate}
 
-Последовательность компонентов конвейера показана на рисунке~\ref{fig:ingestion-pipeline}.
+Последовательность компонентов показана на рисунке~\ref{fig:ingestion-pipeline}.
 
 \input{figures/fig-ingestion-pipeline.tex}
 
-Celery-воркер запускает конвейер асинхронно сразу после загрузки
-документа; генерация курса начинается только по~завершении индексации.
+\subsection{Подготовка черновика курса}
 
-\subsection{Конвейер подготовки черновика курса}
-
-Черновик курса формируется последовательностью вызовов агентов
-LangGraph с~общим \texttt{CourseState}:
-
-\begin{enumerate}
-  \item TargetAnalysisAgent формирует профиль аудитории;
-  \item CourseStructureAgent выбирает промпт-шаблон
-    (ADDIE / SAM / Backward~Design, приложение~Е) и~формирует
-    структурированный JSON (Pydantic~\texttt{CourseBlueprint});
-  \item ContentCreatorAgent для~каждого урока выполняет гибридный поиск
-    в~Qdrant (dense~+~sparse), формирует контекст и~подготавливает черновой текст урока;
-  \item FactCheckAgent проверяет каждое утверждение в~тексте урока
-    против~исходного документа;
-  \item ReviewAgent формирует финальный отчёт о~качестве курса.
-\end{enumerate}
-
-Сценарий взаимодействия компонентов при генерации курса представлен на рисунке~\ref{fig:course-sequence}.
+Подготовка курса начинается после появления evidence-контекста.
+Сценарий взаимодействия компонентов представлен на
+рисунке~\ref{fig:course-sequence}.
 
 \input{figures/fig-course-sequence.tex}
 
-\subsection{Мультимедиа-конвейер}
-
-После~одобрения текстовой структуры MediaGenerationAgent
-запускается параллельно с~ContentCreatorAgent через \texttt{Send~API}
-LangGraph. Для~каждого урока:
+Ключевое отличие от одношагового baseline B2 состоит в том, что
+система не передаёт весь документ в один prompt. Вместо этого она:
 
 \begin{itemize}
-  \item подготавливается иллюстрация: заголовок урока + ключевые термины
-    $\rightarrow$ FLUX.1-dev~\cite{flux_2024} $\rightarrow$ PNG $\rightarrow$ MinIO;
-  \item подготавливается аудиоподкаст: LLM~формирует диалог двух ведущих
-    (Наставник + Ученик) по~тексту урока $\rightarrow$ Silero~TTS~v4~\cite{silero_tts_2024}
-    $\rightarrow$ MP3 $\rightarrow$ MinIO.
+  \item выделяет и нумерует источники до генерации курса;
+  \item сначала проектирует структуру, а затем отдаёт её человеку
+    на ревью;
+  \item генерирует контент уже после утверждения структуры;
+  \item проверяет claims и блокирует публикацию при низком качестве
+    ссылочной привязки.
 \end{itemize}
 
-\subsection{Механизм актуализации}
+\subsection{Quality seal, provenance и thesis validation}
 
-Изменение исходного документа запускает конвейер актуализации:
+Финальная нода \texttt{verifier} не вызывает LLM. Она алгоритмически
+считает отношение \texttt{cited\_claims / total\_claims} и назначает
+quality seal:
 
-\begin{enumerate}
-  \item Document~Ingestion повторно индексирует обновлённый документ;
-  \item FactCheckAgent прогоняет все существующие уроки против
-    нового индекса;
-  \item Уроки с~faithfulness ниже порога (по~умолчанию 0.8) помечаются
-    как~\texttt{OUTDATED} и~передаются ContentCreatorAgent
-    на~перегенерацию;
-  \item контур участия человека уведомляет владельца курса о~изменённых разделах.
-\end{enumerate}
+\begin{itemize}
+  \item \texttt{PASS}, если ссылочная привязка claims не ниже 90\,\%;
+  \item \texttt{PASS\_WITH\_NOTES}, если она находится в диапазоне
+    70--90\,\%;
+  \item \texttt{FAIL}, если evidence отсутствует или качество ниже
+    порога.
+\end{itemize}
 
-Цикл авто-актуализации показан на рисунке~\ref{fig:actualization-cycle}.
+В результате API отдаёт не только текст курса, но и набор проверочных
+артефактов: \texttt{citations}, \texttt{quality\_seal},
+\texttt{block\_provenance}, \texttt{cost\_quality} и
+\texttt{thesis\_validation}. Эти поля используются фронтовыми
+E2E-тестами и дипломным скриптом продуктовой валидации, что делает
+проверку H1--H3 воспроизводимой.
 
-\input{figures/fig-actualization-cycle.tex}
+\subsection{Roadmap-компоненты}
+
+Мультимедиа-генерация (FLUX / Silero), автоактуализация курса при
+изменении источника, полноценные профили SAM / Backward~Design и
+расширенная RAGAS-оценка не включаются в статус завершённого MVP.
+Они описаны как roadmap-слои: их можно подключать поверх текущего
+source-grounded конвейера, но они не используются как доказательство
+основных результатов диплома.
 
 % ─────────────────────────────────────────────────────────────────
 \section{Инфраструктура и развёртывание}
 % ─────────────────────────────────────────────────────────────────
 
-\subsection{Dev-стенд: K3s + GPU}
+\subsection{Dev/env-dev контур}
 
-Сервис развёрнут в~K3s-кластере Adapstory
-(single-node, 192.168.1.3) под~управлением ArgoCD~(App-of-Apps pattern).
-Конфигурация оформлена как Helm-чарт в~GitOps-репозитории~\cite{adapstory_gitops_2025}.
+Для локальной и env-dev проверки используется docker-compose контур
+\texttt{docker-compose.ai-methodist.yml} и overlay
+\texttt{docker-compose.ai-methodist.env-dev.yml}. Он поднимает
+AI~Course~Generator, AI~Methodist MCP-сервис, Dify course tool,
+Knowledge~Graph, Neo4j, PostgreSQL и Redis. В base-compose задана
+лёгкая локальная модель, а env-dev профиль использует более сильный
+Qwen3:8b через OpenAI-compatible Ollama endpoint.
 
-GPU-узел (NVIDIA~Tesla~T4) предоставлен через NVIDIA~GPU~Operator
-с~time-slicing: Ollama и~Celery-воркеры делят GPU-ресурс.
-Все~персональные данные и~документы клиентов остаются внутри периметра
-локального развёртывания, что соответствует требованиям
-152-ФЗ~\cite{fz_152_2006}.
+Для инфраструктурного развёртывания платформа сохраняет GitOps-подход:
+образ собирается CI/CD, значения deployment описываются в Helm/GitOps,
+а ручные изменения в Kubernetes не используются как способ доставки
+функциональности.
 
-\subsection{LLM~Gateway}
+\subsection{Наблюдаемость и проверяемость}
 
-LLM~Gateway предоставляет единый асинхронный
-провайдер-агностичный API (\texttt{complete(prompt, model, params)}):
+В сервисе используются OpenTelemetry spans вокруг нод LangGraph и
+Prometheus-счётчик распределения quality seal. Отдельные runbook-и
+фиксируют env-dev smoke, KG-backed Playwright benchmark и LLM matrix.
+Для ВКР это важно: результат генерации становится не демонстрацией
+«на словах», а набором machine-readable артефактов:
 
 \begin{itemize}
-  \item \textbf{Retry} (Tenacity): экспоненциальный backoff,
-    до~3~попыток при~HTTP~5xx от~Ollama;
-  \item \textbf{Circuit~Breaker}: при~недоступности Ollama >~30~с
-    переключается на~резервный провайдер (OpenAI~API);
-  \item \textbf{Кэш промптов}: идентичные промпты кэшируются в~Redis
-    (TTL~1~час) для~снижения нагрузки на~GPU.
+  \item статус запуска и финальный result JSON;
+  \item quality seal и provenance;
+  \item thesis-validation snapshot;
+  \item Playwright summary и benchmark results;
+  \item product validation report по H1--H3.
 \end{itemize}
-
-\subsection{CI/CD и мониторинг}
-
-Jenkins-пайплайн собирает образы: Maven/uv~build~$\rightarrow$
-Docker build (Kaniko, linux/amd64)~$\rightarrow$ push в~Harbor-реестр~$\rightarrow$
-обновление тега в~GitOps-репозитории~$\rightarrow$ ArgoCD~sync.
-
-OpenTelemetry~Collector собирает метрики:
-latency по~нодам LangGraph-графа, throughput Celery-очереди,
-GPU-utilization. Дашборды доступны в~Grafana (dev-стенд).

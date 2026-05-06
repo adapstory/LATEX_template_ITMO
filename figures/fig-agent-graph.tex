@@ -1,37 +1,33 @@
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}[
-    scale=0.85, every node/.append style={transform shape},
-    node distance=0.8cm and 2.0cm,
+    scale=0.82, every node/.append style={transform shape},
+    node distance=0.7cm and 2.0cm,
     every node/.style={font=\small},
-    agent/.style={rectangle, rounded corners=3pt, draw, minimum height=0.7cm, minimum width=2.5cm, align=center, fill=white},
-    decision/.style={diamond, draw, minimum width=1.6cm, minimum height=1.3cm, align=center, fill=yellow!20, inner sep=1pt, font=\small},
+    agent/.style={rectangle, rounded corners=3pt, draw, minimum height=0.68cm, minimum width=2.7cm, align=center, fill=white},
+    decision/.style={diamond, draw, minimum width=1.7cm, minimum height=1.25cm, align=center, fill=yellow!20, inner sep=1pt, font=\scriptsize},
     arr/.style={-stealth, thick},
   ]
-    % Main vertical flow
-    \node[agent] (target) {TargetAnalysis\\Agent};
-    \node[agent, below=of target] (structure) {CourseStructure\\Agent};
-    \node[decision, below=1.0cm of structure] (review) {human\_review\\\_structure};
-    \node[agent, below=1.0cm of review] (content) {ContentCreator\\Agent};
+    \node[agent] (source) {SourceAnalyzer};
+    \node[agent, below=of source] (structure) {CourseStructure\\Agent};
+    \node[decision, below=0.9cm of structure] (review) {human\\review};
+    \node[agent, below=0.9cm of review] (content) {ContentCreator\\Agent};
     \node[agent, below=of content] (factcheck) {FactCheck\\Agent};
     \node[agent, below=of factcheck] (reviewer) {ReviewAgent};
+    \node[agent, below=of reviewer] (verifier) {Verifier};
+    \node[decision, below=0.9cm of verifier] (quality) {quality\\approval};
 
-    % Parallel branch
-    \node[agent, right=2.5cm of review] (media) {MediaGeneration\\Agent};
-
-    % Edges
-    \draw[arr] (target) -- (structure);
+    \draw[arr] (source) -- (structure);
     \draw[arr] (structure) -- (review);
     \draw[arr] (review) -- node[right, font=\footnotesize] {одобрено} (content);
     \draw[arr] (content) -- (factcheck);
     \draw[arr] (factcheck) -- (reviewer);
+    \draw[arr] (reviewer) -- (verifier);
+    \draw[arr] (verifier) -- (quality);
 
-    % Rejection loop back
     \draw[arr] (review.west) -- ++(-1.2,0) |- node[left, pos=0.25, font=\footnotesize] {отклонено} (structure.west);
-
-    % Parallel dashed to media
-    \draw[arr, dashed] (review.east) -- node[above, font=\footnotesize] {} (media.west);
+    \draw[arr] (quality.west) -- ++(-1.5,0) |- node[left, pos=0.18, font=\footnotesize] {доработка} (content.west);
   \end{tikzpicture}
-  \caption{Граф агентов ИИ-методиста (LangGraph StateGraph)}
+  \caption{Граф агентов ИИ-методиста (6-node LangGraph StateGraph)}
   \label{fig:agent-graph}
 \end{figure}

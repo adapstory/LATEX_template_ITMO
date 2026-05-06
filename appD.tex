@@ -1,23 +1,28 @@
 % Ссылка в тексте: (приложение~Г)
 \chapter{C4-ДЕКОМПОЗИЦИЯ АРХИТЕКТУРЫ}
 
-В~приложении представлена текстовая C4-декомпозиция архитектуры
-ИИ-методиста. На~этапе черновика она заменяет финальные визуальные
-диаграммы и~фиксирует состав системы в~форме, достаточной
-для~архитектурного обсуждения.
+В~приложении представлена текстовая C4-декомпозиция фактической
+архитектуры MVP ИИ-методиста, синхронизированная с текущими сервисами
+Adapstory: AI~Course~Generator, Dify/RAG tool, Knowledge~Graph,
+School~BFF и LMS.
 
 \section*{Г.1 --- Системный контекст (C4 Level~1)}
 
 \begin{itemize}
   \item \textbf{Разработчик курса / HR-специалист}: загружает документ,
-    запускает подготовку черновика, ревьюит структуру курса;
-  \item \textbf{BFF School}: маршрутизирует запросы веб-клиента;
-  \item \textbf{ИИ-методист}: выполняет обработку документа, анализ,
-    подготовку структуры и~черновых материалов курса;
-  \item \textbf{LMS Adapstory}: принимает итоговый курс и~публикует его;
-  \item \textbf{MinIO}: хранит исходные документы и~медиа;
-  \item \textbf{Ollama / GPU-узел}: обслуживает локальные LLM и~модели мультимедиа;
-  \item \textbf{Qdrant}: хранит векторный индекс для~поиска релевантных фрагментов.
+    запускает подготовку черновика, ревьюит структуру и quality seal;
+  \item \textbf{School UI / BFF School}: маршрутизирует запросы
+    веб-клиента и показывает status/result/provenance;
+  \item \textbf{AI Course Generator}: исполняет LangGraph-конвейер
+    генерации и хранит артефакты запуска;
+  \item \textbf{Dify/RAG tool}: индексирует источник и возвращает
+    фрагменты для EvidenceTable;
+  \item \textbf{Knowledge Graph}: предоставляет связанные компетенции,
+    понятия и предметные связи;
+  \item \textbf{LLM endpoint}: локальный или OpenAI-compatible endpoint
+    для моделей семейства Qwen;
+  \item \textbf{LMS Adapstory}: принимает утверждённый курс и
+    публикует его.
 \end{itemize}
 
 \section*{Г.2 --- Контейнеры (C4 Level~2)}
@@ -30,17 +35,17 @@
   \hline
   \textbf{Контейнер} & \textbf{Технология} & \textbf{Роль} \\
   \hline
-  API Gateway & FastAPI & входная точка для~BFF и~оркестрация запросов \\
+  AI Course Generator API & FastAPI & REST/MCP входная точка, создание run, status/result/provenance \\
   \hline
-  Async workers & Celery & асинхронное выполнение задач обработки документов и~генерации \\
+  Agent runtime & LangGraph & 6-node pipeline, interrupts, routing, revision loop \\
   \hline
-  Agent runtime & LangGraph & исполнение агентного графа с~сохраняемым состоянием \\
+  Checkpoint/result store & PostgreSQL & сохранение состояния, запусков, результатов и audit-данных \\
   \hline
-  Ingestion pipeline & Haystack 2.x & извлечение, очистка, чанкинг и~индексация документов \\
+  RAG tool & Dify plugin & индексация источника и retrieval фрагментов \\
   \hline
-  LLM Gateway & Python service & единый доступ к~Qwen / внешним провайдерам \\
+  Knowledge Graph & Neo4j / MCP & компетенции, понятия и связи для контекста курса \\
   \hline
-  Vector storage & Qdrant & поиск релевантных фрагментов для~RAG \\
+  School BFF / UI & Java BFF / Frontend & пользовательский контур ревью, публикации и отображения метрик \\
   \hline
   \end{tabular}
 \end{table}
@@ -48,11 +53,12 @@
 \section*{Г.3 --- Компоненты (C4 Level~3)}
 
 \begin{itemize}
-  \item \textbf{Document parser}: преобразует PDF/DOCX/PPTX/XLSX в~текст;
-  \item \textbf{Chunker + embedder}: формирует индексируемые фрагменты;
-  \item \textbf{CourseStructureAgent}: генерирует структуру курса;
-  \item \textbf{ContentCreatorAgent}: формирует тексты уроков;
-  \item \textbf{FactCheckAgent}: проверяет фактические утверждения;
-  \item \textbf{Review / HITL layer}: обеспечивает контроль с~участием человека;
-  \item \textbf{Exporter}: публикует результат в~LMS Adapstory.
+  \item \textbf{SourceAnalyzer}: строит EvidenceTable из RAG/KG-контекста;
+  \item \textbf{CourseStructureAgent}: генерирует CourseBlueprint;
+  \item \textbf{ContentCreatorAgent}: формирует уроки с inline citations;
+  \item \textbf{FactCheckAgent}: проверяет claims относительно источника;
+  \item \textbf{ReviewAgent}: оценивает методологическую связность и Bloom coverage;
+  \item \textbf{Verifier}: рассчитывает quality seal, provenance и thesis-validation snapshot;
+  \item \textbf{Human review layer}: блокирует публикацию без подтверждения человека;
+  \item \textbf{Exporter}: передаёт утверждённый курс в LMS Adapstory.
 \end{itemize}

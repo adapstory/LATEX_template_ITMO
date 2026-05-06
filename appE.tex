@@ -1,8 +1,9 @@
 % Ссылка в тексте: (приложение~Д)
 \chapter{СПЕЦИФИКАЦИЯ ГРАФА АГЕНТОВ LANGGRAPH}
 
-В~приложении представлена текстовая спецификация графа агентов
-ИИ-методиста: ноды, основные переходы и~точки участия человека.
+В~приложении представлена текстовая спецификация фактического
+6-node графа агентов ИИ-методиста: ноды, переходы, точки участия
+человека и rollback-контур к legacy-топологии.
 
 \section*{Д.1 --- Ноды графа}
 
@@ -14,19 +15,21 @@
   \hline
   \textbf{Нода} & \textbf{Тип} & \textbf{Описание} \\
   \hline
-  target\_analysis & agent & Анализ целевой аудитории и~контекста использования курса \\
+  source & agent & Поиск источников, EvidenceTable, coverage status \\
   \hline
-  course\_structure & agent & Подготовка структуры курса по~выбранной методологии \\
+  structure & agent & CourseBlueprint по методологии ADDIE и evidence-контексту \\
   \hline
-  human\_review & interrupt & Ручное подтверждение или~коррекция структуры \\
+  HITL-structure & interrupt & Подтверждение или коррекция структуры курса \\
   \hline
-  content\_creator & agent & Подготовка черновиков уроков с~использованием поиска по~корпусу \\
+  content & agent & Черновики уроков с inline-ссылками на источники \\
   \hline
-  fact\_check & agent & Проверка утверждений относительно исходного документа \\
+  fact-check & agent & Проверка утверждений относительно EvidenceTable \\
   \hline
-  media\_gen & agent & Иллюстрации и~TTS-материалы \\
+  review & agent & Методологическая проверка, Bloom coverage, coherence \\
   \hline
-  final\_review & agent & Итоговая проверка качества и~сборка отчёта \\
+  verifier & agent & Quality seal, cited claims, provenance, thesis-validation snapshot \\
+  \hline
+  HITL-quality & interrupt & Финальное решение человека перед публикацией \\
   \hline
   \end{tabular}
 \end{table}
@@ -41,19 +44,25 @@
   \hline
   \textbf{Откуда} & \textbf{Куда} & \textbf{Условие перехода} \\
   \hline
-  target\_analysis & course\_structure & исходный документ разобран и~аудитория определена \\
+  source & structure & EvidenceTable построена или явно помечена как неполная \\
   \hline
-  course\_structure & human\_review & структура курса построена и~доступна для~проверки \\
+  structure & HITL-structure & структура курса доступна для проверки \\
   \hline
-  human\_review & content\_creator & структура утверждена пользователем \\
+  HITL-structure & content & структура утверждена пользователем \\
   \hline
-  content\_creator & fact\_check & черновики уроков подготовлены и~требуют верификации \\
+  HITL-structure & structure & структура отклонена и требует пересборки \\
   \hline
-  fact\_check & media\_gen & фактологический порог пройден \\
+  content & fact-check & уроки подготовлены и требуют верификации \\
   \hline
-  media\_gen & final\_review & медиаартефакты готовы \\
+  fact-check & review & отчёты факт-чекинга сформированы \\
   \hline
-  final\_review & export & итоговый пакет курса признан валидным \\
+  review & content & требуется доработка, revision count меньше лимита \\
+  \hline
+  review & verifier & курс прошёл методологическое ревью или исчерпан лимит доработок \\
+  \hline
+  verifier & HITL-quality & quality seal и provenance собраны \\
+  \hline
+  HITL-quality & END & человек принимает результат или фиксирует остановку \\
   \hline
   \end{tabular}
 \end{table}
@@ -61,7 +70,10 @@
 \section*{Д.3 --- Точки участия человека}
 
 \begin{itemize}
-  \item подтверждение структуры курса перед генерацией полного контента;
-  \item ручной разбор спорных кейсов факт-чекинга;
-  \item финальное решение о~публикации курса в~LMS.
+  \item \textbf{HITL~1}: подтверждение структуры курса до генерации полного контента;
+  \item \textbf{HITL~2}: финальное решение на основе quality seal,
+    provenance, citations и блокирующих замечаний;
+  \item \textbf{Rollback}: при отключении Feynman pipeline сервис может
+    перейти к legacy 4-node топологии, а provenance фиксирует,
+    какой pipeline фактически исполнялся.
 \end{itemize}

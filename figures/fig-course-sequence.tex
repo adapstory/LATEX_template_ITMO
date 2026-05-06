@@ -4,77 +4,63 @@
     every node/.style={font=\scriptsize},
     x=1cm,
   ]
-    % Actor positions — wider spacing
-    \def\actorA{0}       % Пользователь
-    \def\actorB{3.2}     % BFF
-    \def\actorC{6.8}     % ИИ-методист
-    \def\actorD{10.0}    % LLM
-    \def\actorE{13.2}    % Qdrant
+    \def\actorA{0}
+    \def\actorB{3.2}
+    \def\actorC{6.8}
+    \def\actorD{10.2}
+    \def\actorE{13.4}
 
-    % Actor labels
     \node[font=\scriptsize\bfseries] at (\actorA, 0) {Пользователь};
     \node[font=\scriptsize\bfseries] at (\actorB, 0) {BFF};
     \node[font=\scriptsize\bfseries] at (\actorC, 0) {ИИ-методист};
-    \node[font=\scriptsize\bfseries] at (\actorD, 0) {LLM};
-    \node[font=\scriptsize\bfseries] at (\actorE, 0) {Qdrant};
+    \node[font=\scriptsize\bfseries] at (\actorD, 0) {Dify/KG};
+    \node[font=\scriptsize\bfseries] at (\actorE, 0) {LLM};
 
-    % Lifelines — taller
     \foreach \x in {\actorA, \actorB, \actorC, \actorD, \actorE} {
       \draw[dashed, gray] (\x, -0.4) -- (\x, -13.5);
     }
 
-    % Messages with more vertical space
     \def\ystart{-1.2}
     \def\ystep{1.2}
 
-    % 1. Пользователь -> BFF
     \draw[-stealth] (\actorA, \ystart) -- (\actorB, \ystart)
       node[midway, above, font=\scriptsize] {загрузка документа};
 
-    % 2. BFF -> ИИ-методист
     \pgfmathsetmacro{\yy}{\ystart - \ystep}
     \draw[-stealth] (\actorB, \yy) -- (\actorC, \yy)
       node[midway, above, font=\scriptsize] {POST /generate};
 
-    % 3. ИИ-методист -> Qdrant
     \pgfmathsetmacro{\yy}{\ystart - 2*\ystep}
-    \draw[-stealth] (\actorC, \yy) -- (\actorE, \yy)
-      node[midway, above, font=\scriptsize] {индексация};
+    \draw[-stealth] (\actorC, \yy) -- (\actorD, \yy)
+      node[midway, above, font=\scriptsize] {индекс и retrieval};
 
-    % 4. ИИ-методист -> LLM
     \pgfmathsetmacro{\yy}{\ystart - 3*\ystep}
-    \draw[-stealth] (\actorC, \yy) -- (\actorD, \yy)
-      node[midway, above, font=\scriptsize] {анализ аудитории};
+    \draw[-stealth] (\actorC, \yy) -- (\actorE, \yy)
+      node[midway, above, font=\scriptsize] {структура курса};
 
-    % 5. ИИ-методист -> LLM
     \pgfmathsetmacro{\yy}{\ystart - 4*\ystep}
-    \draw[-stealth] (\actorC, \yy) -- (\actorD, \yy)
-      node[midway, above, font=\scriptsize] {генерация структуры};
-
-    % 6. ИИ-методист -> Пользователь
-    \pgfmathsetmacro{\yy}{\ystart - 5*\ystep}
     \draw[-stealth] (\actorC, \yy) -- (\actorA, \yy)
-      node[midway, above, font=\scriptsize] {запрос на ревью};
+      node[midway, above, font=\scriptsize] {ревью структуры};
 
-    % 7. Пользователь -> ИИ-методист
-    \pgfmathsetmacro{\yy}{\ystart - 6*\ystep}
+    \pgfmathsetmacro{\yy}{\ystart - 5*\ystep}
     \draw[-stealth] (\actorA, \yy) -- (\actorC, \yy)
       node[midway, above, font=\scriptsize] {одобрение};
 
-    % 8. ИИ-методист -> Qdrant
-    \pgfmathsetmacro{\yy}{\ystart - 7*\ystep}
+    \pgfmathsetmacro{\yy}{\ystart - 6*\ystep}
     \draw[-stealth] (\actorC, \yy) -- (\actorE, \yy)
-      node[midway, above, font=\scriptsize] {RAG-поиск};
+      node[midway, above, font=\scriptsize] {контент уроков};
 
-    % 9. ИИ-методист -> LLM
-    \pgfmathsetmacro{\yy}{\ystart - 8*\ystep}
+    \pgfmathsetmacro{\yy}{\ystart - 7*\ystep}
     \draw[-stealth] (\actorC, \yy) -- (\actorD, \yy)
-      node[midway, above, font=\scriptsize] {генерация контента};
+      node[midway, above, font=\scriptsize] {факт-чекинг};
 
-    % 10. ИИ-методист -> BFF
+    \pgfmathsetmacro{\yy}{\ystart - 8*\ystep}
+    \draw[-stealth] (\actorC, \yy) -- (\actorA, \yy)
+      node[midway, above, font=\scriptsize] {quality seal};
+
     \pgfmathsetmacro{\yy}{\ystart - 9*\ystep}
     \draw[-stealth] (\actorC, \yy) -- (\actorB, \yy)
-      node[midway, above, font=\scriptsize] {курс готов};
+      node[midway, above, font=\scriptsize] {result/provenance};
   \end{tikzpicture}
   \caption{Сценарий взаимодействия при генерации курса}
   \label{fig:course-sequence}
