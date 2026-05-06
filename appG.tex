@@ -48,7 +48,7 @@ Machine-readable manifest прогона хранится в
 между скоростью одношаговой генерации и требованиями к source-grounded
 методическому качеству.
 
-\section*{Оценочные артефакты следующей итерации}
+\section*{Оценочные артефакты текущей итерации}
 
 На~текущем этапе полностью подготовлены:
 \begin{itemize}
@@ -62,3 +62,7 @@ Paired B2/B4-прогон выполнен на том же наборе док�
 \texttt{B4\_result\_i}, отдельный \texttt{kb\_slug} B4 и строковая
 дельта Bloom/source-grounding. Сводка и сырые REST-артефакты приведены
 в~приложении~И и файле \texttt{paired\_b2\_b4\_experiment.json}.
+Дополнительно выполнен детерминированный evaluation lab:
+\texttt{evaluation\_lab/ai\_methodist\_evaluation\_lab\_latest.json}
+фиксирует RAG-style метрики на~30 QA-парах и fact-check
+precision / recall / F1 на~100 утверждениях.

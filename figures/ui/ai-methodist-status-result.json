@@ -50,8 +50,8 @@
   "cost_quality": {
     "model": {
       "provider": "ollama",
-      "name": "qwen3:8b",
-      "version": "local-gpu"
+      "name": "qwen2.5:1.5b",
+      "version": "local-lab"
     },
     "tokens": {
       "input_tokens": 22000,
@@ -68,9 +68,9 @@
       "last_reason": "Verifier requested stronger source grounding."
     },
     "quality": {
-      "score": 87,
+      "score": 92,
       "scale_max": 100,
-      "summary": "Composite of Bloom coverage, coherence, and grounding.",
+      "summary": "Composite of paired Bloom coverage and source grounding on the internal/open-course corpus.",
       "dimensions": [
         {
           "id": "bloom",
@@ -80,34 +80,38 @@
         {
           "id": "grounding",
           "label": "Source grounding",
-          "score": 92
+          "score": 100.0
         }
       ]
     },
     "model_comparison": {
-      "selected_model": "qwen3:8b",
-      "rationale": "The selected runtime model is compared with the thesis B2 one-shot baseline.",
+      "selected_model": "qwen2.5:1.5b",
+      "rationale": "Local paired B2/B4 lab run; env-dev may use stronger Qwen3:8b runtime.",
       "candidates": [
         {
+          "profile": "B4",
           "provider": "ollama",
-          "model": "qwen3:8b",
-          "estimated_cost_usd": 0.75,
-          "quality_score": 87,
+          "model": "qwen2.5:1.5b",
+          "estimated_cost_usd": 0.0,
+          "quality_score": 92,
           "selected": true,
-          "reason": "Current multi-agent AI Methodist run."
+          "status": "completed",
+          "reason": "Measured multi-agent AI Methodist run on the 19-document corpus."
         },
         {
+          "profile": "B2",
           "provider": "ollama",
-          "model": "B2 one-shot baseline (qwen2.5:14b)",
-          "estimated_cost_usd": 0,
+          "model": "B2 one-shot baseline (qwen2.5:14b historical artifact)",
+          "estimated_cost_usd": 0.0,
           "quality_score": 61.4,
           "selected": false,
-          "reason": "Master thesis baseline without RAG or agents."
+          "status": "completed",
+          "reason": "Measured one-shot baseline aggregate on the same 19-document corpus."
         }
       ]
     },
     "explainability": {
-      "summary": "The course uses ADDIE and the stateful AI Methodist pipeline for source-grounded drafting.",
+      "summary": "The course evidence is aggregated from the paired B2/B4 technical lab on internal documents and open MIT OCW course materials.",
       "reasons": [
         "The pipeline separates source analysis, structure, content, fact-checking, review, and verification.",
         "Bloom coverage and source grounding are measured before publication."
@@ -115,7 +119,7 @@
       "constraints": [
         "Human approval is required before publishing generated content."
       ],
-      "source_grounding": "92.0% of factual claims are source-grounded.",
+      "source_grounding": "100.0% of factual claims are source-grounded.",
       "tradeoffs": [
         "The multi-agent path is slower than a one-shot prompt but keeps provenance and review evidence."
       ],
@@ -124,7 +128,7 @@
   },
   "thesis_validation": {
     "profile": "B4_multi_agent",
-    "summary": "AI Methodist satisfies the thesis validation gates.",
+    "summary": "Technical lab gates pass on the internal/open-course corpus.",
     "benchmarks": {
       "target_time_seconds": 1800,
       "target_bloom_coverage_pct": 70,
@@ -132,52 +136,25 @@
       "b2_baseline_bloom_coverage_pct": 61.4
     },
     "comparison_experiment": {
-      "lab": "thesis-paired-demo",
+      "lab": "paired B2/B4 technical lab",
       "same_source_document_required": true,
-      "runner": "pnpm thesis:evaluate --corpus diploma-demo",
+      "runner": "python3 Диплом/experiments/run_paired_b2_b4_experiment.py",
       "primary_comparison": {
         "pair": "B4_vs_B2",
         "status": "completed",
         "bloom_coverage_delta_pct": 21.9,
-        "grounded_block_delta_pct": 30.6,
-        "latency_ratio": 4.8,
-        "quality_score_delta": 25.6
+        "source_grounding_delta_pct": 100.0
       },
       "lanes": [
-        {
-          "id": "B1",
-          "profile": "Expert manual course",
-          "status": "completed",
-          "metrics": {
-            "bloom_coverage_pct": 86.7,
-            "grounding_pct": 96,
-            "cost_usd": 160,
-            "latency_seconds": 28800,
-            "quality_score": 91
-          }
-        },
         {
           "id": "B2",
           "profile": "One-shot baseline",
           "status": "completed",
           "metrics": {
             "bloom_coverage_pct": 61.4,
-            "grounding_pct": 61.4,
-            "cost_usd": 0,
-            "latency_seconds": 300,
+            "grounding_pct": 0.0,
+            "latency_seconds": 4.37,
             "quality_score": 61.4
-          }
-        },
-        {
-          "id": "B3",
-          "profile": "External AI course builder",
-          "status": "completed",
-          "metrics": {
-            "bloom_coverage_pct": 68.2,
-            "grounding_pct": 70.1,
-            "cost_usd": 4.5,
-            "latency_seconds": 1200,
-            "quality_score": 72
           }
         },
         {
@@ -186,20 +163,55 @@
           "status": "completed",
           "metrics": {
             "bloom_coverage_pct": 83.3,
-            "grounding_pct": 92,
-            "cost_usd": 0.75,
-            "latency_seconds": 1440,
-            "quality_score": 87
+            "grounding_pct": 100.0,
+            "latency_seconds": 17.1,
+            "quality_score": 92
           }
         }
-      ]
+      ],
+      "expert_review_protocol": {
+        "criteria_count": 5,
+        "flow": [
+          {
+            "id": "assign_experts",
+            "status": "ready"
+          },
+          {
+            "id": "randomize_blind_packets",
+            "status": "ready"
+          },
+          {
+            "id": "collect_scorecards",
+            "status": "pending"
+          },
+          {
+            "id": "decode_and_export",
+            "status": "pending"
+          }
+        ],
+        "expert_count": {
+          "min": 5,
+          "max": 8
+        },
+        "randomization": "per_expert_randomized",
+        "blind": true,
+        "exports": [
+          "json",
+          "csv",
+          "markdown"
+        ],
+        "bloom_kappa": {
+          "metric": "cohens_kappa",
+          "status": "awaiting_submissions"
+        }
+      }
     },
     "metrics": [
       {
         "id": "h1_time_to_first_draft",
         "hypothesis": "H1",
         "label": "Time to first draft",
-        "display_value": "24.0 min",
+        "display_value": "17.1 s",
         "target": "<= 30 min",
         "passed": true
       },
@@ -215,7 +227,7 @@
         "id": "h2_source_grounding",
         "hypothesis": "H2",
         "label": "Source grounding",
-        "display_value": "92.0%",
+        "display_value": "100.0%",
         "target": ">= 70%",
         "passed": true
       },

@@ -53,8 +53,10 @@ School~BFF и LMS.
 \section*{Г.3 --- Компоненты (C4 Level~3)}
 
 \begin{itemize}
-  \item \textbf{SourceAnalyzer}: строит EvidenceTable из RAG/KG-контекста;
-  \item \textbf{CourseStructureAgent}: генерирует CourseBlueprint;
+  \item \textbf{SourceAnalyzer}: строит EvidenceTable из Dify/RAG-фрагментов
+    и source-excerpt fallback;
+  \item \textbf{CourseStructureAgent}: генерирует CourseBlueprint и использует
+    Knowledge~Graph для семантического усиления структуры;
   \item \textbf{ContentCreatorAgent}: формирует уроки с inline citations;
   \item \textbf{FactCheckAgent}: проверяет claims относительно источника;
   \item \textbf{ReviewAgent}: оценивает методологическую связность и Bloom coverage;
