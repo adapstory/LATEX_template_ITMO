@@ -43,7 +43,7 @@
     "checks": []
   },
   "provenance": {
-    "modelName": "qwen3:8b",
+    "modelName": "qwen2.5:1.5b",
     "promptVersion": "ai-methodist-v6-node-v1",
     "generatedAt": "2026-05-04T08:00:00Z",
     "tokensUsed": 24000

@@ -101,7 +101,7 @@
         {
           "profile": "B2",
           "provider": "ollama",
-          "model": "B2 one-shot baseline (qwen2.5:14b historical artifact)",
+          "model": "B2 one-shot baseline (qwen2.5:7b historical artifact)",
           "estimated_cost_usd": 0.0,
           "quality_score": 61.4,
           "selected": false,
