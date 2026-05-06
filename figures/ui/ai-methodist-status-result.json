@@ -1,0 +1,279 @@
+{
+  "run_id": "run-thesis-screenshots-001",
+  "status": "READY_FOR_APPROVAL",
+  "current_stage": "verifier",
+  "title": "AI Methodist thesis onboarding course",
+  "source_materials": [
+    {
+      "object_key": "tenants/tenant-001/thesis/thesis-onboarding.md",
+      "file_name": "thesis-onboarding.md",
+      "status": "ingested",
+      "size_bytes": 4096
+    }
+  ],
+  "run_history": [
+    {
+      "run_id": "run-thesis-screenshots-001",
+      "status": "READY_FOR_APPROVAL",
+      "title": "B4 validation run",
+      "started_at": "2026-05-05T09:00:00Z",
+      "llm_provider": "ollama"
+    }
+  ],
+  "citations": [
+    {
+      "citation_id": "source-1",
+      "title": "ADDIE source brief",
+      "file_name": "thesis-onboarding.md",
+      "snippet": "The expected flow is upload, indexing, ADDIE structure, human review, fact-check and publication.",
+      "lesson_id": "lesson-1",
+      "confidence": 0.94
+    }
+  ],
+  "quality_seal": {
+    "seal": "PASS",
+    "summary": "All thesis validation gates are ready for human review.",
+    "checks": [
+      {
+        "id": "bloom",
+        "label": "Bloom coverage >=70%",
+        "passed": true
+      },
+      {
+        "id": "grounding",
+        "label": "Source-grounded factual claims",
+        "passed": true
+      }
+    ],
+    "blocking_issues": []
+  },
+  "cost_quality": {
+    "model": {
+      "provider": "ollama",
+      "name": "qwen3:8b",
+      "version": "local-gpu"
+    },
+    "tokens": {
+      "input_tokens": 22000,
+      "output_tokens": 10000,
+      "total_tokens": 32000
+    },
+    "cost": {
+      "currency": "USD",
+      "estimated_total": 0.75
+    },
+    "retries": {
+      "count": 1,
+      "max": 2,
+      "last_reason": "Verifier requested stronger source grounding."
+    },
+    "quality": {
+      "score": 87,
+      "scale_max": 100,
+      "summary": "Composite of Bloom coverage, coherence, and grounding.",
+      "dimensions": [
+        {
+          "id": "bloom",
+          "label": "Bloom coverage",
+          "score": 83.3
+        },
+        {
+          "id": "grounding",
+          "label": "Source grounding",
+          "score": 92
+        }
+      ]
+    },
+    "model_comparison": {
+      "selected_model": "qwen3:8b",
+      "rationale": "The selected runtime model is compared with the thesis B2 one-shot baseline.",
+      "candidates": [
+        {
+          "provider": "ollama",
+          "model": "qwen3:8b",
+          "estimated_cost_usd": 0.75,
+          "quality_score": 87,
+          "selected": true,
+          "reason": "Current multi-agent AI Methodist run."
+        },
+        {
+          "provider": "ollama",
+          "model": "B2 one-shot baseline (qwen2.5:14b)",
+          "estimated_cost_usd": 0,
+          "quality_score": 61.4,
+          "selected": false,
+          "reason": "Master thesis baseline without RAG or agents."
+        }
+      ]
+    },
+    "explainability": {
+      "summary": "The course uses ADDIE and the stateful AI Methodist pipeline for source-grounded drafting.",
+      "reasons": [
+        "The pipeline separates source analysis, structure, content, fact-checking, review, and verification.",
+        "Bloom coverage and source grounding are measured before publication."
+      ],
+      "constraints": [
+        "Human approval is required before publishing generated content."
+      ],
+      "source_grounding": "92.0% of factual claims are source-grounded.",
+      "tradeoffs": [
+        "The multi-agent path is slower than a one-shot prompt but keeps provenance and review evidence."
+      ],
+      "prompt_version": "ai-methodist-v6-node-v1"
+    }
+  },
+  "thesis_validation": {
+    "profile": "B4_multi_agent",
+    "summary": "AI Methodist satisfies the thesis validation gates.",
+    "benchmarks": {
+      "target_time_seconds": 1800,
+      "target_bloom_coverage_pct": 70,
+      "target_unit_cost_pct": 1,
+      "b2_baseline_bloom_coverage_pct": 61.4
+    },
+    "comparison_experiment": {
+      "lab": "thesis-paired-demo",
+      "same_source_document_required": true,
+      "runner": "pnpm thesis:evaluate --corpus diploma-demo",
+      "primary_comparison": {
+        "pair": "B4_vs_B2",
+        "status": "completed",
+        "bloom_coverage_delta_pct": 21.9,
+        "grounded_block_delta_pct": 30.6,
+        "latency_ratio": 4.8,
+        "quality_score_delta": 25.6
+      },
+      "lanes": [
+        {
+          "id": "B1",
+          "profile": "Expert manual course",
+          "status": "completed",
+          "metrics": {
+            "bloom_coverage_pct": 86.7,
+            "grounding_pct": 96,
+            "cost_usd": 160,
+            "latency_seconds": 28800,
+            "quality_score": 91
+          }
+        },
+        {
+          "id": "B2",
+          "profile": "One-shot baseline",
+          "status": "completed",
+          "metrics": {
+            "bloom_coverage_pct": 61.4,
+            "grounding_pct": 61.4,
+            "cost_usd": 0,
+            "latency_seconds": 300,
+            "quality_score": 61.4
+          }
+        },
+        {
+          "id": "B3",
+          "profile": "External AI course builder",
+          "status": "completed",
+          "metrics": {
+            "bloom_coverage_pct": 68.2,
+            "grounding_pct": 70.1,
+            "cost_usd": 4.5,
+            "latency_seconds": 1200,
+            "quality_score": 72
+          }
+        },
+        {
+          "id": "B4",
+          "profile": "AI Methodist multi-agent",
+          "status": "completed",
+          "metrics": {
+            "bloom_coverage_pct": 83.3,
+            "grounding_pct": 92,
+            "cost_usd": 0.75,
+            "latency_seconds": 1440,
+            "quality_score": 87
+          }
+        }
+      ]
+    },
+    "metrics": [
+      {
+        "id": "h1_time_to_first_draft",
+        "hypothesis": "H1",
+        "label": "Time to first draft",
+        "display_value": "24.0 min",
+        "target": "<= 30 min",
+        "passed": true
+      },
+      {
+        "id": "h1_bloom_coverage",
+        "hypothesis": "H1",
+        "label": "Bloom coverage",
+        "display_value": "83.3%",
+        "target": ">= 70%",
+        "passed": true
+      },
+      {
+        "id": "h2_source_grounding",
+        "hypothesis": "H2",
+        "label": "Source grounding",
+        "display_value": "92.0%",
+        "target": ">= 70%",
+        "passed": true
+      },
+      {
+        "id": "h3_unit_cost",
+        "hypothesis": "H3",
+        "label": "Course cost vs manual development",
+        "display_value": "0.05%",
+        "target": "<= 1%",
+        "passed": true
+      }
+    ],
+    "growth_points": []
+  },
+  "methodology_validation": {
+    "methodology": "addie",
+    "profile": "ADDIE",
+    "status": "pass",
+    "score": 86,
+    "scale_max": 100,
+    "summary": "ADDIE checklist is ready for human review.",
+    "items": [
+      {
+        "id": "audience_and_needs_analysis",
+        "label": "Audience and learning need are defined",
+        "label_i18n": {
+          "ru": "Аудитория и учебная потребность определены",
+          "en": "Audience and learning need are defined"
+        },
+        "severity": "blocking",
+        "passed": true,
+        "evidence": "Audience is defined; 4 objectives found.",
+        "agent_task": "AddieAnalysisAgent"
+      },
+      {
+        "id": "objectives_content_assessment_alignment",
+        "label": "Objectives, content, and assessment are aligned",
+        "label_i18n": {
+          "ru": "Цели, содержание и проверка согласованы",
+          "en": "Objectives, content, and assessment are aligned"
+        },
+        "severity": "blocking",
+        "passed": true,
+        "evidence": "4/4 lessons have assessments.",
+        "agent_task": "AddieAlignmentAgent"
+      }
+    ],
+    "growth_points": [],
+    "blocking_gaps": [],
+    "agent_tasks": [
+      {
+        "id": "methodology-review-agent",
+        "name": "ADDIE reviewer",
+        "provider": "ollama",
+        "model": "tenant-default",
+        "status": "ready",
+        "prompt_version": "course-methodology-checklist-v1"
+      }
+    ]
+  }
+}
