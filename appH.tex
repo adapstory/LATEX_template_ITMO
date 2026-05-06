@@ -143,12 +143,11 @@ entity swap, negation, temporal и большую часть numeric distortions
     пригодный для сохранения в экспериментальный корпус.
 \end{itemize}
 
-Фронтовый E2E-тест \texttt{ai-methodist-thesis-validation.spec.ts}
-проверяет отображение этих полей в пользовательском контуре, а скрипты
-\texttt{run\_ai\_methodist\_product\_validation.py} и
-\texttt{run\_paired\_b2\_b4\_experiment.py} превращают JSON-артефакты
-в gate-report по гипотезам диплома и paired-таблицу B2/B4.
-Readiness-gate \texttt{check\_thesis\_excellent\_readiness.py}
+Фронтовый E2E-тест дипломной валидации проверяет отображение этих
+полей в пользовательском контуре, а экспериментальные скрипты
+превращают JSON-артефакты в gate-report по гипотезам диплома
+и paired-таблицу B2/B4. Readiness-gate
+\texttt{check\_thesis\_excellent\_readiness.py}
 дополнительно запрещает возвращать в текст незавершённые claims
 про внешние коммерческие обещания, закрытые материалы третьих лиц или
-mock-скриншоты B1/B3 как будто они являются измеренными результатами.
+визуальные материалы как будто они являются измеренными результатами.
