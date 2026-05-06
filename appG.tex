@@ -57,6 +57,8 @@ Machine-readable manifest прогона хранится в
   \item набор из~100 утверждений для~оценки факт-чекинга.
 \end{itemize}
 
-Для финального B4-сравнения требуется paired-прогон на том же наборе
-документов: B2 и B4 должны использовать одинаковый корпус, одинаковую
-LLM-judge методику и одинаковые правила подсчёта Bloom/source-grounding.
+Paired B2/B4-прогон выполнен на том же наборе документов:
+для каждого \texttt{doc\_i} сохранены \texttt{B2\_result\_i},
+\texttt{B4\_result\_i}, отдельный \texttt{kb\_slug} B4 и строковая
+дельта Bloom/source-grounding. Сводка и сырые REST-артефакты приведены
+в~приложении~И и файле \texttt{paired\_b2\_b4\_experiment.json}.
