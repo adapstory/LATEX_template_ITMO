@@ -8,10 +8,10 @@
     arr/.style={-stealth, thick},
   ]
     \node[block] (document) {Document\\upload};
-    \node[block, right=of document] (dify) {Dify/RAG\\tool};
+    \node[block, right=of document] (dify) {Dify/RAG\\инструмент};
     \node[block, right=of dify] (evidence) {Evidence\\Table};
     \node[block, below=1.7cm of dify] (kg) {Knowledge\\Graph};
-    \node[bigblock, right=of kg] (langgraph) {LangGraph\\6-node};
+    \node[bigblock, right=of kg] (langgraph) {LangGraph\\6 узлов};
     \node[block, right=of langgraph] (artifacts) {Course\\artifacts};
 
     \begin{scope}[on background layer]
