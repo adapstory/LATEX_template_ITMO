@@ -3,23 +3,23 @@
 
 В~приложении представлена текстовая C4-декомпозиция фактической
 архитектуры MVP ИИ-методиста, синхронизированная с текущими сервисами
-Adapstory: AI~Course~Generator, Dify/RAG tool, Knowledge~Graph,
+Adapstory: AI~Course~Generator, инструмент Dify/RAG, граф знаний,
 School~BFF и LMS.
 
 \section*{Г.1 --- Системный контекст (C4 Level~1)}
 
 \begin{itemize}
   \item \textbf{Разработчик курса / HR-специалист}: загружает документ,
-    запускает подготовку черновика, ревьюит структуру и quality seal;
+    запускает подготовку черновика, проверяет структуру и знак качества;
   \item \textbf{School UI / BFF School}: маршрутизирует запросы
-    веб-клиента и показывает status/result/provenance;
+    веб-клиента и показывает статус, результат и происхождение;
   \item \textbf{AI Course Generator}: исполняет LangGraph-конвейер
     генерации и хранит артефакты запуска;
-  \item \textbf{Dify/RAG tool}: индексирует источник и возвращает
+  \item \textbf{Dify/RAG}: индексирует источник и возвращает
     фрагменты для EvidenceTable;
-  \item \textbf{Knowledge Graph}: предоставляет связанные компетенции,
+  \item \textbf{Граф знаний}: предоставляет связанные компетенции,
     понятия и предметные связи;
-  \item \textbf{LLM endpoint}: локальный или OpenAI-compatible endpoint
+  \item \textbf{Конечная точка LLM}: локальная или OpenAI-совместимая конечная точка
     для моделей семейства Qwen;
   \item \textbf{LMS Adapstory}: принимает утверждённый курс и
     публикует его.
@@ -35,17 +35,17 @@ School~BFF и LMS.
   \hline
   \textbf{Контейнер} & \textbf{Технология} & \textbf{Роль} \\
   \hline
-  AI Course Generator API & FastAPI & REST/MCP входная точка, создание run, status/result/provenance \\
+  AI Course Generator API & FastAPI & REST/MCP входная точка, создание запуска, статуса, результата и происхождения \\
   \hline
-  Agent runtime & LangGraph & 6-node pipeline, interrupts, routing, revision loop \\
+  Среда исполнения агентов & LangGraph & шестиузловой конвейер, прерывания, маршрутизация, цикл доработок \\
   \hline
-  Checkpoint/result store & PostgreSQL & сохранение состояния, запусков, результатов и audit-данных \\
+  Хранилище контрольных точек и результатов & PostgreSQL & сохранение состояния, запусков, результатов и аудита \\
   \hline
-  RAG tool & Dify plugin & индексация источника и retrieval фрагментов \\
+  Инструмент RAG & Dify plugin & индексация источника и поиск фрагментов \\
   \hline
-  Knowledge Graph & Neo4j / MCP & компетенции, понятия и связи для контекста курса \\
+  Граф знаний & Neo4j / MCP & компетенции, понятия и связи для контекста курса \\
   \hline
-  School BFF / UI & Java BFF / Frontend & пользовательский контур ревью, публикации и отображения метрик \\
+  School BFF / UI & Java BFF / Frontend & пользовательский контур проверки, публикации и отображения метрик \\
   \hline
   \end{tabular}
 \end{table}
@@ -54,13 +54,13 @@ School~BFF и LMS.
 
 \begin{itemize}
   \item \textbf{SourceAnalyzer}: строит EvidenceTable из Dify/RAG-фрагментов
-    и source-excerpt fallback;
+    и резервного фрагмента исходного текста;
   \item \textbf{CourseStructureAgent}: генерирует CourseBlueprint и использует
-    Knowledge~Graph для семантического усиления структуры;
-  \item \textbf{ContentCreatorAgent}: формирует уроки с inline citations;
-  \item \textbf{FactCheckAgent}: проверяет claims относительно источника;
+    граф знаний для семантического усиления структуры;
+  \item \textbf{ContentCreatorAgent}: формирует уроки со встроенными ссылками на источники;
+  \item \textbf{FactCheckAgent}: проверяет утверждения относительно источника;
   \item \textbf{ReviewAgent}: оценивает методологическую связность и Bloom coverage;
-  \item \textbf{Verifier}: рассчитывает quality seal, provenance и thesis-validation snapshot;
-  \item \textbf{Human review layer}: блокирует публикацию без подтверждения человека;
+  \item \textbf{Verifier}: рассчитывает знак качества, происхождение результата и снимок проверки дипломных метрик;
+  \item \textbf{Слой проверки человеком}: блокирует публикацию без подтверждения человека;
   \item \textbf{Exporter}: передаёт утверждённый курс в LMS Adapstory.
 \end{itemize}

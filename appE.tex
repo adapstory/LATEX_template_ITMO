@@ -2,8 +2,8 @@
 \chapter{СПЕЦИФИКАЦИЯ ГРАФА АГЕНТОВ LANGGRAPH}
 
 В~приложении представлена текстовая спецификация фактического
-6-node графа агентов ИИ-методиста: ноды, переходы, точки участия
-человека и rollback-контур к legacy-топологии.
+шестиузлового графа агентов ИИ-методиста: узлы, переходы, точки участия
+человека и контур отката к прежней топологии.
 
 \section*{Д.1 --- Ноды графа}
 
@@ -15,21 +15,21 @@
   \hline
   \textbf{Нода} & \textbf{Тип} & \textbf{Описание} \\
   \hline
-  source & agent & Поиск источников, EvidenceTable, coverage status \\
+  source & агент & Поиск источников, EvidenceTable, статус покрытия \\
   \hline
-  structure & agent & CourseBlueprint по методологии ADDIE и evidence-контексту \\
+  structure & агент & CourseBlueprint по методологии ADDIE и доказательному контексту \\
   \hline
-  HITL-structure & interrupt & Подтверждение или коррекция структуры курса \\
+  HITL-structure & прерывание & Подтверждение или коррекция структуры курса \\
   \hline
-  content & agent & Черновики уроков с inline-ссылками на источники \\
+  content & агент & Черновики уроков со встроенными ссылками на источники \\
   \hline
-  fact-check & agent & Проверка утверждений относительно EvidenceTable \\
+  fact-check & агент & Проверка утверждений относительно EvidenceTable \\
   \hline
-  review & agent & Методологическая проверка, Bloom coverage, coherence \\
+  review & агент & Методологическая проверка, покрытие Блума, связность \\
   \hline
-  verifier & agent & Quality seal, cited claims, provenance, thesis-validation snapshot \\
+  verifier & агент & Знак качества, подтверждённые утверждения, происхождение результата, снимок проверки дипломных метрик \\
   \hline
-  HITL-quality & interrupt & Финальное решение человека перед публикацией \\
+  HITL-quality & прерывание & Финальное решение человека перед публикацией \\
   \hline
   \end{tabular}
 \end{table}
@@ -54,13 +54,13 @@
   \hline
   content & fact-check & уроки подготовлены и требуют верификации \\
   \hline
-  fact-check & review & отчёты факт-чекинга сформированы \\
+  fact-check & review & отчёты проверки фактов сформированы \\
   \hline
   review & content & требуется доработка, revision count меньше лимита \\
   \hline
-  review & verifier & курс прошёл методологическое ревью или исчерпан лимит доработок \\
+  review & verifier & курс прошёл методологическую проверку или исчерпан лимит доработок \\
   \hline
-  verifier & HITL-quality & quality seal и provenance собраны \\
+  verifier & HITL-quality & знак качества и происхождение результата собраны \\
   \hline
   HITL-quality & END & человек принимает результат или фиксирует остановку \\
   \hline
@@ -71,9 +71,9 @@
 
 \begin{itemize}
   \item \textbf{HITL~1}: подтверждение структуры курса до генерации полного контента;
-  \item \textbf{HITL~2}: финальное решение на основе quality seal,
-    provenance, citations и блокирующих замечаний;
-  \item \textbf{Rollback}: при отключении Feynman pipeline сервис может
-    перейти к legacy 4-node топологии, а provenance фиксирует,
-    какой pipeline фактически исполнялся.
+  \item \textbf{HITL~2}: финальное решение на основе знака качества,
+    происхождения результата, ссылок и блокирующих замечаний;
+  \item \textbf{Откат}: при отключении конвейера Feynman сервис может
+    перейти к прежней четырёхузловой топологии, а происхождение результата фиксирует,
+    какой конвейер фактически исполнялся.
 \end{itemize}

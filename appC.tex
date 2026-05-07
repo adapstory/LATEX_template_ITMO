@@ -12,11 +12,11 @@
 
 \begin{enumerate}
   \item выбрать документ из~ядрового корпуса приложения~Ж;
-  \item запустить одношаговый baseline B2 и сохранить структуру курса;
+  \item запустить одношаговую базовую конфигурацию B2 и сохранить структуру курса;
   \item запустить B4 ИИ-методиста на том же документе;
-  \item сохранить \texttt{status/result/provenance} JSON-артефакты;
-  \item рассчитать Bloom coverage, source-grounding, quality seal,
-    unit-экономику и факт-чек метрики;
+  \item сохранить JSON-артефакты со статусом, результатом и происхождением;
+  \item рассчитать покрытие Блума, привязку к источнику, знак качества,
+    экономику единицы продукта и метрики проверки фактов;
   \item проверить результат скриптами
     \texttt{run\_paired\_b2\_b4\_experiment.py},
     \texttt{run\_ai\_methodist\_product\_validation.py} и
@@ -27,9 +27,9 @@
 
 \begin{itemize}
   \item B4 генерируется на том же источнике, что и B2;
-  \item среднее Bloom coverage B4 не ниже 70\,\%;
-  \item source-grounding B4 не ниже 70\,\%;
-  \item quality seal не ниже \texttt{PASS\_WITH\_NOTES};
+  \item среднее покрытие Блума B4 не ниже 70\,\%;
+  \item привязка к источнику B4 не ниже 70\,\%;
+  \item знак качества не ниже \texttt{PASS\_WITH\_NOTES};
   \item все численные результаты воспроизводятся из JSON-артефактов,
     а не из ручной правки таблиц.
 \end{itemize}
