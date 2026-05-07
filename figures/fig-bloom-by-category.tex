@@ -19,8 +19,9 @@
     {(Регламенты,38.9) ({Все документы},61.4) ({MIT OCW},69.5) (Продуктовые,73.8)};
 
 % Целевой порог
-\draw[dashed, thick, black!70] (axis cs:Регламенты,70) -- (axis cs:Продуктовые,70)
-    node[pos=0.75, above, font=\scriptsize] {Целевой порог (70\,\%)};
+\draw[dashed, thick, black!70] (axis cs:Регламенты,70) -- (axis cs:Продуктовые,70);
+\node[anchor=west, font=\scriptsize, fill=white, fill opacity=0.9, text opacity=1, inner sep=1.5pt]
+    at (rel axis cs:0.04,0.84) {Целевой порог (70\,\%)};
 
 % Перекрасить Продуктовые (>=70) — наложим поверх
 \addplot[fill=teal!70!black, draw=teal!50!black, forget plot] coordinates
