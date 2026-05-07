@@ -8,13 +8,13 @@
     decision/.style={diamond, draw, minimum width=1.7cm, minimum height=1.25cm, align=center, fill=yellow!20, inner sep=1pt, font=\scriptsize},
     arr/.style={-stealth, thick},
   ]
-    \node[agent] (source) {SourceAnalyzer};
-    \node[agent, below=of source] (structure) {CourseStructure\\Agent};
+    \node[agent] (source) {Анализ\\источника};
+    \node[agent, below=of source] (structure) {Структура\\курса};
     \node[decision, below=0.9cm of structure] (review) {проверка\\человеком};
-    \node[agent, below=0.9cm of review] (content) {ContentCreator\\Agent};
-    \node[agent, below=of content] (factcheck) {FactCheck\\Agent};
-    \node[agent, below=of factcheck] (reviewer) {ReviewAgent};
-    \node[agent, below=of reviewer] (verifier) {Verifier};
+    \node[agent, below=0.9cm of review] (content) {Подготовка\\контента};
+    \node[agent, below=of content] (factcheck) {Проверка\\фактов};
+    \node[agent, below=of factcheck] (reviewer) {Педагогическая\\проверка};
+    \node[agent, below=of reviewer] (verifier) {Верификация};
     \node[decision, below=0.9cm of verifier] (quality) {контроль\\качества};
 
     \draw[arr] (source) -- (structure);

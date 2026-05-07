@@ -8,14 +8,14 @@
     arr/.style={-stealth, thick},
     desc/.style={font=\tiny\itshape, text width=1.8cm, align=center},
   ]
-    \node[block] (upload) {School UI\\upload};
-    \node[block, right=of upload] (dify) {Dify\\index};
-    \node[block, right=of dify] (search) {RAG\\search};
-    \node[block, below=1.2cm of search] (evidence) {Evidence\\Table};
-    \node[block, left=of evidence] (kg) {Knowledge\\Graph};
+    \node[block] (upload) {Загрузка\\документа};
+    \node[block, right=of upload] (dify) {Индекс\\Dify};
+    \node[block, right=of dify] (search) {RAG\\поиск};
+    \node[block, below=1.2cm of search] (evidence) {Таблица\\свидетельств};
+    \node[block, left=of evidence] (kg) {Граф\\знаний};
 
     \node[desc, below=0.2cm of upload] {загрузка\\источника};
-    \node[desc, below=0.2cm of dify] {индексация\\и чанкинг};
+    \node[desc, below=0.2cm of dify] {индексация\\и разбиение};
     \node[desc, below=0.2cm of search] {поиск\\фрагментов};
     \node[desc, below=0.2cm of evidence] {нумерация\\источников};
     \node[desc, below=0.2cm of kg] {компетенции\\и понятия};
@@ -25,6 +25,6 @@
     \draw[arr] (search.south) -- (evidence.north);
     \draw[arr] (kg) -- (evidence);
   \end{tikzpicture}
-  \caption{Контур обработки источника и сборки EvidenceTable}
+  \caption{Контур обработки источника и сборки таблицы свидетельств}
   \label{fig:ingestion-pipeline}
 \end{figure}

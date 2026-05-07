@@ -7,24 +7,24 @@
     bigblock/.style={rectangle, rounded corners=4pt, draw, minimum height=1.15cm, minimum width=2.9cm, align=center, fill=blue!8, line width=0.8pt},
     arr/.style={-stealth, thick},
   ]
-    \node[block] (document) {Document\\upload};
+    \node[block] (document) {Загрузка\\документа};
     \node[block, right=of document] (dify) {Dify/RAG\\инструмент};
-    \node[block, right=of dify] (evidence) {Evidence\\Table};
-    \node[block, below=1.7cm of dify] (kg) {Knowledge\\Graph};
+    \node[block, right=of dify] (evidence) {Таблица\\свидетельств};
+    \node[block, below=1.7cm of dify] (kg) {Граф\\знаний};
     \node[bigblock, right=of kg] (langgraph) {LangGraph\\6 узлов};
-    \node[block, right=of langgraph] (artifacts) {Course\\artifacts};
+    \node[block, right=of langgraph] (artifacts) {Артефакты\\курса};
 
     \begin{scope}[on background layer]
       \node[draw, dashed, rounded corners=6pt, inner sep=10pt,
-            fit=(dify)(evidence)(kg), label={[font=\footnotesize]above:Source grounding}] {};
+            fit=(dify)(evidence)(kg), label={[font=\footnotesize]above:Опора на источник}] {};
     \end{scope}
 
     \draw[arr] (document) -- (dify);
     \draw[arr] (dify) -- (evidence);
-    \draw[arr] (evidence) |- (langgraph);
+    \draw[arr] (evidence.south) -- (langgraph.north);
     \draw[arr] (kg) -- (langgraph);
     \draw[arr] (langgraph) -- (artifacts);
   \end{tikzpicture}
-  \caption{Технологический стек ИИ-методиста: source grounding и генерация}
+  \caption{Технологический стек ИИ-методиста: опора на источник и генерация}
   \label{fig:tech-stack-flow}
 \end{figure}
