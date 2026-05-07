@@ -8,7 +8,7 @@
     % Nodes in a circle (radius 3cm)
     \node[block] (update) at (90:3cm) {Обновление\\документа};
     \node[block] (reindex) at (0:3cm) {Переиндексация};
-    \node[block] (factcheck) at (270:3cm) {Факт-чекинг\\уроков};
+    \node[block] (facts) at (270:3cm) {Проверка\\фактов};
     \node[block] (regen) at (180:3cm) {Перегенерация\\устаревших};
 
     % Center label
@@ -16,8 +16,8 @@
 
     % Clockwise arrows (curved)
     \draw[arr] (update.east) to[bend left=20] (reindex.north);
-    \draw[arr] (reindex.south) to[bend left=20] (factcheck.east);
-    \draw[arr] (factcheck.west) to[bend left=20] (regen.south);
+    \draw[arr] (reindex.south) to[bend left=20] (facts.east);
+    \draw[arr] (facts.west) to[bend left=20] (regen.south);
     \draw[arr] (regen.north) to[bend left=20] (update.west);
   \end{tikzpicture}
   \caption{Механизм авто-актуализации курса при изменении источника}
