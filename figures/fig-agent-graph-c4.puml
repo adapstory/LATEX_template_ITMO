@@ -1,7 +1,7 @@
 @startuml
 !include <C4/C4_Component>
 
-LAYOUT_LEFT_RIGHT()
+LAYOUT_TOP_DOWN()
 
 Person(methodist, "Методист / HR-специалист", "Контроль структуры и финального результата")
 System_Ext(source_doc, "Исходный документ", "Регламент, учебная программа, продуктовый материал")
