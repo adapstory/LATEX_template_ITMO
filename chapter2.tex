@@ -133,12 +133,12 @@ fink_significant_learning_2026, chi_wylie_2014, cast_udl_2024}.
 
 \subsection{Расширенная педагогическая и пользовательская рамка}
 
-\begin{table}[h!]
+\begin{table}[htbp]
   \centering
   \small
   \caption{Дополнительные рамки оценки качества курса сверх таксономии Блума}
   \label{tab:extended-learning-metrics}
-  \begin{tabular}{|p{3.2cm}|p{4.0cm}|p{5.3cm}|}
+  \begin{tabular}{|P{3.2cm}|P{4.0cm}|P{5.3cm}|}
   \hline
   \textbf{Рамка} & \textbf{Что измеряет} & \textbf{Потенциальная операционализация для ИИ-методиста} \\
   \hline
@@ -179,7 +179,7 @@ fink_significant_learning_2026, chi_wylie_2014, cast_udl_2024}.
 \end{tabular}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[htbp]
   \centering
   \small
   \setlength{\tabcolsep}{3pt}
@@ -187,9 +187,9 @@ fink_significant_learning_2026, chi_wylie_2014, cast_udl_2024}.
   \caption{Показатели эффекта обучения, ориентированные на обучающегося}
   \label{tab:learner-centered-metrics}
   \begin{tabular}{|
-    >{\raggedright\arraybackslash}p{4.25cm}|
-    >{\raggedright\arraybackslash}p{5.10cm}|
-    >{\raggedright\arraybackslash}p{6.05cm}|}
+    >{\raggedright\arraybackslash}P{4.25cm}|
+    >{\raggedright\arraybackslash}P{5.10cm}|
+    >{\raggedright\arraybackslash}P{6.05cm}|}
   \hline
   \textbf{Показатель} & \textbf{Что измеряет} & \textbf{Потенциальная операционализация} \\
   \hline
@@ -252,7 +252,7 @@ CrewAI~0.9, Agno~1.x и OpenAI Agents SDK
 ~\cite{langgraph_docs_2025, autogen_04_2024, crewai_docs_2025,
 agno_docs_2025, openai_agents_sdk_2025}.
 
-\begin{table}[h!]
+\begin{table}[htbp]
   \caption{Матрица фреймворков мультиагентной оркестрации}
   \label{tab:frameworks}
   \centering
@@ -260,7 +260,7 @@ agno_docs_2025, openai_agents_sdk_2025}.
   \footnotesize
   \setlength{\tabcolsep}{4pt}
   \renewcommand{\arraystretch}{1.25}
-  \begin{tabular}{|p{2.8cm}|c|c|c|c|p{2.2cm}|}
+  \begin{tabular}{|P{2.8cm}|c|c|c|c|P{2.2cm}|}
   \hline
   \textbf{Критерий}
     & \textbf{LangGraph}
@@ -368,11 +368,11 @@ $\rightarrow$ LangGraph~$\rightarrow$ артефакты курса. Это сн
 облачная модель общего назначения, российский облачный провайдер
 и локальная открытая модель.
 
-\begin{table}[h!]
+\begin{table}[htbp]
   \caption{Матрица выбора LLM-вариантов для текущей итерации}
   \label{tab:llms}
   \centering
-  \begin{tabular}{|p{4cm}|p{3.2cm}|p{3.2cm}|p{3.2cm}|}
+  \begin{tabular}{|P{4cm}|P{3.2cm}|P{3.2cm}|P{3.2cm}|}
   \hline
   \textbf{Критерий}
     & \textbf{GPT-4o}
@@ -547,14 +547,14 @@ B2B-сценариев.
 без поиска по корпусу, без проверки фактов и без отдельных специализированных
 агентов.
 
-\begin{table}[h!]
+\begin{table}[htbp]
   \caption{Измеренные результаты одношаговой LLM-конфигурации (B2)}
   \label{tab:b2prelim}
   \centering
   {\small
   \setlength{\tabcolsep}{3pt}
   \renewcommand{\arraystretch}{1.15}
-  \begin{tabular}{|p{3.8cm}|p{0.8cm}|p{2.0cm}|p{2.1cm}|p{2.4cm}|p{3.0cm}|}
+  \begin{tabular}{|P{3.8cm}|P{0.8cm}|P{2.0cm}|P{2.1cm}|P{2.4cm}|P{3.0cm}|}
   \hline
   \textbf{Срез корпуса}
     & \textbf{$n$}
@@ -638,11 +638,11 @@ B2B-сценариев.
 из разных прогонов: итоговая метрика считается по формуле
 $\Delta_i = B4_i - B2_i$ для каждого документа.
 
-\begin{table}[h!]
+\begin{table}[htbp]
   \caption{Парный прогон одношаговой LLM (B2) и ИИ-методиста (B4) на 19 документах}
   \label{tab:paired-b2-b4}
   \centering
-  \begin{tabular}{|p{5.8cm}|p{2.5cm}|p{4.8cm}|}
+  \begin{tabular}{|P{5.8cm}|P{2.5cm}|P{4.8cm}|}
   \hline
   \textbf{Метрика} & \textbf{Значение} & \textbf{Вывод} \\
   \hline
@@ -676,11 +676,11 @@ $\Delta_i = B4_i - B2_i$ для каждого документа.
 Для более тонкой оценки RAG-компонента и проверки фактов использованы
 дополнительные наборы.
 
-\begin{table}[h!]
+\begin{table}[htbp]
   \caption{Оценочные наборы текущего MVP}
   \label{tab:evalassets}
   \centering
-  \begin{tabular}{|p{5.5cm}|p{2.5cm}|p{6.0cm}|}
+  \begin{tabular}{|P{5.5cm}|P{2.5cm}|P{6.0cm}|}
   \hline
   \textbf{Артефакт}
     & \textbf{Объём}
@@ -725,11 +725,11 @@ $\Delta_i = B4_i - B2_i$ для каждого документа.
 конвейера и внутренних допущений о цене привлечения и контрактной
 монетизации, без статуса подтверждённой рыночной выручки.
 
-\begin{table}[h!]
+\begin{table}[htbp]
   \caption{Сценарная экономика единицы продукта текущего MVP на основе проверенного прогона}
   \label{tab:unitecon}
   \centering
-  \begin{tabular}{|p{6.0cm}|p{3.0cm}|p{4.5cm}|}
+  \begin{tabular}{|P{6.0cm}|P{3.0cm}|P{4.5cm}|}
   \hline
   \textbf{Показатель}
     & \textbf{Значение}

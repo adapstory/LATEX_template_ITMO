@@ -1,7 +1,14 @@
 % Используем XeLaTeX — настраиваем шрифт через fontspec
 \usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
 \setmainfont{Times New Roman}
 \setmonofont{Courier New}
+\newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic]
+\newfontfamily\cyrillicfonttt{Courier New}[Script=Cyrillic]
+
+\emergencystretch=2em
 
 % Настройка полей: левое 30 мм, правое 15 мм (допускается 10 мм), верхнее 20 мм, нижнее 20 мм (п. 4.2)
 \usepackage[a4paper,top=20mm,bottom=20mm,left=30mm,right=15mm]{geometry}
