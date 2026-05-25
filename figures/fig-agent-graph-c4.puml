@@ -1,0 +1,42 @@
+@startuml
+!include <C4/C4_Component>
+
+LAYOUT_LEFT_RIGHT()
+
+Person(methodist, "Методист / HR-специалист", "Контроль структуры и финального результата")
+System_Ext(source_doc, "Исходный документ", "Регламент, учебная программа, продуктовый материал")
+System_Ext(rag_kg, "RAG-контур и граф знаний", "Фрагменты источника, свидетельства, компетенции")
+System_Ext(lms, "LMS Adapstory", "Публикация утверждённого курса")
+
+System_Boundary(ai_methodist, "AI Course Generator / LangGraph StateGraph") {
+  Component(source_analysis, "1. Анализ источника", "LangGraph node", "Фрагменты и таблица свидетельств")
+  Component(course_structure, "2. Структура курса", "LangGraph node", "Модули, цели, порядок уроков")
+  Component(content_preparation, "3. Подготовка контента", "LangGraph node", "Черновики уроков со ссылками")
+  Component(fact_checking, "4. Проверка фактов", "LangGraph node", "Сверка утверждений с источником")
+  Component(pedagogy_review, "5. Педагогическая проверка", "LangGraph node", "Блум, связность, чек-лист")
+  Component(verification, "6. Верификация", "LangGraph node", "Знак качества и provenance")
+  Component(artifacts, "Машиночитаемые артефакты", "JSON / reports", "Статус запуска, метрики, снимок H1--H3")
+}
+
+Rel(source_doc, source_analysis, "передаётся на вход")
+Rel(rag_kg, source_analysis, "возвращает фрагменты")
+Rel(rag_kg, course_structure, "усиливает структуру")
+Rel(methodist, course_structure, "утверждает структуру")
+Rel(methodist, verification, "принимает результат")
+
+Rel(source_analysis, course_structure, "evidence table")
+Rel(course_structure, content_preparation, "утверждённая структура")
+Rel(content_preparation, fact_checking, "уроки")
+Rel(fact_checking, pedagogy_review, "отчёт проверки фактов")
+Rel(pedagogy_review, content_preparation, "доработка", "при замечаниях")
+Rel(pedagogy_review, verification, "готово к финальной проверке")
+Rel(verification, artifacts, "сохраняет")
+Rel(verification, lms, "публикация", "после утверждения")
+
+Lay_R(source_analysis, course_structure)
+Lay_R(course_structure, content_preparation)
+Lay_D(content_preparation, fact_checking)
+Lay_L(fact_checking, pedagogy_review)
+Lay_L(pedagogy_review, verification)
+
+@enduml

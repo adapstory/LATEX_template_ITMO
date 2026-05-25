@@ -1,33 +1,6 @@
 \begin{figure}[htbp]
   \centering
-  \begin{tikzpicture}[
-    scale=0.82, every node/.append style={transform shape},
-    node distance=0.7cm and 2.0cm,
-    every node/.style={font=\small},
-    agent/.style={rectangle, rounded corners=3pt, draw, minimum height=0.68cm, minimum width=2.7cm, align=center, fill=white},
-    decision/.style={diamond, draw, minimum width=1.7cm, minimum height=1.25cm, align=center, fill=yellow!20, inner sep=1pt, font=\scriptsize},
-    arr/.style={-stealth, thick},
-  ]
-    \node[agent] (source) {Анализ\\источника};
-    \node[agent, below=of source] (structure) {Структура\\курса};
-    \node[decision, below=0.9cm of structure] (review) {проверка\\человеком};
-    \node[agent, below=0.9cm of review] (content) {Подготовка\\контента};
-    \node[agent, below=of content] (facts) {Проверка\\фактов};
-    \node[agent, below=of facts] (reviewer) {Педагогическая\\проверка};
-    \node[agent, below=of reviewer] (verifier) {Верификация};
-    \node[decision, below=0.9cm of verifier] (quality) {контроль\\качества};
-
-    \draw[arr] (source) -- (structure);
-    \draw[arr] (structure) -- (review);
-    \draw[arr] (review) -- node[right, font=\footnotesize] {одобрено} (content);
-    \draw[arr] (content) -- (facts);
-    \draw[arr] (facts) -- (reviewer);
-    \draw[arr] (reviewer) -- (verifier);
-    \draw[arr] (verifier) -- (quality);
-
-    \draw[arr] (review.west) -- ++(-1.2,0) |- node[left, pos=0.25, font=\footnotesize] {отклонено} (structure.west);
-    \draw[arr] (quality.west) -- ++(-1.5,0) |- node[left, pos=0.18, font=\footnotesize] {доработка} (content.west);
-  \end{tikzpicture}
-  \caption{Граф агентов ИИ-методиста (шестиузловой LangGraph StateGraph)}
+  \includegraphics[width=\textwidth]{figures/fig-agent-graph-c4.png}
+  \caption{C4-диаграмма графа агентов ИИ-методиста (шестиузловой LangGraph StateGraph)}
   \label{fig:agent-graph}
 \end{figure}

@@ -43,6 +43,8 @@ Include via `\input{figures/fig-NAME.tex}` in the corresponding chapter.
 ## Editing tips
 
 - Each figure is self-contained — edit colors/data in the file directly
+- `fig-agent-graph-c4.puml` is the PlantUML/C4 source for `fig-agent-graph-c4.png`;
+  regenerate the PNG after changing the source.
 - pgfplots data is inline (no external CSV) for portability
 - To change colors globally, search for `fill=` and `draw=` patterns
 - Compile with XeLaTeX (required for Times New Roman + tikz)
