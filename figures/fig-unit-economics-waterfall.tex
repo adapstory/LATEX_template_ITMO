@@ -3,7 +3,7 @@
   \begin{tikzpicture}
     \begin{axis}[
       xbar,
-      width=0.85\textwidth,
+      width=0.78\textwidth,
       height=4.5cm,
       bar width=18pt,
       xlabel={Стоимость, руб. (логарифмическая шкала)},
@@ -26,9 +26,9 @@
     \addplot[fill=red!40, draw=red!60] coordinates {
       (150000,{Подрядная разработка})
     };
+      \node[font=\small, text=teal!60!black, anchor=west]
+        at (rel axis cs:0.56,0.78) {$\times$2000 разница};
     \end{axis}
-    \node[font=\small, text=teal!60!black, anchor=west] at (9.5, 1.0)
-      {$\times$2000 разница};
   \end{tikzpicture}
   \caption{Unit-экономика ИИ-методиста: себестоимость vs рыночная стоимость}
   \label{fig:unit-economics}

@@ -1,5 +1,6 @@
 % Используем XeLaTeX — настраиваем шрифт через fontspec
 \usepackage{fontspec}
+\usepackage{xurl}
 \usepackage{polyglossia}
 \setmainlanguage{russian}
 \setotherlanguage{english}
@@ -9,6 +10,7 @@
 \newfontfamily\cyrillicfonttt{Courier New}[Script=Cyrillic]
 
 \emergencystretch=2em
+\hfuzz=1pt
 
 % Настройка полей: левое 30 мм, правое 15 мм (допускается 10 мм), верхнее 20 мм, нижнее 20 мм (п. 4.2)
 \usepackage[a4paper,top=20mm,bottom=20mm,left=30mm,right=15mm]{geometry}
@@ -77,6 +79,9 @@
 % Библиография: ГОСТ-numeric, порядок по первому цитированию (п. 4.10.3–4.10.5)
 \usepackage[backend=biber,style=gost-numeric,sorting=none]{biblatex}
 \addbibresource{bibliography.bib}
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
 
 % Убираем курсив из названий источников
 \DeclareFieldFormat*{title}{#1}
