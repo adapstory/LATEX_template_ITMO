@@ -31,7 +31,11 @@ School~BFF и LMS.
   \caption{Контейнерная декомпозиция ИИ-методиста}
   \label{tab:c4-containers}
   \centering
-  \begin{tabular}{|P{4cm}|P{3cm}|P{5cm}|}
+  \begingroup
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{1.12}
+  \begin{tabular}{|P{4.0cm}|P{3.2cm}|P{5.0cm}|}
   \hline
   \textbf{Контейнер} & \textbf{Технология} & \textbf{Роль} \\
   \hline
@@ -45,9 +49,10 @@ School~BFF и LMS.
   \hline
   Граф знаний & Neo4j / MCP & компетенции, понятия и связи для контекста курса \\
   \hline
-  School BFF / UI & Java BFF / пользовательский интерфейс & пользовательский контур проверки, публикации и отображения метрик \\
+  School BFF / UI & Java BFF / UI & пользовательский контур проверки, публикации и отображения метрик \\
   \hline
   \end{tabular}
+  \endgroup
 \end{table}
 
 \section*{Г.3 --- Компоненты (C4 Level~3)}
