@@ -9,9 +9,8 @@
       minimum height=1.05cm, text width=2.6cm, align=center, fill=white},
     core/.style={component, fill=blue!8, text width=2.75cm},
     evidence/.style={component, fill=green!8, text width=2.65cm},
-    artifact/.style={component, fill=orange!10, text width=2.85cm},
+    artifact/.style={component, fill=orange!10, text width=3.05cm},
     arr/.style={-{Stealth[length=2.5mm]}, thick},
-    dataarr/.style={arr, dashed},
     group/.style={draw, dashed, rounded corners=6pt, inner sep=8pt},
   ]
     \node[component] (source) {Источник\\\footnotesize учебный документ,\\методические материалы};
@@ -19,7 +18,7 @@
     \node[evidence, right=of rag, yshift=0.65cm] (table) {Таблица свидетельств\\\footnotesize цитируемые фрагменты\\и ссылки на источник};
     \node[evidence, right=of rag, yshift=-0.65cm] (kg) {Граф знаний\\\footnotesize компетенции, связи,\\предметные сущности};
     \node[core, below=1.0cm of kg] (langgraph) {LangGraph\\\footnotesize StateGraph, 6 узлов,\\checkpoint-состояние};
-    \node[artifact, below=of langgraph] (artifacts) {Артефакты курса\\\footnotesize структура, уроки,\\verification\_report};
+    \node[artifact, below=of langgraph] (artifacts) {Артефакты курса\\\footnotesize структура, уроки,\\verification\_report, provenance};
 
     \begin{scope}[on background layer]
       \node[group, fit=(rag)(table)(kg)(langgraph),
@@ -31,11 +30,10 @@
     \draw[arr] (source) -- node[above, font=\scriptsize] {загрузка} (rag);
     \draw[arr] (rag) -- (table);
     \draw[arr] (rag) -- (kg);
-    \draw[arr] (table.east) |- (langgraph.east);
+    \draw[arr] (table.east) -- ++(0.45,0) |- (langgraph.north);
     \draw[arr] (kg) -- (langgraph);
-    \draw[arr] (langgraph) -- node[right, font=\scriptsize] {генерация и проверка} (artifacts);
-    \draw[dataarr] (artifacts.west) .. controls +(-1.0,0) and +(-1.0,-0.25) ..
-      node[left, font=\scriptsize, align=center] {трассировка\\происхождения} (table.west);
+    \draw[arr] (langgraph) -- node[midway, right=1pt, font=\scriptsize, align=left,
+      fill=white, inner sep=1pt] {генерация\\и проверка} (artifacts);
   \end{tikzpicture}
   \caption{Компонентная схема текущего MVP ИИ-методиста}
   \label{fig:tech-stack-flow}
