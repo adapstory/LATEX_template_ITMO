@@ -19,7 +19,7 @@ Include via `\input{figures/fig-NAME.tex}` in the corresponding chapter.
 | fig-bloom-by-category.tex | fig:bloom-by-category | After table 2.4 (B2 results) |
 | fig-bloom-levels.tex | fig:bloom-levels | After fig:bloom-by-category |
 | fig-generation-time.tex | fig:generation-time | After B2 time discussion |
-| fig-tech-stack-flow.tex | fig:tech-stack-flow | After §2.2.2 (Haystack+LangGraph) |
+| fig-tech-stack-flow.tex | fig:tech-stack-flow | After §2.2.3 (MVP component chain) |
 
 ## Chapter 3 — Техническая реализация
 

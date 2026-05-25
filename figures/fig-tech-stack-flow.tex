@@ -1,30 +1,42 @@
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}[
-    node distance=1.2cm,
+    scale=0.92,
+    every node/.append style={transform shape},
+    node distance=0.7cm and 0.8cm,
     every node/.style={font=\small},
-    block/.style={rectangle, rounded corners=4pt, draw, minimum height=1cm, minimum width=2.35cm, align=center, fill=white},
-    bigblock/.style={rectangle, rounded corners=4pt, draw, minimum height=1.15cm, minimum width=2.9cm, align=center, fill=blue!8, line width=0.8pt},
-    arr/.style={-stealth, thick},
+    component/.style={rectangle, rounded corners=4pt, draw, line width=0.7pt,
+      minimum height=1.05cm, text width=2.6cm, align=center, fill=white},
+    core/.style={component, fill=blue!8, text width=2.75cm},
+    evidence/.style={component, fill=green!8, text width=2.65cm},
+    artifact/.style={component, fill=orange!10, text width=2.85cm},
+    arr/.style={-{Stealth[length=2.5mm]}, thick},
+    dataarr/.style={arr, dashed},
+    group/.style={draw, dashed, rounded corners=6pt, inner sep=8pt},
   ]
-    \node[block] (document) {Загрузка\\документа};
-    \node[block, right=of document] (dify) {RAG\\инструмент};
-    \node[block, right=of dify] (evidence) {Таблица\\свидетельств};
-    \node[block, below=1.7cm of dify] (kg) {Граф\\знаний};
-    \node[bigblock, right=of kg] (langgraph) {LangGraph\\6 узлов};
-    \node[block, right=of langgraph] (artifacts) {Артефакты\\курса};
+    \node[component] (source) {Источник\\\footnotesize учебный документ,\\методические материалы};
+    \node[core, right=of source] (rag) {RAG-контур\\\footnotesize загрузка, индексация,\\поиск фрагментов};
+    \node[evidence, right=of rag, yshift=0.65cm] (table) {Таблица свидетельств\\\footnotesize цитируемые фрагменты\\и ссылки на источник};
+    \node[evidence, right=of rag, yshift=-0.65cm] (kg) {Граф знаний\\\footnotesize компетенции, связи,\\предметные сущности};
+    \node[core, below=1.0cm of kg] (langgraph) {LangGraph\\\footnotesize StateGraph, 6 узлов,\\checkpoint-состояние};
+    \node[artifact, below=of langgraph] (artifacts) {Артефакты курса\\\footnotesize структура, уроки,\\verification\_report};
 
     \begin{scope}[on background layer]
-      \node[draw, dashed, rounded corners=6pt, inner sep=10pt,
-            fit=(dify)(evidence)(kg), label={[font=\footnotesize]above:Опора на источник}] {};
+      \node[group, fit=(rag)(table)(kg)(langgraph),
+            label={[font=\footnotesize]above:MVP ИИ-методиста}] {};
+      \node[group, fit=(table)(kg),
+            label={[font=\footnotesize]below:Доказательный контекст}] {};
     \end{scope}
 
-    \draw[arr] (document) -- (dify);
-    \draw[arr] (dify) -- (evidence);
-    \draw[arr] (evidence.south) -- (langgraph.north);
+    \draw[arr] (source) -- node[above, font=\scriptsize] {загрузка} (rag);
+    \draw[arr] (rag) -- (table);
+    \draw[arr] (rag) -- (kg);
+    \draw[arr] (table.east) |- (langgraph.east);
     \draw[arr] (kg) -- (langgraph);
-    \draw[arr] (langgraph) -- (artifacts);
+    \draw[arr] (langgraph) -- node[right, font=\scriptsize] {генерация и проверка} (artifacts);
+    \draw[dataarr] (artifacts.west) .. controls +(-1.0,0) and +(-1.0,-0.25) ..
+      node[left, font=\scriptsize, align=center] {трассировка\\происхождения} (table.west);
   \end{tikzpicture}
-  \caption{Технологический стек ИИ-методиста: опора на источник и генерация}
+  \caption{Компонентная схема текущего MVP ИИ-методиста}
   \label{fig:tech-stack-flow}
 \end{figure}
