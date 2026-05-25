@@ -69,11 +69,16 @@
   \label{tab:finance-summary}
   \centering
   \begingroup
-  \small
-  \setlength{\tabcolsep}{3pt}
-  \begin{tabular}{|P{1.7cm}|P{2.4cm}|P{2.5cm}|P{2.8cm}|P{3.3cm}|}
+  \scriptsize
+  \setlength{\tabcolsep}{2pt}
+  \renewcommand{\arraystretch}{1.14}
+  \begin{tabular}{|c|P{2.25cm}|P{2.35cm}|P{2.55cm}|P{3.55cm}|}
   \hline
-  \textbf{Период} & \textbf{Выручка} & \textbf{Расходы и налог} & \textbf{Опер. денежный поток} & \textbf{Комментарий} \\
+  \textbf{Период}
+    & \textbf{Выручка}
+    & \TableHeadTwo{Расходы}{и налог}
+    & \TableHeadThree{Опер.}{денежный}{поток}
+    & \textbf{Комментарий} \\
   \hline
   2026 & 76.0 млн руб. & 49.0 млн руб. & 26.9 млн руб. & помесячный расчёт PNL-файла \\
   \hline

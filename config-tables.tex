@@ -10,6 +10,8 @@
 \DeclareCaptionLabelSeparator{emdash}{\space---\space}  % пробел, длинное тире, пробел
 
 \newcolumntype{P}[1]{>{\RaggedRight\arraybackslash\hspace{0pt}}p{#1}}
+\newcommand{\TableHeadTwo}[2]{\shortstack[l]{\textbf{#1}\\\textbf{#2}}}
+\newcommand{\TableHeadThree}[3]{\shortstack[l]{\textbf{#1}\\\textbf{#2}\\\textbf{#3}}}
 
 % Настройка заголовков таблиц: слева без абзацного отступа, разделитель — тире (п. 4.6.3)
 \captionsetup[table]{position=t, singlelinecheck=false, justification=raggedright, labelsep=emdash, name=Таблица}

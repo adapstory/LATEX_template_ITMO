@@ -522,10 +522,14 @@ Coursebox~AI и~iSpring~AI.
   \caption{Матрица рисков ИИ-методиста}
   \label{tab:risks}
   \centering
-  \begin{tabular}{|P{3.5cm}|P{2cm}|P{2.5cm}|P{4.5cm}|}
+  \begingroup
+  \footnotesize
+  \setlength{\tabcolsep}{2pt}
+  \renewcommand{\arraystretch}{1.14}
+  \begin{tabular}{|P{3.8cm}|P{2.15cm}|P{2.15cm}|P{4.8cm}|}
   \hline
   \textbf{Риск}
-    & \textbf{Вероятность}
+    & \TableHeadTwo{Вероят-}{ность}
     & \textbf{Влияние}
     & \textbf{Митигация} \\
   \hline
@@ -555,6 +559,7 @@ Coursebox~AI и~iSpring~AI.
     & шлюз LLM с~провайдер-агностичным API; альтернативы: Llama~3.3 \\
   \hline
   \end{tabular}
+  \endgroup
 \end{table}
 
 Визуализация рисков на матрице вероятность/влияние приведена на рисунке~\ref{fig:risk-matrix}.

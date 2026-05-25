@@ -18,9 +18,16 @@
   \caption{Агрегированные результаты лабораторного прогона одношаговой LLM-конфигурации (B2)}
   \label{tab:appendix-b2}
   \centering
-  \begin{tabular}{|P{4.5cm}|P{2.0cm}|P{2.2cm}|P{2.5cm}|}
+  \begingroup
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{1.12}
+  \begin{tabular}{|P{4.5cm}|c|P{2.2cm}|P{2.5cm}|}
   \hline
-  \textbf{Срез корпуса} & \textbf{$n$} & \textbf{Покрытие, \%} & \textbf{Доля $\geq 70\%$} \\
+  \textbf{Срез корпуса}
+    & \textbf{$n$}
+    & \TableHeadTwo{Покрытие,}{\%}
+    & \TableHeadTwo{Доля}{${}\geq 70\%$} \\
   \hline
   Все документы & 19 & 61.4 & 21.1\% \\
   \hline
@@ -31,6 +38,7 @@
   Учебные программы MIT~OCW & 6 & 69.5 & 33.3\% \\
   \hline
   \end{tabular}
+  \endgroup
 \end{table}
 
 Эти значения относятся к~одношаговой LLM-конфигурации (B2) из артефакта
@@ -80,7 +88,11 @@ Markdown-документ. Исходные доказательства сох�
   \caption{Парная дельта Блума по категориям корпуса}
   \label{tab:appendix-paired-category}
   \centering
-  \begin{tabular}{|P{4.8cm}|P{1.4cm}|P{2.0cm}|P{2.0cm}|P{2.2cm}|}
+  \begingroup
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{1.12}
+  \begin{tabular}{|P{4.8cm}|c|P{2.0cm}|P{2.0cm}|P{2.2cm}|}
   \hline
   \textbf{Категория} & \textbf{$n$} & \textbf{B2, \%} & \textbf{B4, \%} & \textbf{Дельта} \\
   \hline
@@ -91,6 +103,7 @@ Markdown-документ. Исходные доказательства сох�
   Учебные программы MIT~OCW & 6 & 69.5 & 83.3 & +13.8 п.п. \\
   \hline
   \end{tabular}
+  \endgroup
 \end{table}
 
 \section*{И.3 --- Подготовленные оценочные артефакты}
@@ -99,6 +112,10 @@ Markdown-документ. Исходные доказательства сох�
   \caption{Оценочные наборы текущего MVP}
   \label{tab:appendix-assets}
   \centering
+  \begingroup
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{1.12}
   \begin{tabular}{|P{5.0cm}|P{2.0cm}|P{5.5cm}|}
   \hline
   \textbf{Артефакт} & \textbf{Объём} & \textbf{Назначение} \\
@@ -114,6 +131,7 @@ Markdown-документ. Исходные доказательства сох�
   Лабораторная оценка & 30 QA-пар + 100 утверждений & детерминированная проверка по схеме RAG и фактологическая проверка \\
   \hline
   \end{tabular}
+  \endgroup
 \end{table}
 
 \section*{И.4 --- Детерминированная проверка по схеме RAG и фактологическая проверка}
