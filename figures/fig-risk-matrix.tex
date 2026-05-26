@@ -3,8 +3,8 @@
   \centering
   \begin{tikzpicture}
     \begin{axis}[
-      width=0.85\textwidth,
-      height=0.7\textwidth,
+      width=0.88\textwidth,
+      height=0.66\textwidth,
       xmin=0.5, xmax=3.5,
       ymin=0.5, ymax=3.5,
       xtick={1,2,3},
@@ -13,6 +13,8 @@
       yticklabels={Среднее, Высокое, Критическое},
       xlabel={Вероятность},
       ylabel={Влияние},
+      label style={font=\small},
+      tick label style={font=\small},
       grid=major,
       grid style={thin, gray!50},
       axis on top,
@@ -33,26 +35,31 @@
     \fill[red!15] (axis cs:1.5,2.5) rectangle (axis cs:2.5,3.5);
     \fill[red!15] (axis cs:2.5,2.5) rectangle (axis cs:3.5,3.5);
 
-    % Риски-точки с подписями
-    % Деградация LLM: (2, 2)
-    \addplot[only marks, mark=*, mark size=6pt, blue!70] coordinates {(2, 2)};
-    \node[font=\footnotesize, anchor=west, xshift=8pt] at (axis cs:2,2) {Деградация LLM};
+    % Риски из матрицы презентации. Небольшой сдвиг по X сохраняет читаемость
+    % подписей при одинаковой средней вероятности.
+    \addplot[only marks, mark=*, mark size=5pt, red!70] coordinates {(1.82, 3.00)};
+    \node[font=\scriptsize, align=center, text width=2.0cm, anchor=south, yshift=4pt]
+      at (axis cs:1.82,3.00) {152-ФЗ};
 
-    % Недоступность GPU: (1, 2)
-    \addplot[only marks, mark=*, mark size=6pt, orange!80!black] coordinates {(1, 2)};
-    \node[font=\footnotesize, anchor=south east, xshift=-2pt, yshift=4pt] at (axis cs:1,2) {Недоступность GPU};
+    \addplot[only marks, mark=*, mark size=5pt, orange!80!black] coordinates {(2.18, 2.80)};
+    \node[font=\scriptsize, align=center, text width=2.2cm, anchor=south west, xshift=2pt, yshift=2pt]
+      at (axis cs:2.18,2.80) {Финансовый\\риск};
 
-    % Утечка данных: (1, 3)
-    \addplot[only marks, mark=*, mark size=6pt, red!70] coordinates {(1, 3)};
-    \node[font=\footnotesize, anchor=south, yshift=4pt] at (axis cs:1,3) {Утечка данных};
+    \addplot[only marks, mark=*, mark size=5pt, blue!70] coordinates {(1.82, 2.30)};
+    \node[font=\scriptsize, align=center, text width=2.0cm, anchor=north east, xshift=-2pt, yshift=-3pt]
+      at (axis cs:1.82,2.30) {ФГОС};
 
-    % Неприятие пользователями: (2, 1)
-    \addplot[only marks, mark=*, mark size=6pt, green!50!black] coordinates {(2, 1)};
-    \node[font=\footnotesize, anchor=south, yshift=4pt] at (axis cs:2,1) {Неприятие пользователями};
+    \addplot[only marks, mark=*, mark size=5pt, purple!70] coordinates {(2.20, 2.15)};
+    \node[font=\scriptsize, align=center, text width=2.4cm, anchor=south west, xshift=2pt, yshift=2pt]
+      at (axis cs:2.20,2.15) {Авторские\\права};
 
-    % Смена лицензии: сдвинуто для читаемости
-    \addplot[only marks, mark=*, mark size=6pt, purple!70] coordinates {(1.3, 2.5)};
-    \node[font=\footnotesize, anchor=south west, xshift=2pt, yshift=4pt] at (axis cs:1.3,2.5) {Смена лицензии};
+    \addplot[only marks, mark=*, mark size=5pt, teal!70!black] coordinates {(1.84, 1.55)};
+    \node[font=\scriptsize, align=center, text width=2.4cm, anchor=north east, xshift=-2pt, yshift=-3pt]
+      at (axis cs:1.84,1.55) {Конкурентный\\риск};
+
+    \addplot[only marks, mark=*, mark size=5pt, green!50!black] coordinates {(2.18, 1.20)};
+    \node[font=\scriptsize, align=center, text width=2.0cm, anchor=south west, xshift=2pt, yshift=2pt]
+      at (axis cs:2.18,1.20) {Командный\\риск};
 
     \end{axis}
   \end{tikzpicture}
