@@ -25,16 +25,18 @@ School~BFF и LMS.
     публикует его.
 \end{itemize}
 
+\clearpage
+
 \section*{Г.2 — Контейнеры (C4 Level~2)}
 
-\begin{table}[htbp]
-  \caption{Контейнерная декомпозиция ИИ-методиста}
-  \label{tab:c4-containers}
+\begin{center}
   \centering
+  \captionof{table}{Контейнерная декомпозиция ИИ-методиста}
+  \label{tab:c4-containers}
   \begingroup
   \small
   \setlength{\tabcolsep}{3pt}
-  \renewcommand{\arraystretch}{1.12}
+  \renewcommand{\arraystretch}{1.0}
   \begin{tabular}{|P{4.0cm}|P{3.2cm}|P{5.0cm}|}
   \hline
   \textbf{Контейнер} & \textbf{Технология} & \textbf{Роль} \\
@@ -53,13 +55,11 @@ School~BFF и LMS.
   \hline
   \end{tabular}
   \endgroup
-\end{table}
-
-\clearpage
+\end{center}
 
 \section*{Г.3 — Компоненты (C4 Level~3)}
 
-\begin{itemize}
+\begin{itemize}[itemsep=0pt, topsep=0pt]
   \item \textbf{Узел анализа источника}: строит таблицу свидетельств из RAG-фрагментов
     и резервного фрагмента исходного текста;
   \item \textbf{Узел структуры курса}: генерирует черновик структуры курса и использует
