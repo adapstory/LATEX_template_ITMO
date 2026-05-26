@@ -137,7 +137,7 @@ fink_significant_learning_2026, chi_wylie_2014, cast_udl_2024}.
 
 \subsection{Расширенная педагогическая и пользовательская рамка}
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \small
   \setlength{\tabcolsep}{3pt}
@@ -184,7 +184,7 @@ fink_significant_learning_2026, chi_wylie_2014, cast_udl_2024}.
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \small
   \setlength{\tabcolsep}{3pt}
@@ -227,8 +227,6 @@ fink_significant_learning_2026, chi_wylie_2014, cast_udl_2024}.
 \end{tabular}
 \end{table}
 
-\clearpage
-
 Для настоящего исследования эти рамки относятся к долгосрочному
 \textbf{пользовательскому слою оценки}, дополняющему выполненные технические измерения.
 Иными словами, текущий MVP по-прежнему опирается на~покрытие уровней
@@ -258,7 +256,7 @@ CrewAI~0.9, Agno~1.x и OpenAI Agents SDK
 ~\cite{langgraph_docs_2025, autogen_04_2024, crewai_docs_2025,
 agno_docs_2025, openai_agents_sdk_2025}.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \caption{Матрица фреймворков мультиагентной оркестрации}
   \label{tab:frameworks}
   \centering
@@ -321,8 +319,6 @@ agno_docs_2025, openai_agents_sdk_2025}.
   \endgroup
 \end{table}
 
-\clearpage
-
 \textbf{Обоснование выбора LangGraph.}
 LangGraph соответствует природе задачи, поскольку система должна хранить
 состояние процесса, поддерживать возвраты к предыдущим шагам,
@@ -375,7 +371,7 @@ $\rightarrow$ LangGraph~$\rightarrow$ артефакты курса. Это сн
 На этапе экспериментального MVP рассматривались облачная модель общего назначения,
 российский облачный провайдер и локальная открытая модель.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \caption{Матрица выбора LLM-вариантов для текущей итерации}
   \label{tab:llms}
   \centering
@@ -555,7 +551,7 @@ B2B-сценариев.
 без поиска по корпусу, без проверки фактов и без отдельных специализированных
 агентов.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \caption{Измеренные результаты одношаговой LLM-конфигурации (B2)}
   \label{tab:b2prelim}
   \centering
@@ -646,7 +642,7 @@ B2B-сценариев.
 из разных прогонов. Итоговая метрика считается по формуле
 $\Delta_i = B4_i - B2_i$ для каждого документа.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \caption{Парный прогон одношаговой LLM (B2) и ИИ-методиста (B4) на 19 документах}
   \label{tab:paired-b2-b4}
   \centering
@@ -684,7 +680,7 @@ $\Delta_i = B4_i - B2_i$ для каждого документа.
 Для более тонкой оценки RAG-компонента и проверки фактов использованы
 дополнительные наборы.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \caption{Оценочные наборы текущего MVP}
   \label{tab:evalassets}
   \centering
@@ -710,8 +706,6 @@ $\Delta_i = B4_i - B2_i$ для каждого документа.
   \end{tabular}
 \end{table}
 
-\clearpage
-
 Артефакты превращают работу из описательной архитектурной записки
 в экспериментально воспроизводимую постановку. На этих наборах выполнен
 детерминированный прогон лабораторной оценки. Для оценки по схеме RAG получены
@@ -735,7 +729,7 @@ $\Delta_i = B4_i - B2_i$ для каждого документа.
 конвейера и внутренних допущений о цене привлечения и контрактной
 монетизации, без статуса подтверждённой рыночной выручки.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \caption{Сценарная экономика единицы продукта текущего MVP на основе проверенного прогона}
   \label{tab:unitecon}
   \centering
@@ -767,8 +761,6 @@ $\Delta_i = B4_i - B2_i$ для каждого документа.
   \hline
   \end{tabular}
 \end{table}
-
-\clearpage
 
 Цифры подтверждают экономическую устойчивость выбранной архитектуры,
 и после завершения парного прогона B4 система остаётся технически дешёвой

@@ -135,19 +135,26 @@ MVP на~контролируемом корпусе, который включ�
 
 \subsection{Сводка фактически подтверждённых результатов}
 
-\begin{table}[htbp]
-  \centering
+\begingroup
   \footnotesize
   \setlength{\tabcolsep}{3pt}
   \renewcommand{\arraystretch}{0.95}
+  \begin{longtable}{|P{3.7cm}|P{2.5cm}|P{6.2cm}|}
   \caption{Текущий набор подтверждённых результатов исследования}
-  \label{tab:current-results}
-  \begin{tabular}{|P{3.7cm}|P{2.5cm}|P{6.2cm}|}
+  \label{tab:current-results}\\
   \hline
   \textbf{Контур валидации}
     & \textbf{Текущее значение}
     & \textbf{Что это означает} \\
   \hline
+  \endfirsthead
+  \multicolumn{3}{r}{Продолжение таблицы \thetable}\\
+  \hline
+  \textbf{Контур валидации}
+    & \textbf{Текущее значение}
+    & \textbf{Что это означает} \\
+  \hline
+  \endhead
   Исследование клиентов
     & 20 B2B-интервью
     & проблема подтверждена первичными данными рынка \\
@@ -216,8 +223,8 @@ MVP на~контролируемом корпусе, который включ�
     & сценарная модель выглядит экономически осмысленной; требуется
       подтверждение реальными продажами \\
   \hline
-\end{tabular}
-\end{table}
+  \end{longtable}
+\endgroup
 
 Результаты одношаговой LLM-конфигурации (B2) относительно
 целевых показателей визуализированы на рисунке~\ref{fig:b2-vs-target}.
@@ -502,7 +509,7 @@ Coursebox~AI и~iSpring~AI.
 таблице~\ref{tab:finance-sensitivity} показаны три режима — conservative,
 base и aggressive.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \caption{Чувствительность финансовой модели к коммерческим допущениям}
   \label{tab:finance-sensitivity}
   \centering
@@ -596,7 +603,7 @@ base и aggressive.
 
 \subsection{Оценка рисков}
 
-\begin{table}[htbp]
+\begin{table}[H]
   \caption{Матрица рисков ИИ-методиста}
   \label{tab:risks}
   \centering
@@ -728,7 +735,7 @@ LLM-конфигурацией методиста за 2–3 рабочих дн
 ИИ-методистом, где с подтверждениями методиста цикл до запуска занял
 1 рабочий день.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \footnotesize
   \caption{Показатели пилота в акселераторе Сбера}
@@ -787,7 +794,7 @@ Art \& Math of Decision Making. Описание ИТМО указывает, ч
 оценки качества уроков и давал преподавателю канал для обратной связи
 по содержанию и заданиям.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \footnotesize
   \caption{Операционные апробации сервиса}
