@@ -20,9 +20,9 @@
 \newcommand*\RightCaption{\captionsetup{justification=raggedleft}}
 \newcommand*\LeftCaption{\captionsetup{justification=raggedright}}
 
-% ------------------------
+% ————————
 % Шаблон: Многоуровневый заголовок
-% ------------------------
+% ————————
 \newcommand{\ExampleMultiLevelTable}{%
 \begin{table}[htbp]
 \caption{Пример построения таблицы}
@@ -42,7 +42,7 @@ A & B & C & D \\
 % Шаблон: «Разбитая» таблица (две части под одним номером)
 % Номер таблицы в строке «Продолжение таблицы N» подставляется автоматически
 \newcommand{\ExampleSplitTable}{%
-  % --- Первая часть ---
+  % Первая часть
   \begin{table}[htbp]
     \LeftCaption
     \caption{Пример переноса таблицы}
@@ -59,7 +59,7 @@ A & B & C & D \\
     \end{tabular}
   \end{table}
 
-  % --- Продолжение (номер подставляется автоматически через \thetable) ---
+  % Продолжение: номер подставляется автоматически через \thetable
   \begin{table}[htbp]
     \ContinuedFloat
     \RightCaption
