@@ -2,32 +2,45 @@
   \centering
   \begin{tikzpicture}
     \begin{axis}[
-      xbar,
-      width=0.78\textwidth,
-      height=4.5cm,
-      bar width=18pt,
-      xlabel={Стоимость, руб. (логарифмическая шкала)},
-      xmode=log,
-      xmin=10, xmax=500000,
+      ybar,
+      width=0.76\textwidth,
+      height=5.8cm,
+      bar width=30pt,
+      ylabel={Стоимость, руб. (логарифмическая шкала)},
+      ylabel style={font=\small},
+      ymode=log,
+      ymin=10, ymax=500000,
+      ytick={10,100,1000,10000,100000},
       log ticks with fixed point,
-      ytick=data,
-      symbolic y coords={{ИИ-генерация курса},{Подрядная разработка}},
-      y tick label style={font=\small},
+      xmin=0.4, xmax=2.6,
+      xtick={1,2},
+      xticklabels={{ИИ-генерация\\курса},{Подрядная\\разработка}},
+      xticklabel style={font=\small, align=center, text width=3.4cm},
+      tick label style={font=\footnotesize},
       nodes near coords,
-      nodes near coords align={horizontal},
-      every node near coord/.append style={font=\footnotesize},
-      xmajorgrids=true,
+      nodes near coords align={vertical},
+      point meta=explicit symbolic,
+      every node near coord/.append style={font=\footnotesize, anchor=south},
+      ymajorgrids=true,
       grid style={dashed, gray!40},
-      enlarge y limits=0.5,
+      enlarge x limits=0.45,
+      axis x line*=bottom,
+      axis y line*=left,
     ]
     \addplot[fill=teal!60, draw=teal!80] coordinates {
-      (75,{ИИ-генерация курса})
+      (1,75) [75~руб.]
     };
     \addplot[fill=red!40, draw=red!60] coordinates {
-      (150000,{Подрядная разработка})
+      (2,150000) [150\,000~руб.]
     };
-      \node[font=\small, text=teal!60!black, anchor=west]
-        at (rel axis cs:0.56,0.78) {$\times$2000 разница};
+    \draw[<->, teal!70!black, thick]
+      (axis cs:1,270000) -- (axis cs:2,270000);
+    \node[
+      font=\small,
+      fill=white,
+      inner sep=1.5pt,
+      text=teal!70!black
+    ] at (rel axis cs:0.5,0.86) {$\times$2000 разница};
     \end{axis}
   \end{tikzpicture}
   \caption{Unit-экономика ИИ-методиста: себестоимость vs рыночная стоимость}
