@@ -14,3 +14,15 @@
 *.xdv
 .DS_Store
 laprovincia-menu-restaurant-ru.pdf
+target/
+temp/
+tmp/
+build/
+out/
+.gradle/
+.idea/
+.vscode/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
