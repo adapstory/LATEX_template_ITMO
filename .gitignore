@@ -63,3 +63,7 @@ logs
 *.pid
 *.seed
 *.pid.lock
+/.turbo/
+.eslintcache
+\.eslintcache
+.terraform/
